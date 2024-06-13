@@ -4,6 +4,7 @@ var messages = [
     "Website indev as hell",
     "All hail AQA",
     "Edexcel confusing everyone again",
+    "OCR computer science > every other OCR subject",
     "That one CCEA person",
     "Message @ThisCatLikesCrypto on discord to have your message added!"
 ];
@@ -35,13 +36,20 @@ function Header(){
             <p id="headmsg">Messages Loading...</p>
         </div>
         <div>
-            <a href="https://discord.gg/4AW5qzUBrk"><img src="/images/discord.png"></a>
+            <a href="https://discord.gg/4AW5qzUBrk"><img alt="Discord" src="/images/discord.png"></a>
         </div>
     </div>`
 }
 
+function Footer(){
+    return html`
+    <p>Site by <a href="https://wilburwilliams.uk">Wilbur Williams</a>. 
+    This is not endorsed by AQA or any exam boards.</p>`
+}
+
 window.addEventListener('load', function(){
     document.getElementById("header").appendChild(h(Header));
+    document.getElementById("footer").appendChild(h(Footer));
     msgs();
     setInterval(msgs, 10000);
 });

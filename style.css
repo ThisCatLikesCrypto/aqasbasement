@@ -113,6 +113,19 @@ hr {
     text-align: center;
 }
 
+#footer {
+    position: fixed; /* or absolute, depending on your layout */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px; /* Optional: for spacing */
+}
+
+#footer p {
+    text-align: center;
+    margin: 0; /* Remove default margins */
+}
+
 @media screen and (max-width: 700px) {
     #main {
         margin-left: 0;
