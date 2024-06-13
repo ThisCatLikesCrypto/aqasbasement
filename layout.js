@@ -5,8 +5,11 @@ var messages = [
     "All hail AQA",
     "Edexcel confusing everyone again",
     "OCR computer science > every other OCR subject",
+    "<a href='https://www.youtube.com/@texanspell'>GCSE Slander is more important than revising</a>",
     "That one CCEA person",
-    "Message @ThisCatLikesCrypto on discord to have your message added!"
+    "CIE = international nerds",
+    "'I'm Cooked' - Everyone Ever",
+    "<a href='https://discord.gg/BuBzPr4x3H'>Join the Discord!</a>"
 ];
   
 var currentIndex = 0;
