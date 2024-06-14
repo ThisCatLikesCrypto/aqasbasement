@@ -114,9 +114,6 @@ hr {
 }
 
 #footer {
-    position: fixed; /* or absolute, depending on your layout */
-    bottom: 0;
-    width: 100%;
     text-align: center;
     padding: 10px; /* Optional: for spacing */
 }

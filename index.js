@@ -13,8 +13,9 @@ function Main(){
         It has a long way to go and any help is appreciated.</p>
         <br><br>
         <h2 class="rainbow">Minecraft Server</h2>
-        <p>We have a Minecraft server! The IP is mc.aqasbasement.uk, but you will need to message Kono 
-        (@<span title="click to copy" onclick="copyKono()">._.kono._.</span>) on Discord to be whitelisted.</p>
+        <p>We have a Minecraft server! The IP is mc.aqasbasement.uk</p>
+        <img height=200px src="images/mcserver.png">
+        <br><br>
     </div>
     `
 }
