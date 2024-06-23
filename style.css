@@ -71,6 +71,36 @@ hr {
     margin-right: 20%;
 }
 
+button {
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin: 10px;
+    background: linear-gradient(
+        to right,
+        var(--rosewater),
+        var(--flamingo),
+        var(--pink),
+        var(--mauve),
+        var(--red),
+        var(--maroon),
+        var(--peach),
+        var(--yellow),
+        var(--green),
+        var(--teal),
+        var(--sky),
+        var(--sapphire),
+        var(--blue),
+        var(--lavender)
+    );
+}
+
+button a {
+    color: navy;
+}
+
 #header {
     margin-top: 5%;
     margin-left: 20%;
