@@ -1,8 +1,3 @@
-function copyKono() {
-    navigator.clipboard.writeText("._.kono._.");
-    alert("Copied.");
-}
-
 function Main(){
     return html`
     <div>
