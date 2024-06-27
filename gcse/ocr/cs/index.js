@@ -9,7 +9,7 @@ function Main(){
         </p>
         <p>This might fill up with my notes if I can be bothered</p>
         <h3>1.1</h3>
-        <a href="1.1/1.html">Page for 1.1.1 of the spec</a>
+        <a href="1/1.html">Page for 1.1 of the spec</a>
     </div>
     `
 }

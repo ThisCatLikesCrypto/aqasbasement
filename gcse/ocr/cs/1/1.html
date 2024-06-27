@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>OCR CS GCSE - AQA's Basement</title>
+        <title>CS 1.1 - AQA's Basement</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../../../../style.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/dreamland@0.0.21/dist/all.js"></script>
@@ -11,7 +11,7 @@
         <header id="header"></header>
         <hr>
         <main id="main">
-            <h1>1.1.1 - Architecture of the CPU</h1>
+            <h1>1.1 - Architecture of the CPU</h1>
             <h2>What is a computer?</h2>
             <p>
                 A computer is an electronic device that takes input, 
@@ -63,13 +63,17 @@
             <h2>Processing</h2>
             <p>Processing happens in a cycle: the fetch-decode-execute cycle.</p>
             <p>
-                - In the 'fetch' stage, the CPU fetched the next instruction (held in the program counter) 
-                from RAM or the cache, and brings it into the instruction register.<br>
-                - In the 'decode' stage, the CPU breaks the instruction down into simple calculations 
+                - In the 'fetch' stage, the CPU fetches the next instruction 
+                (the number of which is held in the program counter, 
+                but is copied to the Memory Address Register before the data is fetched) 
+                from RAM or the cache, and brings it into the Memory Data Register.
+                It then copies it into the instruction register.<br>
+                - In the 'decode' stage, the CU gets the instruction from the Instruction Register 
+                and breaks the instruction down into simple calculations 
                 that the ALU (Arithmetic Logic Unit) can do.<br>
                 - In the 'execute' stage, the CPU carries out the instruction. 
                 This can be any task defined by an instruction, for example performing a calculation, 
-                storing information in memory, or getting data in memory.
+                storing information in memory, or getting data in memory.<br>
                 - This cycle occurs billions of times per second (GHz, giga-hertz) on a modern CPU. 
                 This is the clock speed, 1Hz = 1 cycle per second.
             </p>
