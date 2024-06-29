@@ -152,6 +152,21 @@ button a {
     margin: 0; /* Remove default margins */
 }
 
+.centreimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centreplease {
+    display: flex;
+    justify-content: center; /* Horizontally center the inner divs */
+}
+
+#jasperimg {
+    max-width: 700px;
+}
+
 @media screen and (max-width: 700px) {
     #main {
         margin-left: 0;
@@ -161,6 +176,10 @@ button a {
     #header {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    #jasperimg {
+        max-width: 350px;
     }
 }
 
