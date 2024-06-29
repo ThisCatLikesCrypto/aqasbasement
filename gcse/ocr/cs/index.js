@@ -9,7 +9,8 @@ function Main(){
         </p>
         <p>This might fill up with my notes if I can be bothered</p>
         <h3>Paper 1</h3>
-        <a href="1/1.html">Page for 1.1 of the spec</a>
+        <a href="1/1.html">1.1</a>
+        <a href="1/2_1.html">1.2 Part 1</a>
     </div>
     `
 }
