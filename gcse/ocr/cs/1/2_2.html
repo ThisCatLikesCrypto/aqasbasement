@@ -4,6 +4,7 @@
         <title>CS 1.2_2 - AQA's Basement</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../../../../style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net" rel="preconnect">
         <script src="https://cdn.jsdelivr.net/npm/dreamland@0.0.20/dist/all.js"></script>
         <script src="../../../../layout.js"></script>
     </head>
@@ -12,6 +13,7 @@
         <hr>
         <main id="main">
             <h1>1.2 - Memory and Storage (Part 2)</h1>
+            <i>this page was mostly built following the course on savemyexams</i>
             <h2>Units of Data</h2>
             <p>
                 - Computers use 1s and 0s (binary digits, bits) to represent information.<br>
@@ -33,6 +35,36 @@
                 (at GCSE [x]iB doesn't matter, so you may ignore this.)
             </p>
             <br>
+            <h2>Reading data from a disk/disc</h2>
+            <p>
+                - The reason computers use binary is that they consist of billions (at least modern ones anyway) 
+                of tiny switches called transistors. Switches are either on or off, therefore computers must use a 
+                numbering system that it either on or off (1 or 0): binary.<br>
+                - This means that all data entering a computer system must be converted to binary before it can be 
+                processed.<br>
+                - This also means that storage devices use binary. 
+                In optical discs, it is represented by a land (higher) or pit (lower), 
+                in magnetic media, it is represented by positive or negative magnetic polarity, 
+                and in solid state media it is represented by 
+                <a href="https://youtu.be/EXLfErPEYiw?t=529">the presence of electrons in a floating gate 
+                or charge trap layer</a>.
+            </p>
+            <br>
+            <h2>Capacity Requirements</h2>
+            <p>
+                - Data capacity is the max amount of data a storage device can hold.<br>
+                - By knowing the capacity of a storage device, and how the size of a 
+                type of data scales with length, you can calculate how much of different 
+                data types can be stored.<br>
+                - Data types can include text, basic streams of bytes, sound files, any file format really.
+            </p>
+            <p>
+                - You calculate capacity requirements by doing capacity/size of file.<br>
+                - For text files, you do bytes per character * number of characters to get file size.<br>
+                - For image files, you do resolution (like 1920x1080, so 2,073,600) * colour depth (usually 24 bits).<br>
+                - For sound files, you do sample rate * duration * bit depth.
+            </p>
+            <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/">UNFINISHED!!1!</a>
         </main>
         <footer id="footer"></footer>
     </body>

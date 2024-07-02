@@ -11,6 +11,10 @@ function Main(){
         <p>We have a Minecraft server! The IP is mc.aqasbasement.uk</p>
         <img height=200px src="images/mcserver.png">
         <br><br>
+        <h2 class="rainbow">WIP notes</h2>
+        <p>I (Wilbur) am currently working on revision notes for GCSE OCR CS:</p>
+        <a href="gcse/ocr/cs/index.html">GCSE/OCR/CS</a>
+        <br><br>
     </div>
     `
 }
