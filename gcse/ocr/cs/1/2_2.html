@@ -14,7 +14,7 @@
         <hr>
         <main id="main">
             <h1>1.2 - Memory and Storage (Part 2)</h1>
-            <i>this page was mostly built following the course on savemyexams</i>
+            <i>this page was mostly built following the course on savemyexams, but I added quite a lot</i>
             <h2>Units of Data</h2>
             <p>
                 - Computers use 1s and 0s (binary digits, bits) to represent information.<br>
@@ -65,6 +65,54 @@
                 - For image files, you do resolution (like 1920x1080, so 2,073,600) * colour depth (usually 24 bits).<br>
                 - For sound files, you do sample rate * duration * bit depth.
             </p>
+            <br>
+            <h2>Representing Characters</h2>
+            <p><i>This was alluded to before</i></p>
+            <p>
+                - Computers have to represent all data in binary, and this includes keyboard input characters.<br>
+                - The more binary digits you use to represent characters, 
+                the more characters you can represent but the more bits are taken up.<br>
+                - Computers use character sets for characters, which is a 
+                'defined list of characters that can be understood by a computer'.<br>
+                - Each character is given a binary code, and sets are ordered logically 
+                (e.g. in ASCII 00110000 is 0, while 00110001 is 1).<br>
+                - A character set provides a standard for computers to send/receive text.
+            </p>
+            <p>
+                - The most common character sets are ASCII (American Standard Code for Information Interchange) 
+                and Unicode (Universal Character Encoding).<br>
+                - As you might guess, ASCII only contains English characters 
+                (and some numbers and special characters), 
+                which makes sense since it's an American standard but is a bit short-sighted.<br>
+                - With Unicode, instead, the goal is to represent <b>every character ever used</b> 
+                and more and more gets added to it with every revision.<br>
+                - It uses a minimum of 16 bits, providing 65,536 possible characters.
+            </p>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td data-row="1"><strong>ASCII</strong></td>
+                            <td data-row="1"><strong>Unicode</strong></td>
+                        </tr>
+                    <tr>
+                        <td data-row="2">7 bits used</td>
+                        <td data-row="2">16 bits used</td>
+                    </tr>
+                    <tr>
+                        <td data-row="3">128 <abbr title="characters">chars</abbr></td>
+                        <td data-row="3">65,536 <abbr title="characters">chars</abbr></td>
+                    </tr>
+                    <tr>
+                        <td data-row="4">Can represent English characters only</td>
+                        <td data-row="4">Used to represent characters across the world, and has the ability for emojis and other special characters.</td></tr>
+                    <tr>
+                        <td data-row="5">Low storage space needed</td>
+                        <td data-row="5">Higher storage space required</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
             <br>
             <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/">UNFINISHED!!1!</a>
         </main>

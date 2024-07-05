@@ -14,6 +14,7 @@
         <hr>
         <main id="main">
             <h1>1.2 - Memory and Storage (Part 3)</h1>
+            <i>this page was mostly built following the course on savemyexams</i>
             <h2>Binary (Base-2) and Denary (Base-10)</h2>
             <p>
                 - In Denary, the number system you're likely to be used to, 
@@ -219,6 +220,19 @@
                 - Binary digits are moved left or right a set number of time.<br>
                 - A shift to the left multiplies a number by 2, and a shift to the right divides.<br>
                 - A shift can move by more than one place at a time, a shift of 2 multiples by 4 (*2 for each place)
+            </p>
+            <p>
+                - For example, to multiply 38 (100110) by 2, you would perform a left shift of 2, 
+                giving you <code>1001100</code>, or 76.
+            </p>
+            <p>
+                - Depending on the amount of bits used to represent the number, an overflow error may occur. 
+                This is when too many bits are going to be used to represent a number. <br>
+                - For example, if during a binary shift you were only using 6 bits for 38, 
+                and you can't use 7 which is what you need for 76, that would cause an overflow error.<br>
+                - This can cause unpredictable behaviour including crashing, shutdowns or rollovers where 
+                the system flips back around to the <i>smallest</i> possible number than can be represented in an 
+                attempt to add to a number.
             </p>
         </main>
         <footer id="footer"></footer>
