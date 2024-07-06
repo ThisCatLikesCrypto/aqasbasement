@@ -114,6 +114,38 @@
             </table>
             </div>
             <br>
+            <h2>Representing Sound</h2>
+            <p>
+                - For sound to be represented as binary so computers can process it, it must first be sampled and stored.<br>
+                - To do this, when a microphone records it is actually recording measurements of the original sound wave 
+                and then are stored as binary on secondary storage.<br>
+                - Sound waves are analogue (meaning a continuous wave), but computers can only work with digital data.<br>
+                - The process of conversion is simply called 'Analogue to Digital', or A2D.
+            </p>
+            <p>
+                To convert sound waves, the computer:<br>
+                1. Measures the amplitude of the analogue sound wave, creating samples.<br>
+                2. Generates binary values from the samples.<br>
+                3. Creates a digital version of the sound wave from the samples.<br>
+                Then, to play back the audio, the computer reverses the process, converting digital to analogue for speakers.
+            </p>
+            <p>
+                If you still remember what I said in the 'Capacity Requirements' section, you may now be wondering where 
+                'sample rate' and 'bit depth' come in to this.<br>
+                - Sample rate is the amount of samples taken per second (Hz) of an analogue sound wave.<br>
+                - The higher the sample rate, the less blocky the sound wave looks and the more the sound will 
+                sound true to the original:
+            </p>
+            <img class="centreimage" src="../../../../images/cs/signals.png">
+            <p><i><a href="https://ocw.cs.pub.ro/courses/iot/courses/02">image source</a>, licensed under CC-BY-SA</i></p>
+            <p>
+                Landline telephones use 16/22kHz sample rates, CDs use 44.1kHz, and DVDs use 48kHz.
+            </p>
+            <p>
+                <b>Bit Depth</b> is the number of bits stored per sample of sound. It being higher means 
+                a bigger range of sounds can be represented, and it has better sound quality, but it 
+                results in a larger file size.
+            </p>
             <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/">UNFINISHED!!1!</a>
         </main>
         <footer id="footer"></footer>

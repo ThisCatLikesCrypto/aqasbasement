@@ -185,6 +185,7 @@ tr:nth-child(even) {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 75%;
 }
 
 .centreplease {
@@ -209,6 +210,10 @@ tr:nth-child(even) {
 
     #jasperimg {
         max-width: 350px;
+    }
+
+    .centreimage {
+        width: 100%;
     }
 }
 
