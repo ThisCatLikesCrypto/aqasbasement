@@ -1,6 +1,6 @@
-@import url("https://wilburwilliams.uk/fonts/redditsans.css");
+@import url("https://cdn.jsdelivr.net/gh/EyeScary-Development/CDN/fonts/reddit/css/reddit-sans.css");
+/* This isn't an EyeScary project but imma use the CDN anyway */
 
-/* Yes this is Catppuccin. I finally gave in to Pittab's demands.*/
 :root {
     --rosewater: #f5e0dc;
     --flamingo: #f2cdcd;

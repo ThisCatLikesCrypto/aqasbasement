@@ -16,6 +16,8 @@ function Main(){
         <a href="1/2_2.html">1.2 Part 2</a>
         <br>
         <a href="1/2_3.html">1.2 Part 3</a>
+        <br>
+        <a href="1/3_1.html">1.3 Part 1</a>
     </div>
     `
 }
