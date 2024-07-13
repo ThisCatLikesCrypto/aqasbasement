@@ -121,6 +121,16 @@ th, td {
     text-align: left; /* Aligns text to the left */
 }
 
+h2 {
+    padding-top: 15px;
+}
+
+h4 {
+    margin-bottom: 0;
+    margin: 0;
+    padding-top: 10px;
+}
+
 tr:nth-child(even) {
     background-color: var(--mantle);
 }
@@ -186,6 +196,12 @@ tr:nth-child(even) {
     margin-left: auto;
     margin-right: auto;
     width: 75%;
+}
+
+.centreimagebutdontstretch {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .centreplease {
