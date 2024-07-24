@@ -17,7 +17,7 @@
             <i>I already knew most of this, so it was mostly built directly following the spec.</i>
             <h2>Network Pros/Cons</h2>
             <p>
-                - Networks are cruical to our modern use of computers, as the 
+                - Networks are crucial to our modern use of computers, as the 
                 largest network we have is the internet.<br>
                 - They come with quite a lot of pros, for example users can share 
                 resources (like printers and storage servers), access their 
@@ -104,6 +104,7 @@
                 Fibre-optic cables have a higher bandwidth than copper cables, 
                 and faster transfer rates (2/3 the speed of light).
             </p>
+            <br>
             <h2>Network Models</h2>
             <p>
                 - A network model is the logical structure of the network.<br>
@@ -127,7 +128,10 @@
                 and permissions are easier to manage, and the org can more 
                 easily upgrade things all at once.<br>
                 - Servers can often be expensive however, require specialist 
-                knowledge to operate, and act as single points of failure.
+                knowledge to operate, and act as single points of failure.<br>
+                - It is important to note that while a server will often have 
+                specialised hardware, it describes a <i>role</i>, not 
+                inherently a whole 'nother type of computer.
             </p>
             <h3>Peer to Peer (P2P) Model</h3>
             <p>
@@ -143,8 +147,136 @@
                 and no specialist knowledge is required.<br>
                 - However, P2P networks can compromise security and reliability.
             </p>
-            <h3>WIP WIP WIP WIP</h3>
-            <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/">dfs</a>
+            <br>
+            <h2>LAN Hardware</h2>
+            <p>
+                - In order to run a LAN, the network has specific 
+                equipment to run.<br>
+                - The hardware used are routers, network switches, 
+                wireless access points (WAPs), network interface cards (NICs) 
+                and transmission media (like Ethernet cables).
+            </p>
+            <h3>Routers</h3>
+            <p>
+                - A router routes (hence the name) packets (chunks) 
+                of data between different networks.<br>
+                - Most routers will be used for connecting a LAN to the 
+                internet or some other WAN.<br>
+                - Routers manage data traffic and can even prioritise 
+                "more important" traffic to keep connections stable.<br>
+                - The router assigns internal IP addresses to devices on a 
+                network, and IPv4 addresses will start with specific numbers 
+                reserved for internal use (like 192.168.x.x or 10.x.x.x).<br>
+                <img class="centreimage" src="../../../../images/cs/router.png">
+            </p>
+            <h3>Network Switches</h3>
+            <p>
+                - Network switches allow multiple devices to communicate on one 
+                LAN.<br>
+                - The network switches ports are where devices plug in to the 
+                LAN.<br>
+                - A switch is an active (powered) device, and it inspects 
+                network data and ensures it gets directed to the correct 
+                destination device.<br>
+                - A Switch can contain software to allow for system administrators to 
+                configure the switch in a particular way or make sure that 
+                everything is running smoothly, among other things. This is 
+                typically only found in enterprise environments.
+                <img class="centreimage" src="../../../../images/cs/switch.webp">
+            </p>
+            <h3>Wireless Access Points</h3>
+            <p>
+                - Wireless access points (WAPs) allow devices to connected to 
+                a LAN wirelessly, typically over WiFI (technically known as 
+                IEEE 802.11, although I strongly doubt you need to know that 
+                for exams).<br>
+                - The access point connects to a switch or directly to a router 
+                via an Ethernet cable, although some can also connect to 
+                <i>other</i> wireless routers.<br>
+                - The range of the access point is limited, so multiple APs will 
+                be needed if serving a larger area than what one AP can cover.
+                <img class="centreimage" src="../../../../images/cs/WAP.webp">
+            </p>
+            <h3>Network Interface Cards</h3>
+            <p>
+                - A NIC (just pronounce it 'nick' like everyone else does) is 
+                used for a computer to connect to networks.<br>
+                - A NIC may support both wired and wireless connectivity, and 
+                allows a computer to send a receive data.<br>
+                - Most motherboards have NICs built in, so modern systems 
+                do not need a separate card installed for networking in most 
+                cases.
+            </p>
+            <h3>Transmission Media</h3>
+            <p>
+                - Transmission media is the physical wired method of connection 
+                to a network.<br>
+                - There are three types of transmission media: 
+                Unshielded Twisted Pair (UTP), Fibre Optic and Coaxial (Copper).
+            </p>
+            <h4>Unshielded Twisted Pair</h4>
+            <p>
+                - UTP cables are made up of separately insulated <i>pairs</i> of 
+                copper wires <i>twisted</i> around each other.<br>
+                - They are low bandwidth but are the most affordable type of cable 
+                and are commonly found in LANs (the 'Ethernet' cables in the 
+                network switch picture are a type of UTP cable).
+            </p>
+            <h4>Fibre Optic Cables</h4>
+            <p>
+                - Fibre optic cables are made of glass and are high-bandwidth and 
+                low-latency (data can travel at up to 2/3 the speed of light!).<br>
+                - They are the most expensive type of cable, and are commonly 
+                used for high-volume transmission and long-distance connections.<br>
+                - Fibre optic cables are unaffected by electrical noise (interference) 
+                as they contain no metal to induce magnetic currents in (how interference 
+                is caused).
+                - (sidenote: <a href="https://www.submarinecablemap.com/">here</a>'s 
+                a map of all the undersea fibre-optic cables that are in use today.)
+            </p>
+            <h4>Coaxial (Coax) Cables</h4>
+            <p>
+                - A coax cable has a medium bandwidth (between UTP and fibre) and 
+                are more expensive than UTP, but less than fibre.<br>
+                - Coax is used to connect large-scale networks, like PSTN (Public 
+                Switched Telephone Network, at least until it's shut down in 2025) 
+                and TVs.
+            </p>
+            <br>
+            <h2>The Internet</h2>
+            <p><i>
+                (ok so this is the sh*t I specialise in so I'll try to not overcomplicate 
+                things but that may be difficult...)
+            </i></p>
+            <p>
+                - The Internet is a massive collection of networks 
+                <a class="rainbow" href="https://www.submarinecablemap.com/">
+                    spanning the whole world</a>.<br>
+                - (this website is accessible via the internet ok i don't think 
+                you need to be told how widespread it is)<br>
+                - The Internet is the <i>connectivity provider</i> and is <i>not</i> the 
+                same as the World Wide Web. It's really just a giant WAN with extra steps.<br>
+                - You connect to the Internet at home via your router. Your router 
+                contains a modem, which is what allows you to connect to your ISP 
+                (Internet Service Provider, like Sky or BT)'s network, via 
+                telephone line or fibre.<br>
+                - <i>
+                    (this is the point in the savemyexams page when i started 
+                    complaining to myself about the oversimplifications)
+                </i>
+                - Your ISPs network is connected to other networks, which are connected 
+                to other networks, and so on until you have the whole Internet.<br>
+                - This all results in loads of routers all connected together, which 
+                allows you to access other LANs, which will then contain other computers, 
+                including servers (this site runs on a server, one of Cloudflare's).
+            </p>
+            <h3>Domain Name System</h3>
+            <p>[add a pic of CF at some point here to confuse people :D]<br>
+            [also maybe the chad 1.1.1.1 service]</p>
+            <p>
+                <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/3-computer-networks-connections-and-protocols/networks-and-topologies/the-internet/">actually i'm lazy and will do it later</a>
+            </p>
+            <h1>WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP</h1>
         </main>
         <footer id="footer"></footer>
     </body>
