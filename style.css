@@ -59,6 +59,7 @@ body {
     color: aqua;
     font-family: 'Reddit Sans', sans-serif;
     background-color: var(--base);
+    line-height: 1.45;
 }
 
 a {
@@ -127,12 +128,17 @@ h2 {
 
 h3 {
     padding-top: 12px;
+    margin: 0;
 }
 
 h4 {
     margin-bottom: 0;
     margin: 0;
     padding-top: 10px;
+}
+
+p {
+    margin-top: 10px;
 }
 
 tr:nth-child(even) {
