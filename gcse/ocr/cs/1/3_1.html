@@ -272,10 +272,57 @@
                 including servers (this site runs on a server, one of Cloudflare's).
             </p>
             <h3>Domain Name System</h3>
-            <p>[add a pic of CF at some point here to confuse people :D]<br>
-            [also maybe the chad 1.1.1.1 service]</p>
             <p>
-                <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/3-computer-networks-connections-and-protocols/networks-and-topologies/the-internet/">actually i'm lazy and will do it later</a>
+                - When you type something like 'aqasbasement.uk' into your browser, 
+                the computer has to look up the IP (Internet Protocol) address of 
+                a server in order to retrieve the content at that location.<br>
+                - The service it uses to do this is called the Domain Name System, 
+                or DNS.<br>
+                - The DNS is (simplifying) a directory of domain names and their 
+                associated IP addresses, so you can have a nice human-readable domain 
+                name and don't have to type in '172.66.45.28' into your browser (or, 
+                worse (screw SRV record readability): <code>_http._tcp.deb.debian.org.    
+                IN      SRV     10 1 80 prod.debian.map.fastly.net</code> 
+                for 'deb.debian.org'.)<br>
+                - An entry into the directory is called a 'record'.<br>
+                - If DNS didn't exist, you'd have to remember the IP address of every 
+                website you want to visit (or at least a search engine's one).<br>
+                - Here is what the DNS records for this website (aqasbasement.uk) look like, 
+                for GCSEs you don't need to worry about the different types or what 'proxied' 
+                means, but 'A' means direct to IP, and 'CNAME' means a domain 
+                name that is pointing to another one, which can keep happening until eventually 
+                an A record is reached and the IP can be resolved.<br>
+                <img class="centreimage" src="../../../../images/cs/cfdns.png">
+            </p>
+            <h4>How does DNS work, then?</h4>
+            <p>
+                1. When you type in a URL to your browser, your computer requests the IP address from 
+                the DNS server configured in your PC, program or router (for example 1.1.1.1 
+                (Cloudflare), or 9.9.9.9 (Quad9) but most commonly your ISP's servers unless 
+                overridden manually).<br>
+                2. As the DNS resolver caches frequently made requests, most URLs will 
+                not need to get past this stage. If they do, it moves on to the next step:<br>
+                3. DNS root servers. The DNS resolver queries the DNS root server for the 
+                request. The root server's job is to direct the resolver up the chain to the TLD 
+                (Top-Level Domain, like .uk or .net) server.<br>
+                4. The TLD server (managed by a company or organisation like 
+                <a href="https://nominet.uk">Nominet UK</a> (for .uk, .co.uk, .org.uk and the like)). 
+                provides the resolver with the correct IP address for its request.<br>
+                5. The DNS resolver passes its answer onto you, and caches the answer in case it 
+                comes up again soon.<br>
+                6. Your computer will now do whatever it needs to with the IP address. With the 
+                example of a website, it will then send an HTTP(S) (HyperText Transfer Protocol (Secure)) 
+                request to the server and it will return the data (unless something else) and 
+                an HTTP status code '2xx' (if something else happens it will give a different code, 
+                view them at <a href="https://http.cat">http.cat</a> but this is getting really off topic 
+                so dw about it).
+            </p>
+            <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/3-computer-networks-connections-and-protocols/networks-and-topologies/the-internet/">continue doing this</a>
+            <!---[add a pic of CF at some point here to confuse people :D (Complete!)]<br>
+            [also maybe the chad 1.1.1.1 service (Complete!)]-->
+            <p>
+                <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/3-computer-networks-connections-and-protocols/networks-and-topologies/the-internet/">actually i'm lazy and will do it later</a><br>
+                <sup>come to think of it maybe i have adhd???</sup>
             </p>
             <h1>WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP</h1>
         </main>
