@@ -281,8 +281,7 @@
                 - The DNS is (simplifying) a directory of domain names and their 
                 associated IP addresses, so you can have a nice human-readable domain 
                 name and don't have to type in '172.66.45.28' into your browser (or, 
-                worse (screw SRV record readability): <code>_http._tcp.deb.debian.org.    
-                IN      SRV     10 1 80 prod.debian.map.fastly.net</code> 
+                worse (screw IPv6 readability): <code>[2001:4860:4860::8844]</code> 
                 for 'deb.debian.org'.)<br>
                 - An entry into the directory is called a 'record'.<br>
                 - If DNS didn't exist, you'd have to remember the IP address of every 
@@ -296,10 +295,10 @@
             </p>
             <h4>How does DNS work, then?</h4>
             <p>
-                1. When you type in a URL to your browser, your computer requests the IP address from 
-                the DNS server configured in your PC, program or router (for example 1.1.1.1 
-                (Cloudflare), or 9.9.9.9 (Quad9) but most commonly your ISP's servers unless 
-                overridden manually).<br>
+                1. When you type in a URL (Uniform Resource Locator) to your browser, your computer 
+                requests the IP address from  the DNS server configured in your PC, program or router 
+                (for example 1.1.1.1  (Cloudflare), or 9.9.9.9 (Quad9) but most commonly your ISP's 
+                servers unless overridden manually).<br>
                 2. As the DNS resolver caches frequently made requests, most URLs will 
                 not need to get past this stage. If they do, it moves on to the next step:<br>
                 3. DNS root servers. The DNS resolver queries the DNS root server for the 
@@ -310,22 +309,79 @@
                 provides the resolver with the correct IP address for its request.<br>
                 5. The DNS resolver passes its answer onto you, and caches the answer in case it 
                 comes up again soon.<br>
-                6. Your computer will now do whatever it needs to with the IP address. With the 
-                example of a website, it will then send an HTTP(S) (HyperText Transfer Protocol (Secure)) 
-                request to the server and it will return the data (unless something else) and 
-                an HTTP status code '2xx' (if something else happens it will give a different code, 
-                view them at <a href="https://http.cat">http.cat</a> but this is getting really off topic 
-                so dw about it).
+                6. Your computer will now do whatever it needs to with the IP address, such as 
+                request a website resource (explained below).
             </p>
-            <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/3-computer-networks-connections-and-protocols/networks-and-topologies/the-internet/">continue doing this</a>
-            <!---[add a pic of CF at some point here to confuse people :D (Complete!)]<br>
-            [also maybe the chad 1.1.1.1 service (Complete!)]-->
+            <h3>Web Servers + Clients</h3>
+            <h4>Web Servers</h4>
             <p>
-                <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/3-computer-networks-connections-and-protocols/networks-and-topologies/the-internet/">actually i'm lazy and will do it later</a><br>
-                <sup>come to think of it maybe i have adhd???</sup>
+                - A 'Web Server' describes a computer that's role is to store web pages and other assets 
+                needed for a website to function.<br>
+                - They normally have a static IP address, to avoid having to constantly change DNS records.<br>
+                - The most common web server softwares you will find are nginx and Apache. They mostly 
+                deal with hosting websites, administering redirects and other client requests.
             </p>
-            <h1>WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP</h1>
+            <h4>Client</h4>
+            <p>
+                - A 'client' describes a computer that's role is to send requests to the server. 
+                Your computer is acting as a client to the web server behind aqasbasement.uk.<br>
+                - When you (<span id="ipaddresslmao">loading???</span>) make a request to 'aqasbasement.uk', 
+                your query first goes through DNS (returning something like 104.21.29.121 (don't try that)).<br>
+                - Your computer then makes a GET request to the server, which returns the resource.<br>
+                - The server also returns a status code, which in most cases should be <code>200</code> (view 
+                them all at <a href="https://http.cat">http.cat</a>).
+            </p>
+            <h3>The Cloud</h3>
+            <p>
+                - The 'Cloud' is (essentially) just 'someone else's computer'.<br>
+                - Cloud servers are used to store data, run programs and do all sorts of things 
+                over the internet.
+            </p>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Advantages of Using the Cloud</th>
+                    <th>Disadvantages of Using the Cloud</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Access your files from anywhere with an internet connection.</td>
+                    <td>Requires a reliable internet connection to access files.</td>
+                  </tr>
+                  <tr>
+                    <td>Automatic backups help prevent data loss.</td>
+                    <td>Potential security risks if data is not properly protected.</td>
+                  </tr>
+                  <tr>
+                    <td>Scalable storage options—you can easily add more space.</td>
+                    <td>Ongoing costs—usually requires a subscription or payment.</td>
+                  </tr>
+                  <tr>
+                    <td>Collaboration is easier as multiple people can work on the same document simultaneously.</td>
+                    <td>Privacy concerns—your data is stored on someone else's servers.</td>
+                  </tr>
+                  <tr>
+                    <td>Reduces the need for physical storage devices like USB drives.</td>
+                    <td>Data could be inaccessible if the cloud service provider has an outage.</td>
+                  </tr>
+                </tbody>
+              </table>
+            <h1>WIP WIP WIP WIP <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/">WIP</a> WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP</h1>
         </main>
         <footer id="footer"></footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                fetch('https://api.ipify.org')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('ipaddresslmao').textContent = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching IP address:', error);
+                    document.getElementById('ipaddresslmao').textContent = "couldn't fetch IP and now i'm sad :(";
+                });
+            })
+        </script>
     </body>
 </html>
