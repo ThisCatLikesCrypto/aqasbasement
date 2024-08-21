@@ -9,7 +9,7 @@ var messages = [
     "That one CCEA person",
     "CIE = international nerds",
     "'I'm Cooked' - Everyone Ever",
-    "<a href='https://discord.gg/BuBzPr4x3H'>Join the Discord!</a>"
+    "<a href='https://discord.gg/XTvhaHYRBa'>Join the Discord!</a>"
 ];
   
 var currentIndex = 0;
@@ -39,7 +39,7 @@ function Header(){
             <p id="headmsg">Messages Loading...</p>
         </div>
         <div>
-            <a href="https://discord.gg/4AW5qzUBrk"><img alt="Discord" src="/images/discord.png"></a>
+            <a href="https://discord.gg/XTvhaHYRBa"><img alt="Discord" src="/images/discord.png"></a>
         </div>
     </div>`
 }
