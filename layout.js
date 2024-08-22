@@ -46,8 +46,11 @@ function Header(){
 
 function Footer(){
     return html`
-    <p>Site by <a href="https://wilburwilliams.uk">Wilbur Williams</a>. 
-    This is not endorsed by AQA or any exam boards.</p>`
+    <p>
+        Site by <a href="https://wilburwilliams.uk">Wilbur Williams</a>. 
+        This is not endorsed by AQA or any exam boards.<br>
+        <img src="/images/CC-BY-SA-NC.png" title="CC BY-SA NC 4.0" alt="CC BY-SA NC 4.0">
+    </p>`
 }
 
 window.addEventListener('load', function(){
