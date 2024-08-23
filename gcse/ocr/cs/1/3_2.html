@@ -129,6 +129,111 @@
             </tbody>
         </table>
         <br>
+        <h2>Encryption</h2>
+        <p>
+            - Encryption is the process of converting data into a code that can only be read by someone with the
+            correct key.<br>
+            - Encryption is used to protect data from being read by unauthorised parties.<br>
+            - Encryption is important on both wired and wireless networks, but it is needed more on wireless networks 
+            due to man-in-the-middle attacks where someone can pretend to be the router and intercept data.<br>
+            - Encryption is used to protect data in transit, and is also used to protect data at rest.
+        </p>
+        <h3>How is data encrypted?</h3>
+        <p>
+            - Encryption is done using a key, which is a piece of data that is used to encrypt the data.<br>
+            - The key is used to encrypt the data, and the encrypted data is sent to the recipient.<br>
+            - The key is kept secret, and only the recipient has the key to decrypt the data.<br>
+            - Encryption is done using a specific algorithm, which is a set of rules that define how the data is encrypted.
+        </p>
+        <h3>Types of Encryption</h3>
+        <p>
+            - Symmetric encryption is where the same key is used to encrypt and decrypt the data.<br>
+            - Asymmetric encryption is a different key is used to encrypt than to decrypt the data. This is also known as
+            public key cryptography, and is what your computer is using to visit this website (assuming HTTPS, the 'S' 
+            stands for 'Secure').<br>
+            - Hashing is a type of encryption where the data is converted into a fixed-length string of characters, which
+            is called a hash.<br>
+            - Hashing is used to verify the integrity of the data, and is also used to create digital signatures.
+        </p>
+        <h3>Encryption on wireless networks</h3>
+        <p>
+            - Encryption on wireless networks is done using WPA2/WPA3, however older standards like the original 
+            WAP still exist.<br>
+            - When your computer connects to a wireless network, it will ask you for a password. This password is used, 
+            along with the network's SSID ('Service Set Identifier', or the network name), to encrypt the data by 
+            turning it into 'ciphertext' and back out again.<br>
+            - The master key is sent to any device able to provide the correct password.<br>
+            - The lack of encryption is the reason unsecured networks (ones without a password) are dangerous to use
+            without another encryption standard. For websites this is TLS (Transport Layer Security) over HTTPS (although 
+            many websites that require you to enter passwords force you to use HTTPS to stay compliant with data protection laws).<br>
+            - Encryption on wireless networks is used to protect the data from being intercepted by someone who is
+            not the owner of the network, and is also used to protect the data from being read by someone who is not
+            the owner of the network.
+        </p>
+        <h3>Encryption on wired networks</h3>
+        <p>
+            - Encryption on wired networks is done using WEP, which works in a similar way to WPA2/WPA3.<br>
+            - It is a weaker standard than WPA2/WPA3, and so WEP should not be used for wireless networks which are 
+            easier to intercept.
+        </p>
+        <br>
+        <h2>IP addresses and MAC addresses</h2>
+        <p>
+            - IP and MAC addresses are used to identify devices on a network, and are used to route data between devices 
+            on a network.
+        </p>
+        <h3>IP addresses</h3>
+        <p>
+            - An IP address is a unique identifier for a device on a network.<br>
+            - It is used to route data between devices on a network.<br>
+            - It stands for 'Internet Protocol Address', and there are both internal and external IP addresses.<br>
+            - An external IP address is the IP address that is visible to the internet, and is used to connect to 
+            websites and other services.<br>
+            - An internal IP address is the IP address that is used to connect to devices on the same network, and is 
+            used to connect to services on the same network.
+        </p>
+        <h4>IPv4 vs IPv6</h4>
+        <p>
+            - IPv4 is the older commonly used IP address version.<br>
+            - In IPv4, addresses are represented as a series of numbers separated by full stops, for example 
+            <a href="http://81.0.246.142">81.0.246.142</a>. They are 1 byte (8 bits) per block, so 32 bits overall.<br>
+            - IPv4 requires internal IP addresses due to there not being enough addresses for each computer to have its 
+            own external IP address. This works through NAT (Network Address Translation), which is a process where 
+            the router translates the internal IP address to an external IP address, and the external IP address is 
+            visible to the internet.<br>
+            - IPv6 is the newer commonly used IP address version.<br>
+            - In IPv6, addresses are represented as a series of numbers separated by colons, for example 
+            <a href="http://[2a02:c204:2208:8374::1]">2a02:c204:2208:8374::1</a>.<br>
+            - IPv6 is needed due to there only being 4.3 billion IPv4 addresses available, which we ran out of 
+            in November 2019 (at least for RIPE NCC, who are the organisation that manages IP addresses for Europe, the 
+            Middle East and Central Asia. They were the last regional registry to run out.)<br>
+            and so the number of IPv6 addresses is much higher (2^128 addresses, or, uh, 340,282,366,920,938,463,463,374,607,431,768,211,456.)<br>
+            - If you get asked for an IPv6 in an exam, you may write '::1' which is simply the loopback address, which is 
+            the address of the computer itself, or an alias for 'localhost'.<br>
+            - IPv6 addresses are varying length because ':0000:' can be compressed to just :: as many times over as needed, 
+            but only once per address (for example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334 is the same as 
+            2001:0db8:85a3::8a2e:0370:7334, but if you had 2001:0db8:85a3:0000:0000:8a2e:0000:7333 you couldn't 
+            compress it to 2001:0db8:85a3::8a2e::7333, just 2001:0db8:85a3::8a2e:0:7334). Consecutive 0s can be compressed 
+            to just one 0.<br><br>
+            <b>
+                If you are struggling to understand this, that's totally fair and don't stress about it too much, just remember 
+                ::1 is valid in case it comes up and remember that this is only a small part of the overall paper 1. Feel 
+                free to skip this section.
+            </b><br><br>
+            
+        </p>
+        <h3>MAC addresses</h3>
+        <p>
+            - A MAC address ('Media Access Control Address') is a unique identifier for a device on a LAN.<br>
+            - A MAC address is static, and one is usually assigned to a NIC at the factory and doesn't change 
+            no matter what network it's on.<br>
+            - A MAC address is 12 hexademical digits (48 bits), grouped into pairs for readability. The first 
+            three pairs are the Organisation Unique Identifier (OUI), which is a unique identifier for the manufacturer 
+            of the device. The last three pairs are the Device Identifier, which is a unique identifier for the 
+            device itself.<br>
+            - There are 281 trillion MAC addresses.
+        </p>
+        <br>
         <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/">qwerqwerqewrqew</a>
     </main>
     <footer id="footer"></footer>
