@@ -1,4 +1,4 @@
-//Built with dreamland.js, version 0.0.21
+//Built with dreamland.js, version 0.0.20
 
 var messages = [
     "Website indev as hell",
@@ -48,8 +48,11 @@ function Footer(){
     return html`
     <p>
         Site by <a href="https://wilburwilliams.uk">Wilbur Williams</a>. 
-        This is not endorsed by AQA or any exam boards.<br>
-        <img src="/images/CC-BY-SA-NC.png" title="CC BY-SA NC 4.0" alt="CC BY-SA NC 4.0">
+        This is not endorsed by AQA or any exam boards. 
+        <a href="https://github.com/ThisCatLikesCrypto/aqasbasement">Source code</a><br>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <img src="/images/CC-BY-SA-NC.png" title="CC BY-NC-SA 4.0" alt="CC BY-NC-SA 4.0">
+        </a>
     </p>`
 }
 
