@@ -24,6 +24,8 @@ function Main(){
         <a href="1/4.html">1.4</a>
         <br>
         <a href="1/5.html">1.5</a>
+        <br>
+        <a href="1/6.html">1.6</a>
     </div>
     `
 }
