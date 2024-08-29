@@ -8,24 +8,32 @@ function Main(){
             <button><a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/">SaveMyExams</a></button>
         </p>
         <h2>Revision notes</h2>
-        <h3>Paper 1</h3>
-        <a href="1/1.html">1.1</a>
-        <br>
-        <a href="1/2_1.html">1.2 Part 1</a>
-        <br>
-        <a href="1/2_2.html">1.2 Part 2</a>
-        <br>
-        <a href="1/2_3.html">1.2 Part 3</a>
-        <br>
-        <a href="1/3_1.html">1.3 Part 1</a>
-        <br>
-        <a href="1/3_2.html">1.3 Part 2</a>
-        <br>
-        <a href="1/4.html">1.4</a>
-        <br>
-        <a href="1/5.html">1.5</a>
-        <br>
-        <a href="1/6.html">1.6</a>
+        <div class="classiccentreplease">
+            <div>
+                <h3>Paper 1</h3>
+                <a href="1/1.html">1.1</a>
+                <br>
+                <a href="1/2_1.html">1.2 Part 1</a>
+                <br>
+                <a href="1/2_2.html">1.2 Part 2</a>
+                <br>
+                <a href="1/2_3.html">1.2 Part 3</a>
+                <br>
+                <a href="1/3_1.html">1.3 Part 1</a>
+                <br>
+                <a href="1/3_2.html">1.3 Part 2</a>
+                <br>
+                <a href="1/4.html">1.4</a>
+                <br>
+                <a href="1/5.html">1.5</a>
+                <br>
+                <a href="1/6.html">1.6</a>
+            </div>
+            <div>
+                <h3>Paper 2</h3>
+                <a href="2/1_1.html">2.1 Part 1</a>
+            </div>
+        </div>
     </div>
     `
 }

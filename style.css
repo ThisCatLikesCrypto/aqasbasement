@@ -219,6 +219,12 @@ tr:nth-child(even) {
     justify-content: center; /* Horizontally center the inner divs */
 }
 
+.classiccentreplease { /* Also known as maindivdiv */
+    display: flex;
+    justify-content: space-between; /* Horizontally center the inner divs */
+    max-width: 350px;
+}
+
 #jasperimg {
     max-width: 700px;
 }

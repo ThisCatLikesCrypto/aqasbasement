@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS 2.1 - AQA's Basement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../../style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net" rel="preconnect">
+    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/dreamland@0.0.20/dist/all.js">
+    <script src="https://cdn.jsdelivr.net/npm/dreamland@0.0.20/dist/all.js"></script>
+    <script src="../../../../layout.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <hr>
+    <main id="main">
+        <h1>2.1 - Algorithms (Part 1)</h1>
+        <i>I decided to follow savemyexams here with doing searching/sorting algorithms (which really should be in part
+            2), earlier</i>
+        <h2>Principles of Computational Thinking</h2>
+        <p>
+            - Computational thinking is the process of breaking down a problem into smaller parts and solving them one
+            at a time.<br>
+            - It contains 3 main components:<br>
+        <ul>
+            <li>Abstraction</li>
+            <li>Decomposition</li>
+            <li>Algorithmic thinking</li>
+        </ul>
+        </p>
+        <h3>Abstraction</h3>
+        <p>
+            - Abstraction is the process of simplifying a problem by removing unnecessary details.<br>
+            - An example of abstraction could be a high-level programming language like Python or C, which hide the
+            differences
+            between different processor architectures so your program will run the same everywhere without having to
+            worry about
+            the underlying hardware.<br>
+            - There are plenty of other examples as well, such as the concept of 'processes' in OSes, allowing multiple
+            programs
+            to run concurrently without having to manage the CPU and memory at a low level.
+        </p>
+        <h3>Decomposition</h3>
+        <!--Nah this is absolutely perfect supermaven go brrr i guess-->
+        <p>
+            - Decomposition is the process of breaking down a problem into smaller parts, which can then be solved
+            individually.<br>
+            - An example of decomposition could be a mathematical equation, which can be broken down into smaller parts
+            such as
+            addition, subtraction, multiplication, and division.<br>
+            - This process is also used in programming, where a program can be broken down into smaller parts such as
+            functions,
+            loops, conditionals, and variables.
+        </p>
+        <h3>Algorithmic thinking</h3>
+        <p>
+            - Algorithmic thinking is turning a problem into a series of basic step-by-step instructions.<br>
+            - It requires the combined use of both abstraction and decomposition.<br>
+            - Algorithms help problems become automated and let computers understand what to do.<br>
+            - A good algorithm should be as bulletproof but simple as possible, to reduce the chance of problems.
+        </p>
+        <br>
+        <h2>Searching Algorithms</h2>
+        <p>
+            - Searching algorithms are algorithms used to efficiently find a specific element in a list.<br>
+            - The two sorting algorithms you need are Linear Search and Binary Search.<br>
+            - For searching (and sorting) algorithms, you need to understand time complexity. This is written 
+            in big O notation. Something like O(n) means that if it took 1 second for each object in a list, 
+            it would take n seconds to search the entire list.
+        </p>
+        <h3>Linear Search</h3>
+        <h4>Definition:</h4>
+        <p>
+            Linear search is the simplest search algorithm. It checks each element in a list, one by one, until it finds
+            the
+            target value or reaches the end of the list. This method does not require the list to be sorted.
+        </p>
+        <h4>How It Works:</h4>
+        <ol>
+            <li>Start at the beginning of the list.</li>
+            <li>Compare the current element with the target value you are searching for.</li>
+            <li>If the current element matches the target, the search is successful, and the index of the element is
+                returned.
+            </li>
+            <li>If the current element does not match the target, move to the next element in the list.</li>
+            <li>Repeat steps 2-4 until you either find the target value or reach the end of the list.</li>
+            <li>If the end of the list is reached without finding the target value, the search is unsuccessful, and a
+                suitable
+                message or value (like -1) is returned.
+            </li>
+        </ol>
+        <h4>Example:</h4>
+        <p>
+            Imagine you have a list of numbers: <code>[3, 8, 12, 5, 6]</code>, and you want to find the number
+            <code>12</code>
+            using linear search.
+        </p>
+        <ul>
+            <li>Start with the first number (<code>3</code>) – it's not <code>12</code>.</li>
+            <li>Move to the next number (<code>8</code>) – it's not <code>12</code>.</li>
+            <li>Move to the next number (<code>12</code>) – this time, it matches the target. The search is successful.
+            </li>
+        </ul>
+        <h4>Pros:</h4>
+        <ul>
+            <li>Simple to implement and understand.</li>
+            <li>Works on both sorted and unsorted lists.</li>
+        </ul>
+        <h4>Cons:</h4>
+        <ul>
+            <li>Inefficient for large lists because each element must be checked, one at a time.</li>
+            <li>Worst-case scenario: it checks all elements, making it slow for large datasets (with a time complexity
+                of O(n), where n is the number of elements in the list).
+            </li>
+        </ul>
+        <h3>Binary Search</h3>
+        <h4>Definition:</h4>
+        <p>
+            Binary search is a more efficient search algorithm that works only on sorted lists. It repeatedly divides
+            the
+            search interval in half to find the target value.
+        </p>
+
+        <h4>How It Works:</h4>
+        <ol>
+            <li>Start with two pointers – one at the beginning of the list (low) and one at the end (high).</li>
+            <li>Calculate the middle point of the list using the formula: <code>middle = (low + high) // 2</code>.<br>
+            (// is 'floor division'. Just division but you discard the remainder.)</li>
+            <li>Compare the middle element with the target value:
+                <ul>
+                    <li>If the middle element matches the target value, the search is successful, and the index is
+                        returned.</li>
+                    <li>If the target value is less than the middle element, narrow the search to the left half of the
+                        list by
+                        setting <code>high = middle - 1</code>.
+                    </li>
+                    <li>If the target value is greater than the middle element, narrow the search to the right half of
+                        the list
+                        by setting <code>low = middle + 1</code>.
+                    </li>
+                </ul>
+            </li>
+            <li>Repeat steps 2-3 until the target value is found or the <code>low</code> pointer exceeds the
+                <code>high</code>
+                pointer, indicating the target is not in the list.
+            </li>
+        </ol>
+        <h4>Example:</h4>
+        <p>
+            Imagine you have a sorted list of numbers: <code>[2, 4, 7, 10, 15, 20]</code>, and you want to find the
+            number
+            <code>10</code> using binary search.
+        </p>
+        <ul>
+            <li>Start with <code>low = 0</code> and <code>high = 5</code> (index positions).</li>
+            <li>Calculate the middle index: <code>middle = (0 + 5) // 2 = 2</code>.</li>
+            <li>The middle element is <code>7</code>, which is less than <code>10</code>. So, search in the right half
+                (<code>low = 3</code>).
+            </li>
+            <li>Recalculate the middle index: <code>middle = (3 + 5) // 2 = 4</code>.</li>
+            <li>The middle element is <code>15</code>, which is greater than <code>10</code>. So, search in the left
+                half
+                (<code>high = 3</code>).
+            </li>
+            <li>Now, <code>middle = (3 + 3) // 2 = 3</code>.</li>
+            <li>The middle element is <code>10</code>, which matches the target value. The search is successful.</li>
+        </ul>
+        <h4>Pros:</h4>
+        <ul>
+            <li>Much faster than linear search for large, sorted lists.</li>
+            <li>Reduces the problem size by half with each step, leading to a time complexity of O(log n), where n is
+                the
+                number of elements in the list.
+            </li>
+        </ul>
+        <h4>Cons:</h4>
+        <ul>
+            <li>Requires the list to be sorted before searching.</li>
+            <li>Slightly more complex to implement compared to linear search.</li>
+        </ul>
+        <h3>Comparison of Linear Search and Binary Search:</h3>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Linear Search</th>
+                <th>Binary Search</th>
+            </tr>
+            <tr>
+                <td><b>Data Requirement</b></td>
+                <td>Works on both sorted and unsorted lists</td>
+                <td>Requires a sorted list</td>
+            </tr>
+            <tr>
+                <td><b>Complexity</b></td>
+                <td>O(n) – checks each element</td>
+                <td>O(log n) – divides the list</td>
+            </tr>
+            <tr>
+                <td><b>Ease of Use</b></td>
+                <td>Simple to implement</td>
+                <td>More complex, needs sorting</td>
+            </tr>
+            <tr>
+                <td><b>Efficiency</b></td>
+                <td>Slower for large datasets</td>
+                <td>Faster, especially for large lists</td>
+            </tr>
+        </table>
+        <!--Sorting algorithms next (link to ArrayV, maybe even include some visualisations?)-->
+    </main>
+    <footer id="footer"></footer>
+</body>
+
+</html>
