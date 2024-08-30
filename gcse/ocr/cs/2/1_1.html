@@ -206,6 +206,179 @@
             </tr>
         </table>
         <!--Sorting algorithms next (link to ArrayV, maybe even include some visualisations?)-->
+        <br>
+        <h2>Sorting Algorithms</h2>
+        <p>
+            - A sorting algorithm is an algorithm that sorts a list of elements.<br>
+            - There are many different sorting algorithms, each with its own advantages and disadvantages.<br>
+            - The ones you need to know are Bubble sort, Merge sort and Insertion sort.
+        </p>
+        <h3>Bubble Sort</h3>
+        <h4>Definition:</h4>
+        <p>
+            - Bubble sort is a simple sorting algorithm that repeatedly steps through the list 
+            (starting from the first element), compares adjacent elements and swaps them if 
+            they are in the wrong order.<br>
+            - Once it has passed through the whole list once, the tallest element will be at the end 
+            (because it will have been repeatedly bought forward).<br>
+            - It continues to do this until no swaps are needed, which indicates the list is sorted.<br>
+            - Its time complexity is O(n^2), which means it doubles in time with each element.
+        </p>
+        <h4>Example:</h4>
+        <p>
+            Suppose you have the list <code>[5, 3, 8, 4, 2]</code>.<br>
+        </p>
+        <b>First Pass:</b>
+        <p>1. Compare <code>5</code> and <code>3</code>. Swap because <code>5 &gt; 3</code>. List: <code>[3, 5, 8, 4, 2]</code><br>
+        2. Compare <code>5</code> and <code>8</code>. No swap. List: <code>[3, 5, 8, 4, 2]</code><br>
+        3. Compare <code>8</code> and <code>4</code>. Swap because <code>8 &gt; 4</code>. List: <code>[3, 5, 4, 8, 2]</code><br>
+        4. Compare <code>8</code> and <code>2</code>. Swap because <code>8 &gt; 2</code>. List: <code>[3, 5, 4, 2, 8]</code></p>
+    
+        <b>Second Pass:</b>
+        <p>1. Compare <code>3</code> and <code>5</code>. No swap. List: <code>[3, 5, 4, 2, 8]</code><br>
+        2. Compare <code>5</code> and <code>4</code>. Swap because <code>5 &gt; 4</code>. List: <code>[3, 4, 5, 2, 8]</code><br>
+        3. Compare <code>5</code> and <code>2</code>. Swap because <code>5 &gt; 2</code>. List: <code>[3, 4, 2, 5, 8]</code></p>
+    
+        <b>Third Pass:</b>
+        <p>1. Compare <code>3</code> and <code>4</code>. No swap. List: <code>[3, 4, 2, 5, 8]</code><br>
+        2. Compare <code>4</code> and <code>2</code>. Swap because <code>4 &gt; 2</code>. List: <code>[3, 2, 4, 5, 8]</code></p>
+    
+        <b>Fourth Pass:</b>
+        <p>1. Compare <code>3</code> and <code>2</code>. Swap because <code>3 &gt; 2</code>. List: <code>[2, 3, 4, 5, 8]</code></p>
+    
+        <b>Final Sorted List:</b>
+        <p><code>[2, 3, 4, 5, 8]</code></p>
+        <br>
+        <p>Here's a visualisation with sound (using <a href="https://github.com/Gaming32/ArrayV">ArrayV</a>):</p>
+        <video alt="bubble sort" class="centreimage" controls src="/videos/cs/bubble.webm"></video> <!--Eh centreimage makes a bit of sense-->
+        <h3>Merge Sort</h3>
+        <h4>Definition:</h4>
+        <p>
+            - Merge sort is a divide-and-conquer algorithm that splits the list into two halves, recursively sorts each half, and then merges the sorted halves back together.<br>
+            - It is known for its efficiency and stability. Even in the worst case, merge sort operates with a time complexity of O(n log n).<br>
+            - The merging process ensures that the resultant list is sorted.
+        </p>
+        <h4>Example:</h4>
+        <p>
+            Suppose you have the list <code>[5, 3, 8, 4, 2]</code>.<br>
+        </p>
+        <b>First Split:</b>
+        <p>Split into two halves: <code>[5, 3]</code> and <code>[8, 4, 2]</code></p>
+        
+        <b>Second Split:</b>
+        <p>Split <code>[5, 3]</code> into <code>[5]</code> and <code>[3]</code>. Split <code>[8, 4, 2]</code> into <code>[8]</code> and <code>[4, 2]</code>.<br>
+        Split <code>[4, 2]</code> into <code>[4]</code> and <code>[2]</code>.</p>
+        
+        <b>Merge Step 1:</b>
+        <p>Merge <code>[5]</code> and <code>[3]</code> into <code>[3, 5]</code>.<br>
+        Merge <code>[4]</code> and <code>[2]</code> into <code>[2, 4]</code>.</p>
+        
+        <b>Merge Step 2:</b>
+        <p>Merge <code>[8]</code> and <code>[2, 4]</code> into <code>[2, 4, 8]</code>.</p>
+        
+        <b>Final Merge:</b>
+        <p>Merge <code>[3, 5]</code> and <code>[2, 4, 8]</code> into <code>[2, 3, 4, 5, 8]</code>.</p>
+        
+        <b>Final Sorted List:</b>
+        <p><code>[2, 3, 4, 5, 8]</code></p>
+        <br>
+        <video alt="merge sort visualisation" class="centreimage" controls src="/videos/cs/merge.webm"></video>
+        
+        <h3>Insertion Sort</h3>
+        <h4>Definition:</h4>
+        <p>
+            - Insertion sort is a simple sorting algorithm that builds the final sorted list one item at a time.<br>
+            - It is much like sorting playing cards in your hands. The list is split into a sorted part and an unsorted part.<br>
+            - Elements from the unsorted part are picked one by one and placed at the correct position in the sorted part.
+        </p>
+        <h4>Example:</h4>
+        <p>
+            Suppose you have the list <code>[5, 3, 8, 4, 2]</code>.<br>
+        </p>
+        <b>Initial List:</b>
+        <p><code>[5, 3, 8, 4, 2]</code></p>
+        
+        <b>Step 1:</b>
+        <p>The first element <code>5</code> is already sorted. Move to the next element <code>3</code>.<br>
+        Insert <code>3</code> before <code>5</code>. List: <code>[3, 5, 8, 4, 2]</code></p>
+        
+        <b>Step 2:</b>
+        <p>Next element is <code>8</code>. It is already greater than <code>5</code>, so no changes. List: <code>[3, 5, 8, 4, 2]</code></p>
+        
+        <b>Step 3:</b>
+        <p>Next element is <code>4</code>. Insert it before <code>5</code> and after <code>3</code>. List: <code>[3, 4, 5, 8, 2]</code></p>
+        
+        <b>Step 4:</b>
+        <p>Next element is <code>2</code>. Insert it at the beginning. List: <code>[2, 3, 4, 5, 8]</code></p>
+        
+        <b>Final Sorted List:</b>
+        <p><code>[2, 3, 4, 5, 8]</code></p>
+        <br>
+        <video alt="insertion sort visualisation" class="centreimage" controls src="/videos/cs/insertion.webm"></video>
+        <h3>Summary</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sorting Algorithm</th>
+                    <th>Pros</th>
+                    <th>Cons</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bubble Sort</td>
+                    <td>
+                        <ul>
+                            <li>Simple to understand and implement</li>
+                            <li>Doesn't require extra memory (in-place)</li>
+                            <li>Stable sort (maintains order of equal elements)</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Very inefficient for large datasets (O(n^2) time complexity)</li>
+                            <li>Rarely used in practical applications due to poor performance</li>
+                            <li>Not suitable for large datasets</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Insertion Sort</td>
+                    <td>
+                        <ul>
+                            <li>Simple and intuitive</li>
+                            <li>Efficient for small or nearly sorted datasets (O(n) time complexity for nearly sorted)</li>
+                            <li>In-place sorting (requires constant space)</li>
+                            <li>Stable sort</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Still inefficient for large datasets (O(n^2) time complexity in worst-case)</li>
+                            <li>Less efficient than more advanced algorithms like Merge Sort for large unsorted lists</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Merge Sort</td>
+                    <td>
+                        <ul>
+                            <li>Efficient for large datasets (O(n log n) time complexity)</li>
+                            <li>Consistent performance regardless of input (no worst-case O(n^2) scenario)</li>
+                            <li>Stable sort</li>
+                            <li>Can handle large datasets more effectively</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Requires additional memory space (O(n) space complexity)</li>
+                            <li>More complex to implement than Bubble Sort or Insertion Sort</li>
+                            <li>May not be the most efficient for small datasets due to overhead</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer id="footer"></footer>
 </body>
