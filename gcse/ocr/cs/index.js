@@ -32,6 +32,8 @@ function Main(){
             <div>
                 <h3>Paper 2</h3>
                 <a href="2/1_1.html">2.1 Part 1</a>
+                <br>
+                <a href="2/1_2.html">2.1 Part 2</a>
             </div>
         </div>
     </div>
