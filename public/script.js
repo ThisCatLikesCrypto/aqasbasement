@@ -1,5 +1,3 @@
-//Built with dreamland.js, version 0.0.20
-
 var messages = [
     "Website indev as hell",
     "All hail AQA",
