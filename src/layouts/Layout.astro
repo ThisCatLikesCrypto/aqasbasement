@@ -1,0 +1,46 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{title} - AQA's Basement</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/style.css" rel="stylesheet">
+		<script is:inline src="/script.js"></script>
+    </head>
+    <body>
+        <header id="header">
+			<div id="headercontent">
+				<div>
+					<h1 class="rainbow"><a href="/index.html">AQA's Basement</a></h1>
+					<p id="headmsg">Messages Loading... <noscript>(Well, they won't. Unless you enable JavaScript.)</noscript></p>
+				</div>
+				<div>
+					<a href="https://discord.gg/XTvhaHYRBa"><img alt="Discord" src="/images/discord.png"></a>
+				</div>
+			</div>
+		</header>
+        <hr>
+        <main id="main">
+			<noscript><h3 style="text-align: center;">While this website doesn't <i>require</i> JavaScript, it is better to have it enabled.</h3></noscript>
+			<slot />
+		</main>
+        <footer id="footer">
+			<p>
+				Site by <a href="https://wilburwilliams.uk">Wilbur Williams</a>. 
+				This is not endorsed by AQA or any exam boards. 
+				<a href="https://github.com/ThisCatLikesCrypto/aqasbasement">Source code</a><br>
+				<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+					<img src="/images/CC-BY-SA-NC.png" title="CC BY-NC-SA 4.0" alt="CC BY-NC-SA 4.0">
+				</a>
+			</p>
+		</footer>
+    </body>
+</html>

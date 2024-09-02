@@ -1,0 +1,377 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+---
+<Layout title="1.3 - Computer networks, connections and protocols (Part 2)">
+    <h1>1.3 - Computer networks, connections and protocols (Part 2)</h1>
+    <h2>Wired vs Wireless</h2>
+    <!--Supermaven generated most of this in like 2 seconds how the hell did it do that-->
+    <p>
+        - Wired connections are physical cables that connect two devices together.<br>
+        - Wired connections are generally more reliable and faster than wireless connections, but wireless
+        connections are more secure and can be used over longer distances.<br>
+        - The most common type of wired connection is the twisted pair cable, explained in 3_1, and Ethernet is
+        the most common use of twisted pair cables for LANs, as it is standardised and well-supported.<br>
+        - Ethernet can send and receive data simultaneously, through each pair of wires, at speeds of up to
+        (most commonly) 10 Gbps (gigabits per second).<br>
+        - Wireless connections are a type of network connection that uses radio waves to transmit data
+        between devices.<br>
+        - Wireless connections use radio waves to transmit data, and
+        are more flexible and can be used in more situations.<br>
+        - Wireless connections can be used in places where wired connections are not possible, such as
+        in the open air, or in areas with poor or no coverage.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Wireless</th>
+                <th>Wired</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mobility</td>
+                <td>High mobility, can move freely</td>
+                <td>Limited by cable length</td>
+            </tr>
+            <tr>
+                <td>Setup Complexity</td>
+                <td>Usually simpler, no cables required</td>
+                <td>Can be complex with multiple cables</td>
+            </tr>
+            <tr>
+                <td>Interference</td>
+                <td>Prone to interference from other wireless devices</td>
+                <td>Less prone to interference</td>
+            </tr>
+            <tr>
+                <td>Data Transfer Speed</td>
+                <td>Can be slower due to signal loss or interference</td>
+                <td>Generally faster and more stable</td>
+            </tr>
+            <tr>
+                <td>Power Consumption</td>
+                <td>Higher, especially for portable devices</td>
+                <td>Lower, as it typically relies on device power</td>
+            </tr>
+            <tr>
+                <td>Reliability</td>
+                <td>Can be affected by distance and obstacles</td>
+                <td>More reliable due to direct connection</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h3>Types of Wireless Connections</h3>
+    <p>
+        - For GCSE, you need to know about WiFi and Bluetooth.<br>
+        - WiFi, Wireless Fidelity, or 802.11, is a very common standard for wireless connections, and is most
+        common to connect to devices such as laptops, smartphones, tablets, and TVs.<br>
+        - Clients using WiFi connect to a Wireless Access Point (WAP), which can be its own thing but is
+        most commonly part of a router.<br>
+        - Bluetooth is another standard for wireless connections, and is used for connecting devices together, such
+        as a laptop and a mouse.<br>
+        - It is much less commonly used for internet connections than WiFi.<br>
+        - Bluetooth is only typically used for a connection between just two devices.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Wi-Fi</th>
+                <th>Bluetooth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Range</td>
+                <td>Up to 100 meters</td>
+                <td>Typically up to 10 meters</td>
+            </tr>
+            <tr>
+                <td>Data Transfer Speed</td>
+                <td>Up to 1 Gbps (Wi-Fi 6)</td>
+                <td>Up to 3 Mbps (Bluetooth 5.0)</td>
+            </tr>
+            <tr>
+                <td>Power Consumption</td>
+                <td>Higher</td>
+                <td>Lower</td>
+            </tr>
+            <tr>
+                <td>Use Cases</td>
+                <td>Internet connectivity, file transfer, streaming</td>
+                <td>Peripheral connections (headphones, keyboards), file transfer</td>
+            </tr>
+            <tr>
+                <td>Interference</td>
+                <td>Can be affected by other Wi-Fi networks</td>
+                <td>Less susceptible to interference, but can be affected by physical obstacles</td>
+            </tr>
+            <tr>
+                <td>Security</td>
+                <td>Higher security with WPA2/WPA3</td>
+                <td>Lower security, but still secure with pairing</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h2>Encryption</h2>
+    <p>
+        - Encryption is the process of converting data into a code that can only be read by someone with the
+        correct key.<br>
+        - Encryption is used to protect data from being read by unauthorised parties.<br>
+        - Encryption is important on both wired and wireless networks, but it is needed more on wireless networks
+        due to man-in-the-middle attacks where someone can pretend to be the router and intercept data.<br>
+        - Encryption is used to protect data in transit, and is also used to protect data at rest.
+    </p>
+    <h3>How is data encrypted?</h3>
+    <p>
+        - Encryption is done using a key, which is a piece of data that is used to encrypt the data.<br>
+        - The key is used to encrypt the data, and the encrypted data is sent to the recipient.<br>
+        - The key is kept secret, and only the recipient has the key to decrypt the data.<br>
+        - Encryption is done using a specific algorithm, which is a set of rules that define how the data is encrypted.
+    </p>
+    <h3>Types of Encryption</h3>
+    <p>
+        - Symmetric encryption is where the same key is used to encrypt and decrypt the data.<br>
+        - Asymmetric encryption is a different key is used to encrypt than to decrypt the data. This is also known as
+        public key cryptography, and is what your computer is using to visit this website (assuming HTTPS, the 'S'
+        stands for 'Secure').<br>
+        - Hashing is a type of encryption where the data is converted into a fixed-length string of characters, which
+        is called a hash.<br>
+        - Hashing is used to verify the integrity of the data, and is also used to create digital signatures.
+    </p>
+    <h3>Encryption on wireless networks</h3>
+    <p>
+        - Encryption on wireless networks is done using WPA2/WPA3, however older standards like the original
+        WAP still exist.<br>
+        - When your computer connects to a wireless network, it will ask you for a password. This password is used,
+        along with the network's SSID ('Service Set Identifier', or the network name), to encrypt the data by
+        turning it into 'ciphertext' and back out again.<br>
+        - The master key is sent to any device able to provide the correct password.<br>
+        - The lack of encryption is the reason unsecured networks (ones without a password) are dangerous to use
+        without another encryption standard. For websites this is TLS (Transport Layer Security) over HTTPS (although
+        many websites that require you to enter passwords force you to use HTTPS to stay compliant with data protection
+        laws).<br>
+        - Encryption on wireless networks is used to protect the data from being intercepted by someone who is
+        not the owner of the network, and is also used to protect the data from being read by someone who is not
+        the owner of the network.
+    </p>
+    <h3>Encryption on wired networks</h3>
+    <p>
+        - Encryption on wired networks is done using WEP, which works in a similar way to WPA2/WPA3.<br>
+        - It is a weaker standard than WPA2/WPA3, and so WEP should not be used for wireless networks which are
+        easier to intercept.
+    </p>
+    <br>
+    <h2>IP addresses and MAC addresses</h2>
+    <p>
+        - IP and MAC addresses are used to identify devices on a network, and are used to route data between devices
+        on a network.
+    </p>
+    <h3>IP addresses</h3>
+    <p>
+        - An IP address is a unique identifier for a device on a network.<br>
+        - It is used to route data between devices on a network.<br>
+        - It stands for 'Internet Protocol Address', and there are both internal and external IP addresses.<br>
+        - An external IP address is the IP address that is visible to the internet, and is used to connect to
+        websites and other services.<br>
+        - An internal IP address is the IP address that is used to connect to devices on the same network, and is
+        used to connect to services on the same network.
+    </p>
+    <h4>IPv4 vs IPv6</h4>
+    <p>
+        - IPv4 is the older commonly used IP address version.<br>
+        - In IPv4, addresses are represented as a series of numbers separated by full stops, for example
+        <a href="http://81.0.246.142">81.0.246.142</a>. They are 1 byte (8 bits) per block, so 32 bits overall.<br>
+        - IPv4 requires internal IP addresses due to there not being enough addresses for each computer to have its
+        own external IP address. This works through NAT (Network Address Translation), which is a process where
+        the router translates the internal IP address to an external IP address, and the external IP address is
+        visible to the internet.<br>
+        - IPv6 is the newer commonly used IP address version.<br>
+        - In IPv6, addresses are represented as a series of numbers separated by colons, for example
+        <a href="http://[2a02:c204:2208:8374::1]">2a02:c204:2208:8374::1</a>.<br>
+        - IPv6 is needed due to there only being 4.3 billion IPv4 addresses available, which we ran out of
+        in November 2019 (at least for RIPE NCC, who are the organisation that manages IP addresses for Europe, the
+        Middle East and Central Asia. They were the last regional registry to run out.)<br>
+        and so the number of IPv6 addresses is much higher (2^128 addresses, or, uh,
+        340,282,366,920,938,463,463,374,607,431,768,211,456.)<br>
+        - If you get asked for an IPv6 in an exam, you may write '::1' which is simply the loopback address, which is
+        the address of the computer itself, or an alias for 'localhost'.<br>
+        - IPv6 addresses are varying length because ':0000:' can be compressed to just :: as many times over as needed,
+        but only once per address (for example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334 is the same as
+        2001:0db8:85a3::8a2e:0370:7334, but if you had 2001:0db8:85a3:0000:0000:8a2e:0000:7333 you couldn't
+        compress it to 2001:0db8:85a3::8a2e::7333, just 2001:0db8:85a3::8a2e:0:7334). Consecutive 0s can be compressed
+        to just one 0.<br><br>
+        <b>
+            If you are struggling to understand this, that's totally fair and don't stress about it too much, just
+            remember
+            ::1 is valid in case it comes up and remember that this is only a small part of the overall paper 1. Feel
+            free to skip this section.
+        </b><br><br>
+
+    </p>
+    <h3>MAC addresses</h3>
+    <p>
+        - A MAC address ('Media Access Control Address') is a unique identifier for a device on a LAN.<br>
+        - A MAC address is static, and one is usually assigned to a NIC at the factory and doesn't change
+        no matter what network it's on.<br>
+        - A MAC address is 12 hex digits (48 bits), grouped into pairs for readability. The first
+        three pairs are the Organisation Unique Identifier (OUI), which is a unique identifier for the manufacturer
+        of the device. The last three pairs are the Device Identifier, which is a unique identifier for the
+        device itself.<br>
+        - There are 281 trillion MAC addresses.<br>
+        - An example of one is 00:0C:29:D5:B1:C8.
+    </p>
+    <br>
+    <h2>Standards</h2>
+    <p>
+        - I've talked quite a bit about standards already, so what actually are they?<br>
+        - In computing, a standard is a set of guidelines that define how something should be done, and how it should
+        be done.<br>
+        - Standards allows hardware/software to interact across different manufacturers/producers.<br>
+        - A standard is usually defined by a body, such as a committee or a group of people.<br>
+        - They allow different hardware and software to be interchangeable, interoperable, and compatibility and allow
+        for greater consistency and reliability.<br>
+        - There are many standards bodies in computing.<br>
+        - For example, IEC 60417-5009 is the name of the standard for the standby symbol, HTTP/2 (made by the IETF) is
+        one
+        of the HTTP versions you're most likely using to view this webpage (more on HTTP later), and the USB standards
+        (by the USB-IF) define how USB devices should work.<br>
+        - (you don't need to know this for GCSE, but the IEC stands for 'International Electrotechnical Commission', the
+        IETF
+        stands for 'Internet Engineering Task Force', and the USB-IF stands for 'USB Implementers Forum').
+    </p>
+    <br>
+    <h2>Protocols</h2>
+    <p>
+        - A protocol is a (standard) set of rules that define communication between two or more devices.<br>
+        - The ones you need to know about are:
+        <ul>
+            <li>TCP/IP (Transmission Control Protocol/Internet Protocol)</li>
+            <li>HTTP (Hyper Text Transfer Protocol)</li>
+            <li>HTTPS (Hyper Text Transfer Protocol Secure)</li>
+            <li>FTP (File Transfer Protocol)</li>
+            <li>POP (Post Office Protocol)</li>
+            <li>IMAP (Internet Message Access Protocol)</li>
+            <li>SMTP (Simple Mail Transfer Protocol)</li>
+        </ul>
+    </p>
+    <h3>TCP/IP</h3>
+    <p>
+        - TCP/IP is the set of two protocols that allow computers to communicate with each other over the internet.<br>
+        - TCP (Transmission Control Protocol) is the protocol that allows data to be sent without errors, or if there
+        are errors,
+        they are detected and corrected.<br>
+        - IP (Internet Protocol) is the protocol that tells systems at the internet layer how to route data between
+        computers. This is
+        why IP addresses exist, or the internet layer would have no idea where to send traffic.
+    </p>
+    <h3>HTTP(S)</h3>
+    <p>
+        - HTTP allows clients and servers to communicate with each other with standard error codes and headers to view
+        websites and
+        access web resources.<br>
+        - HTTP allows 'methods' to allow data to be transferred. For example, GET is used when requesting a resource,
+        and POST is used
+        when sending data to a server.<br>
+        - <i>
+            (sidenote: if you press F12, go to the 'Network' tab, and reload, you can see the GET requests your computer
+            is making
+            for the resources on this page, and the (hopefully) 200 OK responses it gets back.)
+        </i><br>
+        - HTTPS is the same as HTTP, but it is encrypted so that no one except the intended recipient can read it.
+    </p>
+    <h3>FTP</h3>
+    <p>
+        - FTP is a standard optimised for file transfer between computers.<br>
+        - Uploading/downloading files is often done through FTP due to its greater efficiency, and the ability to
+        pause/resume
+        downloads helps reliability, so you don't have to restart everything if you lose connection (like you might when
+        downloading
+        a large file over HTTP).<br>
+        - Programs like FileZilla can be used to transfer files over FTP.
+    </p>
+    <!--I wanted to put a note about rsync here but you don't need to know that and this page is already long and rambly enough as it is-->
+    <h3>POP, IMAP and SMTP</h3>
+    <p>
+        - POP (Post Office Protocol) is a standard for email.<br>
+        - IMAP (Internet Message Access Protocol) is a standard for email.<br>
+        - SMTP (Simple Mail Transfer Protocol) is a standard for email.<br>
+        - POP, IMAP and SMTP are all used to send and receive email.
+    </p>
+    <p><b>(ok, to be more specific...)</b></p>
+    <p>
+        - You use SMTP to send emails to your SMTP server, which then uses SMTP to communicate with the recipient's
+        POP/IMAP server
+        through the internet. The recipient can then access the emails on their POP/IMAP server through their email
+        client.<br>
+        - SMTP is for communication between email servers and email clients, and between different email servers so you
+        can send
+        emails to people on other providers. You send emails over SMTP.<br>
+        - IMAP is a protocol for downloading email to your email client, and so is POP. The difference is that POP
+        deletes email after
+        it has been downloaded, whereas IMAP does not.<br>
+    </p>
+    <table>
+        <tr>
+            <th>Protocol</th>
+            <th>Advantages</th>
+            <th>Disadvantages</th>
+        </tr>
+        <tr>
+            <td>POP (Post Office Protocol)</td>
+            <td>
+                <ul>
+                    <li>Emails are downloaded to local storage</li>
+                    <li>Works well with limited server storage</li>
+                    <li>Can access emails offline</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Emails are not synced across devices</li>
+                    <li>Limited to one device for viewing emails</li>
+                    <li>Risk of losing emails if local data is lost</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>IMAP (Internet Message Access Protocol)</td>
+            <td>
+                <ul>
+                    <li>Emails are synced across multiple devices</li>
+                    <li>Messages are stored on the server</li>
+                    <li>Organize and manage folders server-side</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Requires constant internet connection for access</li>
+                    <li>Consumes more server storage space</li>
+                    <li>Potentially slower performance with large mailboxes</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <h2>Layers (networks)</h2>
+    <p>
+        - A layer aims to represent different sub parts of a task to make it easier
+        and more manageable.<br>
+        - Layers are used to separate concerns, and make it easier to
+        maintain/work on just one layer at a time.<br>
+        - They allow for more flexibility and easier development, and allow people to
+        specialise on working with the layer they have the most experience with.<br>
+        - They make it easier to build on top of lower layers, and reuse
+        existing infrastructure for different purposes.<br>
+        - The TCP/IP protocol uses a 4-layer model (stack):
+        <ul>
+            <li>Application (the data you interact with)</li>
+            <li>Transport (segmenting layer, TCP)</li>
+            <li>Internet (packets layer, IP)</li>
+            <li>Network (physical layer)</li>
+        </ul>
+    </p>
+</Layout>

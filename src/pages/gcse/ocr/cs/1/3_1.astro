@@ -1,0 +1,493 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+---
+<Layout title="1.3 - Computer networks, connections and protocols (Part 1)">
+    <h1>1.3 - Computer networks, connections and protocols (Part 1)</h1>
+    <i>Sidenote: this contains a lot of extra nerd stuff, sorry. I couldn't help myself.</i>
+    <h2>Network Pros/Cons</h2>
+    <p>
+        - Networks are crucial to our modern use of computers, as the
+        largest network we have is the internet.<br>
+        - They come with quite a lot of pros, for example users can share
+        resources (like printers and storage servers), access their
+        files from anywhere on the network, stay in touch through calls and
+        emails, store files in central databases,
+        and back up their computers, but they also have cons.<br>
+        - There are security risks with networks, since things like viruses
+        are most commonly distributed through them, and malware can take
+        over networks if not properly secured.<br>
+        - Network traffic can also be intercepted, meaning a layer of
+        encryption (SSL) is required for sensitive information.<br>
+        - Servers and network switches are single point of failure,
+        so your entire network can become useless if just one thing fails,
+        and lots of users and data can slow everything down and
+        make the experience of using the network worse.
+    </p>
+    <br>
+    <h2>Types of Networks</h2>
+    <p>
+        - Networks are split into two categories, LANs (Local Area Networks)
+        and WANs (Wide Area Networks).
+    </p>
+    <b>LANs</b>
+    <p>
+        - Local Area Networks are networks which are defined has having
+        a small geographical area of under 1 mile, and all of the hardware
+        is owned by the person/group of people using it.<br>
+        - LANs use 'twister pair' (UTP, Ethernet) cables, fibre optical cables,
+        or Wi-Fi.
+    </p>
+    <b>WANs</b>
+    <p>
+        - Wide Area Networks have a large geographical area of over 1 mile.<br>
+        - They are a collection of LANs joined together.<br>
+        - The largest WAN is the internet.<br>
+        - To connect to a WAN, you have to use a router.<br>
+        - <b>Not</b> all the hardware used is owned by the person using it.
+        For example, your traffic will have to go through your ISP
+        (Internet Service Provider) at some point.<br>
+        - WANs use fibre optic cables, satellites and telephone lines.
+    </p>
+    <br>
+    <h2>Network Performance</h2>
+    <p>
+        Network performance is affected by the bandwidth available,
+        the number of users on the network, the latency of connection
+        between computers, the error rate of signals, and the medium
+        (think: type of cable, Wi-Fi) of transmission.
+    </p>
+    <b>Bandwidth</b>
+    <p>
+        Bandwidth is the maximum amount of data that cant be sent
+        and received at one time. It is measured in bits per second
+        (bit rate) and a smaller bandwidth means less data can be
+        sent (a slower network), and a higher bandwidth means that
+        more data can be sent, resulting in a faster experience.
+    </p>
+    <b>Number of Users</b>
+    <p>
+        A higher number of users (users on a network at the same time)
+        can lead to slowdown if the servers managing the network
+        (like a router) cannot cope with the load or if there is not
+        enough bandwidth for everyone.
+    </p>
+    <b>Latency</b>
+    <p>
+        Latency is the delay between data being sent and received,
+        usually measured in milliseconds (ms). If there is high
+        latency, more data will be on the network at once so
+        more data will be on the network, causing collisions.
+        This can lead to even more data being sent as the error
+        rate (how many packets of data do not reach their
+        destination) will increase. Error rate may also increase
+        on less reliable connections.<br>
+        The experience is also worsened since the data takes more
+        time to arrive.
+    </p>
+    <b>Transmission Media</b>
+    <p>
+        Transmission media is the type of cable used for wired connections,
+        which are higher bandwidth and generally more stable than wireless.
+        The main options for wires are the unshielded twisted-pair (copper or
+        some other metal) cable (usually Ethernet) and fibre-optic cables.
+        Fibre-optic cables have a higher bandwidth than copper cables,
+        and faster transfer rates (2/3 the speed of light).
+    </p>
+    <br>
+    <h2>Network Models</h2>
+    <p>
+        - A network model is the logical structure of the network.<br>
+        - It defines how the network digitally, will operate on top of the physical network.
+    </p>
+    <h3>Client-Server Models</h3>
+    <p>
+        - A client-server model is where there is a distinct client and a distinct
+        server on a network, and these connect via a network switch.<br>
+        - The server is the device which often has a single purpose, like
+        managing internet access, serving files, controlling security,
+        managing a smart home, or providing a remote hub for updates.<br>
+        - A server is sometimes more powerful than the clients, as
+        they often serve many many different client machines (think
+        about how many requests a web server has to deal with, for
+        example.)<br>
+        - Servers may require specific hardware (like many CPU cores
+        to run many virtual machines), and specific software (like
+        the nginx ('engine x') web server software.)<br>
+        - Most organisations will use a client-server model, as files
+        and permissions are easier to manage, and the org can more
+        easily upgrade things all at once.<br>
+        - Servers can often be expensive however, require specialist
+        knowledge to operate, and act as single points of failure.<br>
+        - It is important to note that while a server will often have
+        specialised hardware, it describes a <i>role</i>, not
+        inherently a whole 'nother type of computer.
+    </p>
+    <h3>Peer to Peer (P2P) Model</h3>
+    <p>
+        - In a peer-to-peer model, every computer on a network is
+        equivalent to any other.<br>
+        - Each peer is responsible for their own management, with
+        no central server to manage services collectively.<br>
+        - Most homes have a P2P model, as
+        <i title="this definitely does not include me">most</i>
+        people do not need or want to run services centrally, or
+        do not have the prerequisite knowledge or funds.<br>
+        - P2P models are very easy to setup, maintain, are cheap,
+        and no specialist knowledge is required.<br>
+        - However, P2P networks can compromise security and reliability.
+    </p>
+    <br>
+    <h2>LAN Hardware</h2>
+    <p>
+        - In order to run a LAN, the network has specific
+        equipment to run.<br>
+        - The hardware used are routers, network switches,
+        wireless access points (WAPs), network interface cards (NICs)
+        and transmission media (like Ethernet cables).
+    </p>
+    <h3>Routers</h3>
+    <p>
+        - A router routes (hence the name) packets (chunks)
+        of data between different networks.<br>
+        - Most routers will be used for connecting a LAN to the
+        internet or some other WAN.<br>
+        - Routers manage data traffic and can even prioritise
+        "more important" traffic to keep connections stable.<br>
+        - The router assigns internal IP addresses to devices on a
+        network, and IPv4 addresses will start with specific numbers
+        reserved for internal use (like 192.168.x.x or 10.x.x.x).<br>
+        <img class="centreimage" alt="router" src="/images/cs/router.png">
+    </p>
+    <h3>Network Switches</h3>
+    <p>
+        - Network switches allow multiple devices to communicate on one
+        LAN.<br>
+        - The network switches ports are where devices plug in to the
+        LAN.<br>
+        - A switch is an active (powered) device, and it inspects
+        network data and ensures it gets directed to the correct
+        destination device.<br>
+        - A Switch can contain software to allow for system administrators to
+        configure the switch in a particular way or make sure that
+        everything is running smoothly, among other things. This is
+        typically only found in enterprise environments.
+        <img class="centreimage" alt="network switch" src="/images/cs/switch.webp">
+    </p>
+    <h3>Wireless Access Points</h3>
+    <p>
+        - Wireless access points (WAPs) allow devices to connected to
+        a LAN wirelessly, typically over WiFI (technically known as
+        IEEE 802.11, although I strongly doubt you need to know that
+        for exams).<br>
+        - The access point connects to a switch or directly to a router
+        via an Ethernet cable, although some can also connect to
+        <i>other</i> wireless routers.<br>
+        - The range of the access point is limited, so multiple APs will
+        be needed if serving a larger area than what one AP can cover.
+        <img class="centreimage" alt="wireless access point" src="/images/cs/WAP.webp">
+    </p>
+    <h3>Network Interface Cards</h3>
+    <p>
+        - A NIC (just pronounce it 'nick' like everyone else does) is
+        used for a computer to connect to networks.<br>
+        - A NIC may support both wired and wireless connectivity, and
+        allows a computer to send a receive data.<br>
+        - Most motherboards have NICs built in, so modern systems
+        do not need a separate card installed for networking in most
+        cases.
+        <img class="centreimage" alt="network interface card" src="/images/cs/NIC.jpg">
+    </p>
+    <h3>Transmission Media</h3>
+    <p>
+        - Transmission media is the physical wired method of connection
+        to a network.<br>
+        - There are three types of transmission media:
+        Unshielded Twisted Pair (UTP), Fibre Optic and Coaxial (Copper).
+    </p>
+    <h4>Unshielded Twisted Pair</h4>
+    <p>
+        - UTP cables are made up of separately insulated <i>pairs</i> of
+        copper wires <i>twisted</i> around each other.<br>
+        - They are low bandwidth but are the most affordable type of cable
+        and are commonly found in LANs (the 'Ethernet' cables in the
+        network switch picture are a type of UTP cable).
+    </p>
+    <h4>Fibre Optic Cables</h4>
+    <p>
+        - Fibre optic cables are made of glass and are high-bandwidth and
+        low-latency (data can travel at up to 2/3 the speed of light!).<br>
+        - They are the most expensive type of cable, and are commonly
+        used for high-volume transmission and long-distance connections.<br>
+        - Fibre optic cables are unaffected by electrical noise (interference)
+        as they contain no metal to induce magnetic currents in (how interference
+        is caused).
+        - (sidenote: <a href="https://www.submarinecablemap.com/">here</a>'s
+        a map of all the undersea fibre-optic cables that are in use today.)
+    </p>
+    <h4>Coaxial (Coax) Cables</h4>
+    <p>
+        - A coax cable has a medium bandwidth (between UTP and fibre) and
+        are more expensive than UTP, but less than fibre.<br>
+        - Coax is used to connect large-scale networks, like PSTN (Public
+        Switched Telephone Network, at least until it's shut down in 2025)
+        and TVs.
+    </p>
+    <br>
+    <h2>The Internet</h2>
+    <p><i>
+            (ok so this is the sh*t I specialise in so I'll try to not overcomplicate
+            things but that may be difficult...)
+        </i></p>
+    <p>
+        - The Internet is a massive collection of networks
+        <a class="rainbow" href="https://www.submarinecablemap.com/">
+            spanning the whole world</a>.<br>
+        - (this website is accessible via the internet ok i don't think
+        you need to be told how widespread it is)<br>
+        - The Internet is the <i>connectivity provider</i> and is <i>not</i> the
+        same as the World Wide Web. It's really just a giant WAN with extra steps.<br>
+        - You connect to the Internet at home via your router. Your router
+        contains a modem, which is what allows you to connect to your ISP
+        (Internet Service Provider, like Sky or BT)'s network, via
+        telephone line or fibre.<br>
+        - <i>
+            (this is the point in the savemyexams page when i started
+            complaining to myself about the oversimplifications)
+        </i>
+        - Your ISPs network is connected to other networks, which are connected
+        to other networks, and so on until you have the whole Internet.<br>
+        - This all results in loads of routers all connected together, which
+        allows you to access other LANs, which will then contain other computers,
+        including servers (this site runs on a server, one of Cloudflare's).
+    </p>
+    <h3>Domain Name System</h3>
+    <p>
+        - When you type something like 'aqasbasement.uk' into your browser,
+        the computer has to look up the IP (Internet Protocol) address of
+        a server in order to retrieve the content at that location.<br>
+        - The service it uses to do this is called the Domain Name System,
+        or DNS.<br>
+        - The DNS is (simplifying) a directory of domain names and their
+        associated IP addresses, so you can have a nice human-readable domain
+        name and don't have to type in '81.0.246.142' into your browser (or,
+        worse (screw IPv6 readability): <code>[2001:4860:4860::8844]</code> )<br>
+        - An entry into the directory is called a 'record'.<br>
+        - If DNS didn't exist, you'd have to remember the IP address of every
+        website you want to visit (or at least a search engine's one).<br>
+        - Here is what the DNS records for this website (aqasbasement.uk) look like,
+        for GCSEs you don't need to worry about the different types or what 'proxied'
+        means, but 'A' means direct to IP, and 'CNAME' means a domain
+        name that is pointing to another one, which can keep happening until eventually
+        an A record is reached and the IP can be resolved.<br>
+        <img class="centreimage" alt="cloudflare dns settings" src="/images/cs/cfdns.png">
+    </p>
+    <h4>How does DNS work, then?</h4>
+    <p>
+        1. When you type in a URL (Uniform Resource Locator) to your browser, your computer
+        requests the IP address from the DNS server configured in your PC, program or router
+        (for example 1.1.1.1 (Cloudflare), or 9.9.9.9 (Quad9) but most commonly your ISP's
+        servers unless overridden manually).<br>
+        2. As the DNS resolver caches frequently made requests, most URLs will
+        not need to get past this stage. If they do, it moves on to the next step:<br>
+        3. DNS root servers. The DNS resolver queries the DNS root server for the
+        request. The root server's job is to direct the resolver up the chain to the TLD
+        (Top-Level Domain, like .uk or .net) server.<br>
+        4. The TLD server (managed by a company or organisation like
+        <a href="https://nominet.uk">Nominet UK</a> (for .uk, .co.uk, .org.uk and the like)).
+        provides the resolver with the correct IP address for its request.<br>
+        5. The DNS resolver passes its answer onto you, and caches the answer in case it
+        comes up again soon.<br>
+        6. Your computer will now do whatever it needs to with the IP address, such as
+        request a website resource (explained below).
+    </p>
+    <h3>Web Servers + Clients</h3>
+    <h4>Web Servers</h4>
+    <p>
+        - A 'Web Server' describes a computer that's role is to store web pages and other assets
+        needed for a website to function.<br>
+        - They normally have a static IP address, to avoid having to constantly change DNS records.<br>
+        - The most common web server softwares you will find are nginx and Apache. They mostly
+        deal with hosting websites, administering redirects and other client requests.
+    </p>
+    <h4>Client</h4>
+    <p>
+        - A 'client' describes a computer that's role is to send requests to the server.
+        Your computer is acting as a client to the web server behind aqasbasement.uk.<br>
+        - When you (<span id="ipaddresslmao">loading???</span>) make a request to 'aqasbasement.uk',
+        your query first goes through DNS (returning something like 104.21.29.121 (don't try that)).<br>
+        - Your computer then makes a GET request to the server, which returns the resource.<br>
+        - The server also returns a status code, which in most cases should be <code>200</code> (view
+        them all at <a href="https://http.cat">http.cat</a>).
+    </p>
+    <h3>The Cloud</h3>
+    <p>
+        - The 'Cloud' is (essentially) just 'someone else's computer'.<br>
+        - Cloud servers are used to store data, run programs and do all sorts of things
+        over the internet.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Advantages of Using the Cloud</th>
+                <th>Disadvantages of Using the Cloud</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Access your files from anywhere with an internet connection.</td>
+                <td>Requires a reliable internet connection to access files.</td>
+            </tr>
+            <tr>
+                <td>Automatic backups help prevent data loss.</td>
+                <td>Potential security risks if data is not properly protected.</td>
+            </tr>
+            <tr>
+                <td>Scalable storage options—you can easily add more space.</td>
+                <td>Ongoing costs—usually requires a subscription or payment.</td>
+            </tr>
+            <tr>
+                <td>Collaboration is easier as multiple people can work on the same document simultaneously.</td>
+                <td>Privacy concerns—your data is stored on someone else's servers.</td>
+            </tr>
+            <tr>
+                <td>Reduces the need for physical storage devices like USB drives.</td>
+                <td>Data could be inaccessible if the cloud service provider has an outage.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Hosting</h4>
+    <p>
+        - 'Hosting' is where you store content (usually files, websites, etc.) on servers.<br>
+        - These servers need to have very high uptime, and often need lots of bandwidth, so most
+        hosting happens with third parties who have the expertise and infrastructure to achieve this.<br>
+        - It is quite rare to find a website hosted entirely on the infrastructure of the organisation
+        behind it without using any third-party hosting.<br>
+        - Servers must also have protection from attacks like (DDoS or Distributed Denial of Service) attacks
+        which overload a server and cause the application to become unusable for actual users.<br>
+        - The IP address of the server must remain the same, or the server must use a DDNS (Dynamic DNS) service
+        to make sure it is accessible at any time, and you don't have to go updating DNS records
+        every time your IP address changes.
+    </p>
+    <br>
+    <h2>Network Topologies</h2>
+    <!--Why do we need this i've never even seen it come up once ever-->
+    <p>
+        - A network topology is the physical structure of the network (like, the placement of cables and stuff).<br>
+        - Different network models (P2P/Client-Server) can be used on a topology.<br>
+        - Many network topologies are in use, but the ones you need to care about are star and mesh.
+    </p>
+    <h3>Star Topology</h3>
+    <p>
+        - A star topology has a central main switch (or switches), which all other devices on the network connect
+        to.<br>
+        - You can think of it as if the central switch is the star, and each device is on the end of each
+        of the star's points.
+    </p>
+    <h3>Mesh Topology</h3>
+    <p>
+        - A mesh topology is where all (well, most usually) computers are connected to all other computers.<br>
+        - Where <i>every</i> computer is connected to <i>every other</i> computer, this is 'full' mesh topology.<br>
+        - Mesh networks are most common with IoT (Internet of Things), for example Amazon's Ring doorbells can all
+        communicate with each other so if your internet goes down, your Ring doorbell might be able to pickup
+        an internet signal from your neighbour's one.<br>
+        - You may have seen 'mesh networks' advertised as a way to get full WiFi coverage, they're called this
+        because each (puck?) you place around the building has the ability to communicate with all the others to
+        intelligently connect you to the one with the best signal.<br>
+        - A partial mesh topology is when not <i>every</i> device is connected together, which requires less cables
+        and less hardware in general, but there are still redundant paths for data to take.
+    </p>
+    <h3>Comparison Table</h3>
+    <table>
+        <tr>
+            <th>Aspect</th>
+            <th>Star Topology</th>
+            <th>Mesh Topology</th>
+        </tr>
+        <tr>
+            <td><b>Definition</b></td>
+            <td>A network topology where each device is connected to a central hub or switch.</td>
+            <td>A network topology where each device is connected to every other device in the network, either directly
+                (fully connected) or partially.</td>
+        </tr>
+        <tr>
+            <td><b>Cost</b></td>
+            <td>Generally lower cost because it requires fewer cables and connections than a full mesh network.</td>
+            <td>Typically higher cost due to the large number of cables and connections required, especially in a fully
+                connected mesh.</td>
+        </tr>
+        <tr>
+            <td><b>Scalability</b></td>
+            <td>Highly scalable. New devices can be added easily without affecting the rest of the network.</td>
+            <td>Less scalable, particularly in a fully connected mesh, as adding new devices increases the complexity
+                and number of connections exponentially.</td>
+        </tr>
+        <tr>
+            <td><b>Reliability</b></td>
+            <td>Less reliable if the central hub fails, as the entire network can go down. However, individual device
+                failures usually do not affect the network.</td>
+            <td>Highly reliable because multiple paths exist between any two devices. The failure of one device or
+                connection does not typically disrupt the entire network.</td>
+        </tr>
+        <tr>
+            <td><b>Complexity</b></td>
+            <td>Low complexity. The network is simple to design, implement, and manage.</td>
+            <td>High complexity. Managing and configuring the network is more challenging due to the multiple
+                connections.</td>
+        </tr>
+        <tr>
+            <td><b>Performance</b></td>
+            <td>Performance is generally good because data passes through only one or two devices (hub and the
+                destination device), minimizing latency.</td>
+            <td>Potential for excellent performance due to multiple paths, but can suffer from increased latency in
+                large, fully connected networks due to the number of hops.</td>
+        </tr>
+        <tr>
+            <td><b>Maintenance</b></td>
+            <td>Easy to maintain as troubleshooting is straightforward. Issues are often localized to a single device or
+                the central hub.</td>
+            <td>Challenging to maintain due to the large number of connections. Identifying and fixing issues can be
+                more difficult.</td>
+        </tr>
+        <tr>
+            <td><b>Security</b></td>
+            <td>Centralized security measures can be implemented effectively, but if the central hub is compromised, the
+                whole network is at risk.</td>
+            <td>More secure as it is harder to compromise the entire network. Attacking one device does not necessarily
+                affect others.</td>
+        </tr>
+        <tr>
+            <td><b>Data Collisions</b></td>
+            <td>Few data collisions as each device communicates with the central hub, reducing the likelihood of
+                collisions.</td>
+            <td>Low likelihood of data collisions because of multiple paths available, though it depends on the specific
+                implementation.</td>
+        </tr>
+        <tr>
+            <td><b>Implementation</b></td>
+            <td>Easy to implement and expand. Ideal for small to medium-sized networks.</td>
+            <td>Complex to implement, particularly in fully connected networks. More suitable for large networks
+                requiring high reliability.</td>
+        </tr>
+        <tr>
+            <td><b>Network Failure Impact</b></td>
+            <td>If the central hub fails, the entire network goes down. However, individual device failures have limited
+                impact.</td>
+            <td>Network failure impact is minimal, as there are multiple paths for data to travel. A single device
+                failure usually has little to no impact.</td>
+        </tr>
+    </table>
+</Layout>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('https://api.ipify.org')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('ipaddresslmao').textContent = data;
+            })
+            .catch(error => {
+                console.error('Error fetching IP address:', error);
+                document.getElementById('ipaddresslmao').textContent =
+                    "couldn't fetch IP and now i'm sad :(";
+            });
+    })
+</script>

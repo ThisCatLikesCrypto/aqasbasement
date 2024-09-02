@@ -1,0 +1,183 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+---
+<Layout title="1.5 - Systems Software">
+    <h1>1.5 - Systems Software</h1>
+    <h2>Operating Systems</h2>
+    <p>
+        - An operating system (OS) is a piece of software that provides an
+        interface (I/O) between the use and the hardware in a computer system.<br>
+        - An OS deliberately hides the inner workings of a computer from the
+        user, in order to make it easier to use. For example, the user doesn't
+        need to know the memory address of a running program, so it won't
+        show that unless explicitly requested.<br>
+        - An OS has 5 main functions: Providing a user interface (UI), managing
+        memory and the CPU, managing peripherals and the device drivers
+        (drivers let the OS interact with hardware), managing users
+        (user accounts), and managing files.
+    </p>
+    <br>
+    <h3>Memory and CPU management</h3>
+    <p>
+        - Memory management is the process where the OS allocates (sections off)
+        RAM between different programs that are open at the same time.<br>
+        - The RAM is allocated based on priority and usage. A program with
+        higher RAM usage will be allocated more RAM
+        (as programs can have significantly different resource requirements),
+        and a program actively in use by the user will get higher RAM
+        allocation priority than a background application, who may have
+        its data demoted to virtual memory.<br>
+        - The OS dynamically manages the memory, so no program is allocated
+        lots more memory than it needs.<br>
+        - Memory management makes multitasking possible.
+    </p>
+    <h4>How multitasking is made possible</h4>
+    <p>
+        - 'Multitasking', in the computational sense, is when the OS is
+        simultaneously managing system resources to make the user
+        feel like they are using multiple programs at the same time.<br>
+        - The OS splits tasks and allocates system resources to achieve
+        this.<br>
+        - Since a CPU can only execute one instruction at a time, but
+        it can execute many instructions at high speed, the system is able
+        to constantly switch between programs in order to maintain
+        responsiveness.
+    </p>
+    <br>
+    <h3>User Interfaces</h3>
+    <p>
+        - A user interface, or UI, is how a user interacts with the
+        operating system.<br>
+        - The most common UIs include a Command Line Interface (CLI),
+        a Graphical User Interface (GUI), or a Mobile UI.
+    </p>
+    <h4>Command Line Interfaces</h4>
+    <p>
+        A CLI uses text-based commands to interact with the user.
+        advanced users are a lot more likely to use a CLI
+        (like me writing this lmao) and examples of CLIs are MS-DOS
+        (officially Microsoft Disk Operating System,
+        but the original DOS was QDOS, or.. uh...
+        'Quick and Dirty Operating System'), and Windows Command
+        Processor (cmd.exe).
+    </p>
+    <h4>Graphical User Interfaces</h4>
+    <p>
+        A GUI uses Windows, Icons, Menus and Pointers (WIMP) to
+        interact with the user. You're probably using one right now,
+        and examples include the Desktop Environments of
+        Windows, MacOS, Ubuntu, and many more.
+    </p>
+    <h4>Mobile User Interfaces</h4>
+    <p>
+        Mobile UIs are basically GUIs but optimised for mobile.
+        They respond to touch input, rather than needing a mouse
+        to use them.
+    </p>
+    <br>
+    <h3>Peripherals</h3>
+    <p>
+        Peripheral management is defined as the process (carried
+        out by the Operating System) which manages the way peripherals
+        (like a mouse or speaker) interacts with software. It allocates
+        resources to them, and manages them (which makes plug-and-play)
+        possible, so your computer automatically detects peripherals
+        and configures them without (much) user input.
+    </p>
+    <br>
+    <h3>Device Drivers</h3>
+    <p>
+        A device driver is a piece of software that is used to control a
+        piece of hardware. Peripherals (and any hardware) require device
+        drivers in order to be used with the OS, but the OS will have
+        generic device drivers built in which are designed to enable
+        basic compatibility with as many devices as possible of that type
+        and enables PnP (plug-and-play). If a device requires specific
+        features not present in the generic driver, a separate driver
+        must be installed, which can usually be downloaded from the
+        manufacturer. Drivers are OS specific, and receive updates for
+        as long as the device is supported.
+    </p>
+    <br>
+    <h3>User Management</h3>
+    <p>
+        - User management is the process that an OS carries out to
+        allow different users to log onto a computer (user accounts).<br>
+        - The OS will let each user have different settings, and permissions
+        (access rights) to access resources.<br>
+        - A user can have administrator rights, which gives them the ability
+        to manage other users and permissions.
+    </p>
+    <br>
+    <h3>File Management</h3>
+    <p>
+        - File management is where the OS creates, organises, manipulates and
+        accesses files and folders on a computer system.<br>
+        - The OS manages the physical location of data on both primary and
+        secondary storage.<br>
+        - File management gives the user the ability to create, name, rename,
+        copy, move, and delete files and folders.<br>
+        - Permissions is also a part of file management, so based on user
+        permissions they may not be able to do (any number) of those tasks
+        with files/folders (see image below).<br>
+        - The OS may provide a search function to find files (tags, folders,
+        file types, file content, etc.)
+    </p>
+    <img style="max-height: 50vh" class="centreimagebutdontstretch" src="/images/cs/fileperms.png">
+    <p style="text-align: center;"><i>Permissions for this file in Windows</i></p>
+    <br>
+    <h2>Utility Software</h2>
+    <p>
+        - Utility software is software designed to help maintain, troubleshoot (or repair),
+        or enhance operation of, a computer system.<br>
+        - Utility software is designed top perform specific tasks, and interacts with
+        hardware, for example an SSD (for a disk cleanup utility or something).<br>
+        - Utility software comes installed with the operating system and is often crucial
+        to its functioning.<br>
+        - There are three types of utility software you need to know about: defragmentation,
+        compression and encryption, but since you also need something for troubleshooting
+        task managers also come up a bit.
+    </p>
+    <br>
+    <h3>Defragmentation</h3>
+    <p>
+        - Defragmentation is part of the maintain category of utility software, and its
+        purpose is to group fragmented files (where files are spread out all over the
+        physical spinning platter of a magnetic drive), back together to speed up access times.<br>
+        - As data is deleted over time, gaps are left on a drive and as new data fills
+        these gaps data gets fragmented.<br>
+        - It's important to note that defragmentation <b>does not</b> help an SSD.<br>
+        - Honestly I'm not sure how well I can explain this so go watch
+        <a href="https://www.youtube.com/watch?v=XSvOfu2PfXk">this video</a> if you're stuck.
+    </p>
+    <br>
+    <h3>Compression</h3>
+    <p>
+        - This is explained in <a href="2_2.html">1.2_2</a>, so I'll keep it brief,
+        but compression (enhance) reduces the amount of secondary storage space required
+        by performing an algorithm on the original data.<br>
+        - Lossy compression removes data from the original data, so the original file cannot be
+        recovered from the compressed version, but lossless compression just represents data
+        more efficiently, so the original files can be recreated.
+    </p>
+    <br>
+    <h3>Encryption</h3>
+    <p>
+        - Encryption (enhance) is where data is scrambled, using an algorithm from plain text
+        into cipher text, so that only someone with the 'key' can access it.<br>
+        - Encryption software enhances security and keeps data safe from attackers.<br>
+        - For example, encryption is used to store passwords.<br>
+        - As an example of what it looks like, by using the AES-256 encryption standard
+        'AQA's Basement' becomes 'Iba1CyzG+i7g+kZxOVpnvw==' when using the key 'cs'.
+    </p>
+    <br>
+    <h3>Task Manager</h3>
+    <p>
+        - A task manager is a software that is built into the OS to allow a user to monitor
+        system resources and start/kill programs 'tasks' for troubleshooting.<br>
+        - A task manager gives the user info such as processes, performance,
+        startup apps, users, system services, resource utilisation, and more.<br>
+        - In Windows, the Task Manager is accessible by searching for <code>taskmgr.exe</code>,
+        or in Linux (or MacOS) you can run <code>top</code> from the terminal (CLI).
+    </p>
+</Layout>

@@ -1,0 +1,221 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+---
+<Layout title="1.4 - Network Security">
+    <h1>1.4 - Network Security</h1>
+    <h2>Forms of attack</h2>
+    <p>
+        - There are many forms of attack on networks, but the most common
+        (and the ones you need to know about) are:
+        <ul>
+            <li>Malware</li>
+            <li>Denial of service attacks</li>
+            <li>Brute force attacks</li>
+            <li>Social engineering attacks</li>
+            <li>SQL injection attacks</li>
+            <li>Data interception attacks</li>
+        </ul>
+    </p>
+    <h3>Malware</h3>
+    <p>
+        - Malware is malicious software that is designed to damage or
+        disrupt a computer system, or to gain unauthorised access to a
+        computer system.<br>
+        - It can be spread through a variety of methods, including
+        email attachments, infected websites, and infected software.<br>
+        - Oftentimes if you are being careless and, for example, running random
+        scripts without precautions, you are more likely to be infected with
+        malware.<br>
+        - Malware tends to delete, corrupt, or modify files and data,
+        and can also be used to gain unauthorised access to a computer
+        system (or make it part of a botnet, which is a network of infected
+        computers often used to carry out DDoS attacks).
+        <table>
+            <thead>
+                <tr>
+                    <th>Malware</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Trojan horse</td>
+                    <td>A Trojan horse (or simply trojan) is a piece of malware that looks like a legitimate program,
+                        but is actually a program that has been designed to do malicious things.</td>
+                </tr>
+                <tr>
+                    <td>Virus</td>
+                    <td>A virus is a piece of malware that can replicate itself within the hosts's computer.</td>
+                </tr>
+                <tr>
+                    <td>Worm</td>
+                    <td>A worm is like a virus, but it can spread to other computers without the user having to do
+                        anything.</td>
+                </tr>
+                <tr>
+                    <td>Botnet</td>
+                    <td>A botnet is a network of infected computers that are used to carry out DDoS or other attacks.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rootkit</td>
+                    <td>A rootkit is a piece of malware that can hide itself from the operating system and can be used
+                        to gain unauthorised access to a computer system.</td>
+                </tr>
+                <tr>
+                    <td>Spyware</td>
+                    <td>Spyware is a piece of malware that can monitor and record the activities of a user's computer.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ransomware</td>
+                    <td>Ransomware is a piece of malware that encrypts a user's files and demands payment in exchange
+                        for the decryption key.</td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <h3>Denial of Service Attacks</h3>
+    <p>
+        - A Denial of Service (DoS) attack is a type of attack that
+        disrupts a computer system by flooding it with requests,
+        causing it to become unresponsive or crash.<br>
+        - The distributed (DDoS) version of this attack is where instead of just using
+        one or a few computers to carry out the attack, which is easier to block, the
+        attackers use a large number of computers (oftentimes on a botnet) to
+        carry out the attack.<br>
+        - The attackers sometimes request payment to stop the attack.
+    </p>
+    <h3>Brute Force Attacks</h3>
+    <p>
+        - A Brute Force attack is a type of attack that
+        tries to guess a password by trying every possible combination
+        until it finds the correct one.<br>
+        - Oftentimes this is done by using a dictionary of common passwords
+        first, and then using a brute force attack to try to guess the remaining
+        passwords (or just password if you're targeting someone specifically).<br>
+        - Longer passwords and passwords with more types of characters take a lot
+        longer to iterate over than shorter ones, which is why many places will
+        force you to use a longer password with more types of characters.
+    </p>
+    <h3>Social Engineering Attacks</h3>
+    <p>
+        - A Social Engineering attack is a type of attack that
+        attempts to trick a person into divulging confidential information
+        or performing actions that they wouldn't normally do.<br>
+        - Oftentimes this is done by pretending to be someone else, or by making it seem like
+        something has happened that hasn't (for example, a website pretending to be an official
+        warning from a company like Microsoft telling you you have a virus).<br>
+        - The most common forms of social engineering are:
+        <ul>
+            <li>Phishing - where you pretend to be a reputable entity, and trick the user
+                into giving you their details.</li>
+            <li>Pretexting - where you get sent a message pretending to be from a government
+                or a company you worth for/with, and then tricks you into giving confidential
+                information.</li>
+        </ul>
+        - Social engineering is often a common component in other types of attacks, for example
+        downloading a trojan from an email from your 'bank'.<br>
+        - It can be very effective because no matter how much you try to protect your computers,
+        you are always susceptible to human error.
+    </p>
+    <h3>SQL Injection Attacks</h3>
+    <p>
+        - A SQL Injection attack is a type of attack that attempts to insert malicious SQL code
+        into a frontend (like a website) to gain unauthorised access to the database.
+        <h4>uhh... but what is SQL?</h4>
+        <p>
+            - SQL stands for Structured Query Language, and is a language used to interact with
+            databases. It is a very powerful language, and is used to create, update, and delete
+            data in a database. It is also used to query the data in the database, and to perform
+            other tasks such as creating views and stored procedures.<br>
+            - There are many types of SQL commands, such as SELECT, INSERT, UPDATE, DELETE,
+            CREATE, ALTER, and DROP. If a database input (such as on a login page) is not
+            'sanitised' properly, it can be used to perform SQL injection attacks.<br>
+            <sub>
+                SQL is either pronounced 'sequel' or ess queue ell. Under NO circumstances
+                is it 'squeal'.
+            </sub>
+        </p>
+    </p>
+    <h3>Data Interception Attacks</h3>
+    <p>
+        - A Data Interception attack is a type of attack that attempts to steal data from a
+        system by intercepting and reading the data being sent between the system and the user.<br>
+        - Oftentimes this is done by using a tool called a sniffer, which is a piece of software
+        that captures all the data being sent between the system and the user, and then displays
+        it to the attacker.
+    </p>
+    <h2>Methods of preventing attacks</h2>
+    <p>
+        - There are many methods of preventing attacks, but some common ones are:
+        <!--This seems way too arbitrary to me, why not explain 2FA and shit?-->
+        <ul>
+            <li>Firewalls</li>
+            <li>Passwords</li>
+            <li>Encryption</li>
+            <li>User access levels</li>
+            <li>Penetration testing</li>
+            <li>Physical security</li>
+            <li>Antimalware/antivirus software</li>
+        </ul>
+    </p>
+    <h3>Firewalls</h3>
+    <p>
+        - A firewall is a piece of software that allows you to control what traffic
+        can pass through it, and what it can block. It blocks unwanted traffic by
+        filtering requests and responses.<br>
+        - Often both your router and your computer will have firewalls, sometimes
+        even your <a href="https://quad9.net">DNS has a firewall</a>.
+    </p>
+    <h3>Passwords</h3>
+    <p>
+        - Passwords are a way of protecting your data, and are used to prevent
+        unauthorised access to your computer. They are usually stored in a database,
+        and are hashed using a one-way function (such as SHA-256) to make them
+        difficult to reverse engineer.<br>
+        - These help prevent data theft and brute force attacks.
+    </p>
+    <h3>Encryption</h3>
+    <p>
+        - Encryption is a way of protecting your data, and is used to prevent
+        unauthorised access to your computer. It is done by using a one-way function
+        (such as AES) to encrypt your data, and then decrypting it using a key.
+    </p>
+    <h3>User access levels</h3>
+    <p>
+        - User access levels ensure that no one has higher access than they absolutely need.<br>
+        - For example, in a company, an IT administrator account might have access to everything, but
+        a sales account might only have access to sales data.<br>
+        - This prevents data theft, and can lessen the impact of a social engineering attack.
+    </p>
+    <h3>Penetration testing</h3>
+    <p>
+        - Penetration testing is a way of testing your computer for vulnerabilities.<br>
+        - It is carried out by using both a tool called a vulnerability scanner, which
+        scans your computer for known vulnerabilities.<br>
+        - Penetration testing is also done by people (sometimes known as 'ethical hackers')
+        who act like malicious hackers, and when they find a vulnerability,
+        they report it to you. Sometimes these people are employed by companies, and sometimes
+        bugs are reported through a 'bug bounty' program.<br>
+        - This can prevent SQL injection, make social engineering attacks harder, and lets
+        attack vectors be found and fixed before they are exploited.
+        <h3>Physical security</h3>
+        <p>
+            - Physical security is simply preventing physical access to a part of a network.<br>
+            - For example, having a keycard system for access to a server room, CCTV, or simply
+            security by obscurity.<br>
+            - This prevents data interception and theft, and can prevent social engineering attacks.
+        </p>
+        <h3>Antimalware/antivirus software</h3>
+        <p>
+            - Antimalware/antivirus software is a way of protecting your data, and is used to prevent
+            unauthorised access to your computer. It is done by using a tool called a
+            antivirus software, which scans for malware and then reports it to you.<br>
+            - Antimalware software can be used to scan emails, files, websites etc.<br>
+            - It works because it has a list of known malware signatures, and if even
+            if a program is not on the list, if it behaves suspiciously it can be flagged
+            (hence false positives).<br>
+            - Antimalware software is used to stop... well, malware.
+        </p>
+</Layout>

@@ -1,0 +1,129 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+---
+<Layout title="1.2 - Memory and Storage (Part 1)">
+    <h1>1.2 - Memory and Storage (Part 1)</h1>
+    <h2>Primary Storage</h2>
+    <p>
+        - Primary storage is storage that is small in capacity,
+        generally volatile (except ROM), and is quick to access.<br>
+        - It stores the data that your computer needs when turned on,
+        for example instructions or a program's settings file.<br>
+        - It is required in a computer system because of its speed,
+        which reduces the time taken to complete operations
+        (such as the fetch-decode-execute cycle) significantly.<br>
+        - It includes RAM, but also components like cache and registers.<br>
+        - Primary storage is normally closer to the CPU, to reduce access latencies.<br>
+        - It's usually a lot more expensive than secondary storage,
+        owing to its fast access times.<br>
+        - ROM counts as primary storage, but it is not able to be overwritten easily,
+        hence its name (Read-Only Memory).
+        It is still fast and directly available to the system.<br>
+        - When obtaining RAM, you have to consider its price, speed, and cost.
+        You may have to research other factors such as error-checking but that's
+        not on the spec
+        (don't worry about it, unless you're a sysadmin in which case why are you doing CS GCSE?).
+    </p>
+    <br>
+    <h2>RAM vs ROM</h2>
+    <p>
+        - RAM, or Random Access Memory, holds the data and instructions
+        that are currently being used.<br>
+        - For the CPU to access the data on RAM,
+        it must first be copied across from secondary storage.<br>
+        - As ram is volatile primary storage, it is very fast.<br>
+        - It can be written to as well as read from.<br>
+        - Normally has more storage than ROM.
+    </p>
+    <p>
+        - ROM, or read only memory, is primary storage that holds
+        the BIOS (Basic Input/Output System) and the boot
+        instructions.<br>
+        - It's a small memory chip on the computer's motherboard.<br>
+        - It's fast, slower than RAM but faster than secondary storage.<br>
+        - It's non-volatile (not wiped when power is lost) storage type.<br>
+        - ROM is read-only, and it has a very small capacity.
+    </p>
+    <br>
+    <h2>Virtual Memory</h2>
+    <p>
+        - Virtual Memory is a virtual extension of RAM on secondary storage.<br>
+        - When RAM is nearly full, virtual memory can be used so that the computer
+        doesn't crash and programs continue to RAM.<br>
+        - Programs and data not currently in use (idle) are commonly transferred
+        to virtual memory.<br>
+        - Since secondary storage is a lot slower than primary,
+        data and programs in virtual memory will take a lot longer to access,
+        and the system will feel slower.<br>
+        - Because of the speed penalty, the computer's OS will transfer data back
+        to RAM when it is in use or when the RAM is cleared.
+    </p>
+    <br>
+    <h2>Secondary Storage</h2>
+    <p>
+        - As you might have guessed by now, secondary storage is persistent
+        (non-volatile, persists between restarts) storage in a computer,
+        that has a higher capacity than primary storage, and is cheaper.<br>
+        - Because secondary storage is non-volatile, it is used for long-term
+        storage of programs and data that is not currently in use.<br>
+        - You cannot use ROM for this purpose due to its ready-only and expensive nature.<br>
+        - Secondary storage is slower than primary storage,
+        but is perfect for storing programs, the OS, and other files.<br>
+        - When buying it, the characteristics you have to consider are
+        capacity (usually GB or TB), speed (read/write and input/output operations per second or IOPS)
+        portability, durability, and reliability.
+    </p>
+    <br>
+    <h2>Types of Secondary Storage</h2>
+    <p>
+        - Secondary storage (which you may come across as just 'storage devices')
+        comes in a few different types of media: magnetic, solid state, and optical.
+    </p>
+    <p>
+        - Magnetic storage, like Hard Disk Drives (HDDs) use magnets to store binary
+        1s and 0s on a spinning platter. They are high capacity, low cost
+        (sidenote: SSDs are becoming cheaper and cheaper so they may not have this advantage soon)
+        and medium speed.<br>
+        - However, they are not particulary durable as they can easily break if bumped
+        or dropped, they are heavy and large so are impractical for transport,
+        prone to mechanical failure, and they are loud as they spin so fast.
+    </p>
+    <p>
+        - Solid state storage (flash memory), like SSDs or USB drives, uses electronic circuits
+        (NAND gates) to store 1s and 0s.<br>
+        - Solid state storage can range from low capacity in USB drives, to high capacity in SSDs.<br>
+        - It has very fast read/write access, as there are no moving parts. This also makes it durable.<br>
+        - Drives that use flash memory are normally quite small, making them good for portability.<br>
+        - They are also very quiet, sometimes practically silent.
+    </p>
+    <p>
+        - Optical storage (like CDs and DVDs) use a laser to 'burn' the surface of a disc
+        (DISC WITH A C, SAVEMYEXAMS), creating
+        <a href="https://www.youtube.com/watch?v=e1mJv9pxm7M">pits and lands</a>
+        which represent 1s and 0s.<br>
+        - It is a very cheap type of storage per gigabyte, has no moving parts
+        (but the surface of a disc can be scratched), and are very thin making them portable.<br>
+        - The storage medium itself is slient, but any readers/writers may make noise spinning
+        the disc.
+    </p>
+    <br>
+    <h2>When to use a type of Storage</h2>
+    <p>
+        When to use solid state media:<br>
+        - Mobile Devices<br>
+        - Portable Storage<br>
+        - As an OS Drive<br>
+        - For durability
+    </p>
+    <p>
+        When to use magnetic storage:<br>
+        - For storing large files/backups<br>
+        - Storing less-frequently-accessed data cheaply
+    </p>
+    <p>
+        When to use optical storage:
+        - Storing multimedia content (like music or films)<br>
+        - Storing games for consoles<br>
+        - Archiving data long-term (with the correct type of optical disc)
+    </p>
+</Layout>

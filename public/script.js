@@ -31,34 +31,7 @@ function msgs() {
     }, 2000); // Ensure the class is removed after the animation completes
 }
 
-function Header(){
-    return html`
-    <div id="headercontent">
-        <div>
-            <h1 class="rainbow"><a href="/index.html">AQA's Basement</a></h1>
-            <p id="headmsg">Messages Loading...</p>
-        </div>
-        <div>
-            <a href="https://discord.gg/XTvhaHYRBa"><img alt="Discord" src="/images/discord.png"></a>
-        </div>
-    </div>`
-}
-
-function Footer(){
-    return html`
-    <p>
-        Site by <a href="https://wilburwilliams.uk">Wilbur Williams</a>. 
-        This is not endorsed by AQA or any exam boards. 
-        <a href="https://github.com/ThisCatLikesCrypto/aqasbasement">Source code</a><br>
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-            <img src="/images/CC-BY-SA-NC.png" title="CC BY-NC-SA 4.0" alt="CC BY-NC-SA 4.0">
-        </a>
-    </p>`
-}
-
 window.addEventListener('load', function(){
-    document.getElementById("header").appendChild(h(Header));
-    document.getElementById("footer").appendChild(h(Footer));
     msgs();
     setInterval(msgs, 10000);
 });

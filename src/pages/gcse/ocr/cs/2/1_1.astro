@@ -1,0 +1,384 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+---
+<Layout title="2.1 - Algorithms (Part 1)">
+    <h1>2.1 - Algorithms (Part 1)</h1>
+    <i>I decided to follow savemyexams here with doing searching/sorting algorithms (which really should be in part
+        2), earlier</i>
+    <h2>Principles of Computational Thinking</h2>
+    <p>
+        - Computational thinking is the process of breaking down a problem into smaller parts and solving them one
+        at a time.<br>
+        - It contains 3 main components:<br>
+        <ul>
+            <li>Abstraction</li>
+            <li>Decomposition</li>
+            <li>Algorithmic thinking</li>
+        </ul>
+    </p>
+    <h3>Abstraction</h3>
+    <p>
+        - Abstraction is the process of simplifying a problem by removing unnecessary details.<br>
+        - An example of abstraction could be a high-level programming language like Python or C, which hide the
+        differences
+        between different processor architectures so your program will run the same everywhere without having to
+        worry about
+        the underlying hardware.<br>
+        - There are plenty of other examples as well, such as the concept of 'processes' in OSes, allowing multiple
+        programs
+        to run concurrently without having to manage the CPU and memory at a low level.
+    </p>
+    <h3>Decomposition</h3>
+    <!--Nah this is absolutely perfect supermaven go brrr i guess-->
+    <p>
+        - Decomposition is the process of breaking down a problem into smaller parts, which can then be solved
+        individually.<br>
+        - An example of decomposition could be a mathematical equation, which can be broken down into smaller parts
+        such as
+        addition, subtraction, multiplication, and division.<br>
+        - This process is also used in programming, where a program can be broken down into smaller parts such as
+        functions,
+        loops, conditionals, and variables.
+    </p>
+    <h3>Algorithmic thinking</h3>
+    <p>
+        - Algorithmic thinking is turning a problem into a series of basic step-by-step instructions.<br>
+        - It requires the combined use of both abstraction and decomposition.<br>
+        - Algorithms help problems become automated and let computers understand what to do.<br>
+        - A good algorithm should be as bulletproof but simple as possible, to reduce the chance of problems.
+    </p>
+    <br>
+    <h2>Searching Algorithms</h2>
+    <p>
+        - Searching algorithms are algorithms used to efficiently find a specific element in a list.<br>
+        - The two sorting algorithms you need are Linear Search and Binary Search.<br>
+        - For searching (and sorting) algorithms, you need to understand time complexity. This is written
+        in big O notation. Something like O(n) means that if it took 1 second for each object in a list,
+        it would take n seconds to search the entire list.
+    </p>
+    <h3>Linear Search</h3>
+    <h4>Definition:</h4>
+    <p>
+        Linear search is the simplest search algorithm. It checks each element in a list, one by one, until it finds
+        the
+        target value or reaches the end of the list. This method does not require the list to be sorted.
+    </p>
+    <h4>How It Works:</h4>
+    <ol>
+        <li>Start at the beginning of the list.</li>
+        <li>Compare the current element with the target value you are searching for.</li>
+        <li>If the current element matches the target, the search is successful, and the index of the element is
+            returned.
+        </li>
+        <li>If the current element does not match the target, move to the next element in the list.</li>
+        <li>Repeat steps 2-4 until you either find the target value or reach the end of the list.</li>
+        <li>If the end of the list is reached without finding the target value, the search is unsuccessful, and a
+            suitable
+            message or value (like -1) is returned.
+        </li>
+    </ol>
+    <h4>Example:</h4>
+    <p>
+        Imagine you have a list of numbers: <code>[3, 8, 12, 5, 6]</code>, and you want to find the number
+        <code>12</code>
+        using linear search.
+    </p>
+    <ul>
+        <li>Start with the first number (<code>3</code>) – it's not <code>12</code>.</li>
+        <li>Move to the next number (<code>8</code>) – it's not <code>12</code>.</li>
+        <li>Move to the next number (<code>12</code>) – this time, it matches the target. The search is successful.
+        </li>
+    </ul>
+    <h4>Pros:</h4>
+    <ul>
+        <li>Simple to implement and understand.</li>
+        <li>Works on both sorted and unsorted lists.</li>
+    </ul>
+    <h4>Cons:</h4>
+    <ul>
+        <li>Inefficient for large lists because each element must be checked, one at a time.</li>
+        <li>Worst-case scenario: it checks all elements, making it slow for large datasets (with a time complexity
+            of O(n), where n is the number of elements in the list).
+        </li>
+    </ul>
+    <h3>Binary Search</h3>
+    <h4>Definition:</h4>
+    <p>
+        Binary search is a more efficient search algorithm that works only on sorted lists. It repeatedly divides
+        the
+        search interval in half to find the target value.
+    </p>
+
+    <h4>How It Works:</h4>
+    <ol>
+        <li>Start with two pointers – one at the beginning of the list (low) and one at the end (high).</li>
+        <li>Calculate the middle point of the list using the formula: <code>middle = (low + high) // 2</code>.<br>
+            (// is 'floor division'. Just division but you discard the remainder.)</li>
+        <li>Compare the middle element with the target value:
+            <ul>
+                <li>If the middle element matches the target value, the search is successful, and the index is
+                    returned.</li>
+                <li>If the target value is less than the middle element, narrow the search to the left half of the
+                    list by
+                    setting <code>high = middle - 1</code>.
+                </li>
+                <li>If the target value is greater than the middle element, narrow the search to the right half of
+                    the list
+                    by setting <code>low = middle + 1</code>.
+                </li>
+            </ul>
+        </li>
+        <li>Repeat steps 2-3 until the target value is found or the <code>low</code> pointer exceeds the
+            <code>high</code>
+            pointer, indicating the target is not in the list.
+        </li>
+    </ol>
+    <h4>Example:</h4>
+    <p>
+        Imagine you have a sorted list of numbers: <code>[2, 4, 7, 10, 15, 20]</code>, and you want to find the
+        number
+        <code>10</code> using binary search.
+    </p>
+    <ul>
+        <li>Start with <code>low = 0</code> and <code>high = 5</code> (index positions).</li>
+        <li>Calculate the middle index: <code>middle = (0 + 5) // 2 = 2</code>.</li>
+        <li>The middle element is <code>7</code>, which is less than <code>10</code>. So, search in the right half
+            (<code>low = 3</code>).
+        </li>
+        <li>Recalculate the middle index: <code>middle = (3 + 5) // 2 = 4</code>.</li>
+        <li>The middle element is <code>15</code>, which is greater than <code>10</code>. So, search in the left
+            half
+            (<code>high = 3</code>).
+        </li>
+        <li>Now, <code>middle = (3 + 3) // 2 = 3</code>.</li>
+        <li>The middle element is <code>10</code>, which matches the target value. The search is successful.</li>
+    </ul>
+    <h4>Pros:</h4>
+    <ul>
+        <li>Much faster than linear search for large, sorted lists.</li>
+        <li>Reduces the problem size by half with each step, leading to a time complexity of O(log n), where n is
+            the
+            number of elements in the list.
+        </li>
+    </ul>
+    <h4>Cons:</h4>
+    <ul>
+        <li>Requires the list to be sorted before searching.</li>
+        <li>Slightly more complex to implement compared to linear search.</li>
+    </ul>
+    <h3>Comparison of Linear Search and Binary Search:</h3>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Linear Search</th>
+            <th>Binary Search</th>
+        </tr>
+        <tr>
+            <td><b>Data Requirement</b></td>
+            <td>Works on both sorted and unsorted lists</td>
+            <td>Requires a sorted list</td>
+        </tr>
+        <tr>
+            <td><b>Complexity</b></td>
+            <td>O(n) – checks each element</td>
+            <td>O(log n) – divides the list</td>
+        </tr>
+        <tr>
+            <td><b>Ease of Use</b></td>
+            <td>Simple to implement</td>
+            <td>More complex, needs sorting</td>
+        </tr>
+        <tr>
+            <td><b>Efficiency</b></td>
+            <td>Slower for large datasets</td>
+            <td>Faster, especially for large lists</td>
+        </tr>
+    </table>
+    <br>
+    <h2>Sorting Algorithms</h2>
+    <p>
+        - A sorting algorithm is an algorithm that sorts a list of elements.<br>
+        - There are many different sorting algorithms, each with its own advantages and disadvantages.<br>
+        - The ones you need to know are Bubble sort, Merge sort and Insertion sort.
+    </p>
+    <h3>Bubble Sort</h3>
+    <h4>Definition:</h4>
+    <p>
+        - Bubble sort is a simple sorting algorithm that repeatedly steps through the list
+        (starting from the first element), compares adjacent elements and swaps them if
+        they are in the wrong order.<br>
+        - Once it has passed through the whole list once, the tallest element will be at the end
+        (because it will have been repeatedly bought forward).<br>
+        - It continues to do this until no swaps are needed, which indicates the list is sorted.<br>
+        - Its time complexity is O(n^2), which means it doubles in time with each element.
+    </p>
+    <h4>Example:</h4>
+    <p>
+        Suppose you have the list <code>[5, 3, 8, 4, 2]</code>.<br>
+    </p>
+    <b>First Pass:</b>
+    <p>1. Compare <code>5</code> and <code>3</code>. Swap because <code>5 &gt; 3</code>. List: <code>[3, 5, 8, 4,
+            2]</code><br>
+        2. Compare <code>5</code> and <code>8</code>. No swap. List: <code>[3, 5, 8, 4, 2]</code><br>
+        3. Compare <code>8</code> and <code>4</code>. Swap because <code>8 &gt; 4</code>. List: <code>[3, 5, 4, 8,
+            2]</code><br>
+        4. Compare <code>8</code> and <code>2</code>. Swap because <code>8 &gt; 2</code>. List: <code>[3, 5, 4, 2,
+            8]</code></p>
+
+    <b>Second Pass:</b>
+    <p>1. Compare <code>3</code> and <code>5</code>. No swap. List: <code>[3, 5, 4, 2, 8]</code><br>
+        2. Compare <code>5</code> and <code>4</code>. Swap because <code>5 &gt; 4</code>. List: <code>[3, 4, 5, 2,
+            8]</code><br>
+        3. Compare <code>5</code> and <code>2</code>. Swap because <code>5 &gt; 2</code>. List: <code>[3, 4, 2, 5,
+            8]</code></p>
+
+    <b>Third Pass:</b>
+    <p>1. Compare <code>3</code> and <code>4</code>. No swap. List: <code>[3, 4, 2, 5, 8]</code><br>
+        2. Compare <code>4</code> and <code>2</code>. Swap because <code>4 &gt; 2</code>. List: <code>[3, 2, 4, 5,
+            8]</code></p>
+
+    <b>Fourth Pass:</b>
+    <p>1. Compare <code>3</code> and <code>2</code>. Swap because <code>3 &gt; 2</code>. List: <code>[2, 3, 4, 5,
+            8]</code></p>
+
+    <b>Final Sorted List:</b>
+    <p><code>[2, 3, 4, 5, 8]</code></p>
+    <br>
+    <p>Here's a visualisation with sound (using <a href="https://github.com/Gaming32/ArrayV">ArrayV</a>):</p>
+    <video alt="bubble sort" class="centreimage" controls src="/videos/cs/bubble.webm"></video>
+    <!--Eh centreimage makes a bit of sense-->
+    <h3>Merge Sort</h3>
+    <h4>Definition:</h4>
+    <p>
+        - Merge sort is a divide-and-conquer algorithm that splits the list into two halves, recursively sorts each
+        half, and then merges the sorted halves back together.<br>
+        - It is known for its efficiency and stability. Even in the worst case, merge sort operates with a time
+        complexity of O(n log n).<br>
+        - The merging process ensures that the resultant list is sorted.
+    </p>
+    <h4>Example:</h4>
+    <p>
+        Suppose you have the list <code>[5, 3, 8, 4, 2]</code>.<br>
+    </p>
+    <b>First Split:</b>
+    <p>Split into two halves: <code>[5, 3]</code> and <code>[8, 4, 2]</code></p>
+
+    <b>Second Split:</b>
+    <p>Split <code>[5, 3]</code> into <code>[5]</code> and <code>[3]</code>. Split <code>[8, 4, 2]</code> into
+        <code>[8]</code> and <code>[4, 2]</code>.<br>
+        Split <code>[4, 2]</code> into <code>[4]</code> and <code>[2]</code>.</p>
+
+    <b>Merge Step 1:</b>
+    <p>Merge <code>[5]</code> and <code>[3]</code> into <code>[3, 5]</code>.<br>
+        Merge <code>[4]</code> and <code>[2]</code> into <code>[2, 4]</code>.</p>
+
+    <b>Merge Step 2:</b>
+    <p>Merge <code>[8]</code> and <code>[2, 4]</code> into <code>[2, 4, 8]</code>.</p>
+
+    <b>Final Merge:</b>
+    <p>Merge <code>[3, 5]</code> and <code>[2, 4, 8]</code> into <code>[2, 3, 4, 5, 8]</code>.</p>
+
+    <b>Final Sorted List:</b>
+    <p><code>[2, 3, 4, 5, 8]</code></p>
+    <br>
+    <video alt="merge sort visualisation" class="centreimage" controls src="/videos/cs/merge.webm"></video>
+
+    <h3>Insertion Sort</h3>
+    <h4>Definition:</h4>
+    <p>
+        - Insertion sort is a simple sorting algorithm that builds the final sorted list one item at a time.<br>
+        - It is much like sorting playing cards in your hands. The list is split into a sorted part and an unsorted
+        part.<br>
+        - Elements from the unsorted part are picked one by one and placed at the correct position in the sorted part.
+    </p>
+    <h4>Example:</h4>
+    <p>
+        Suppose you have the list <code>[5, 3, 8, 4, 2]</code>.<br>
+    </p>
+    <b>Initial List:</b>
+    <p><code>[5, 3, 8, 4, 2]</code></p>
+
+    <b>Step 1:</b>
+    <p>The first element <code>5</code> is already sorted. Move to the next element <code>3</code>.<br>
+        Insert <code>3</code> before <code>5</code>. List: <code>[3, 5, 8, 4, 2]</code></p>
+
+    <b>Step 2:</b>
+    <p>Next element is <code>8</code>. It is already greater than <code>5</code>, so no changes. List: <code>[3, 5, 8,
+            4, 2]</code></p>
+
+    <b>Step 3:</b>
+    <p>Next element is <code>4</code>. Insert it before <code>5</code> and after <code>3</code>. List: <code>[3, 4, 5,
+            8, 2]</code></p>
+
+    <b>Step 4:</b>
+    <p>Next element is <code>2</code>. Insert it at the beginning. List: <code>[2, 3, 4, 5, 8]</code></p>
+
+    <b>Final Sorted List:</b>
+    <p><code>[2, 3, 4, 5, 8]</code></p>
+    <br>
+    <video alt="insertion sort visualisation" class="centreimage" controls src="/videos/cs/insertion.webm"></video>
+    <h3>Summary</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Sorting Algorithm</th>
+                <th>Pros</th>
+                <th>Cons</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bubble Sort</td>
+                <td>
+                    <ul>
+                        <li>Simple to understand and implement</li>
+                        <li>Doesn't require extra memory (in-place)</li>
+                        <li>Stable sort (maintains order of equal elements)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Very inefficient for large datasets (O(n^2) time complexity)</li>
+                        <li>Rarely used in practical applications due to poor performance</li>
+                        <li>Not suitable for large datasets</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Insertion Sort</td>
+                <td>
+                    <ul>
+                        <li>Simple and intuitive</li>
+                        <li>Efficient for small or nearly sorted datasets (O(n) time complexity for nearly sorted)</li>
+                        <li>In-place sorting (requires constant space)</li>
+                        <li>Stable sort</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Still inefficient for large datasets (O(n^2) time complexity in worst-case)</li>
+                        <li>Less efficient than more advanced algorithms like Merge Sort for large unsorted lists</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Merge Sort</td>
+                <td>
+                    <ul>
+                        <li>Efficient for large datasets (O(n log n) time complexity)</li>
+                        <li>Consistent performance regardless of input (no worst-case O(n^2) scenario)</li>
+                        <li>Stable sort</li>
+                        <li>Can handle large datasets more effectively</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Requires additional memory space (O(n) space complexity)</li>
+                        <li>More complex to implement than Bubble Sort or Insertion Sort</li>
+                        <li>May not be the most efficient for small datasets due to overhead</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</Layout
