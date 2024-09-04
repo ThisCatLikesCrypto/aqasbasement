@@ -50,14 +50,14 @@ import Layout from '../../../../../layouts/Layout.astro';
     <br>
     <h2>Pseudocode</h2>
     <p>
-        - Occassionally in an exam you will be asked to write your answer in pseudocode, 
+        - Occassionally in an exam you will be asked to write your answer in pseudocode,
         or read pseudocode.<br>
         - Pseudocode is a way of writing code that is not meant to be executed, but rather
         to show the logic of the code.<br>
-        - For exams you should learn the OCR Exam Reference Language, which is a form of 
+        - For exams you should learn the OCR Exam Reference Language, which is a form of
         pseudocode.<br>
-        - <a href="https://www.ocr.org.uk/images/202654-pseudocode-guide.pdf">This document</a> 
-        explains it quite well, so I won't rewrite it all here (the doc is from 2015 but 
+        - <a href="https://www.ocr.org.uk/images/202654-pseudocode-guide.pdf">This document</a>
+        explains it quite well, so I won't rewrite it all here (the doc is from 2015 but
         it's not like it's changed much since then).
     </p>
     <br>
@@ -72,5 +72,180 @@ import Layout from '../../../../../layouts/Layout.astro';
         - Here is an example flowchart for a dice game:
     </p>
     <img src="/images/cs/flowchart.png" alt="Dice Game Flowchart" class="centreimage">
+    <br>
+    <h2>Identifying Common Errors</h2>
+    <p>
+        - You need to be able to identify common errors in your code.<br>
+        - This helps with both debugging and understanding the logic of the code.<br>
+        - Common errors include:
+        <ul>
+            <li>Syntax errors</li>
+            <li>Logical errors</li>
+            <li>Runtime errors</li>
+        </ul>
+    </p>
+    <h3>Syntax Errors</h3>
+    <p>
+        - Syntax errors are errors in the structure of the code.<br>
+        - They are usually easy to spot, as they will cause the code to not run at all.<br>
+        - Examples of syntax errors include:
+        <ul>
+            <li>Missing a closing bracket</li>
+            <li>Using a variable that hasn't been declared</li>
+            <li>Using a variable before it has been declared</li>
+            <li>Using a variable in the wrong place</li>
+        </ul>
+    </p>
+    <h3>Logical Errors</h3>
+    <p>
+        - Logical errors occur when the code runs but produces incorrect results.<br>
+        - These errors can be harder to identify because the program does not crash.<br>
+        - Examples of logical errors include:
+        <ul>
+            <li>Incorrect use of conditions in an <code>if</code> statement</li>
+            <li>Loops that iterate too many or too few times</li>
+            <li>Off-by-one errors, such as starting a loop at 1 instead of 0</li>
+            <li>Using the wrong mathematical operator in a calculation</li>
+        </ul>
+    </p>
+    <h3>Runtime Errors</h3>
+    <p>
+        - Runtime errors occur when the code is executed, leading to crashes or unexpected behavior.<br>
+        - These errors happen after the code has successfully passed syntax checks and started running.<br>
+        - Examples of runtime errors include:
+        <ul>
+            <li>Dividing a number by zero</li>
+            <li>Accessing an index that is out of range in an array</li>
+            <li>Running out of memory due to excessive memory allocation</li>
+            <li>File not found errors when trying to open a non-existent file</li>
+        </ul>
+    </p>
+    <h3>Examples of Code Errors and Corrections</h3>
+    <!--oh god this code is shit looking thanks <pre>-->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Error Type</th>
+                    <th>Code with Error</th>
+                    <th>Corrected Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Syntax Error</td>
+                    <td>
+                        <pre><code>
+// Missing closing bracket
+function calculate_area(radius)
+    area = 3.14 * radius ** 2
+    print("Area is: ", area
+endfunction
+</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>
+// Corrected by adding the closing bracket
+function calculate_area(radius)
+    area = 3.14 * radius ** 2
+    print("Area is: ", area)
+endfunction
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Logical Error</td>
+                    <td>
+                        <pre><code>
+// Incorrect condition in the if statement
+// ('=' is only for assignment)
+function check_even(number)
+    if number % 2 = 0:
+        print("Even number")
+    else:
+        print("Odd number")
+endfunction
+</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>
+// Corrected condition in the if statement
+function check_even(number)
+    if number % 2 == 0:
+        print("Even number")
+    else:
+        print("Odd number")
+endfunction
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Runtime Error</td>
+                    <td>
+                        <pre><code>
+// Division by zero error
+function divide_numbers(a, b)
+    result = a / b
+    print("Result is: ", result)
+endfunction
+</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>
+// Corrected by adding a check for zero
+function divide_numbers(a, b)
+    if b != 0:
+        result = a / b
+        print("Result is: ", result)
+    else:
+        print("Error: Division by zero")
+endfunction
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Logical Error</td>
+                    <td>
+                        <pre><code>
+// This loop will never execute
+function print_numbers()
+    for i=100 to 11
+        print(i)
+    next i
+endfunction
+</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>
+// Corrected loop range
+function print_numbers()
+    for i=0 to 10
+        print(i + 1)
+    next i
+endfunction
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Syntax Error</td>
+                    <td>
+                        <pre><code>
+// Using a variable before it is declared
+print(total)
+total = 100
+</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>
+// Corrected by declaring the variable first
+total = 100
+print(total)
+</code></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <h3>(WIP)</h3>
+    <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/7-algorithms/designing-creating-and-refining-algorithms/trace-tables/">asdasd</a>
 </Layout>
