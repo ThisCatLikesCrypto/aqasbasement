@@ -1,0 +1,142 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+---
+<Layout title="2.2 - Programming Fundamentals (Part 1)">
+    <h1>2.2 - Programming Fundamentals (Part 1)</h1>
+    <h2>The use of variables, constants, operators, inputs, outputs and assignments</h2>
+    <h3>Variables</h3>
+    <p>
+        - A <b>variable</b> is a storage location identified by a memory address and an associated 
+        symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a value.<br>
+        - For example, a variable named 'cat' could store the value 'meow', and then you can access 'cat' to retrieve 'meow' later on in the code.
+    </p>
+    <h3>Assignments</h3>
+    <p>
+        - <b>Assignments</b> are the process of storing a value in a variable or constant. This is usually done using the equals sign (=).<br>
+        - In programming languages, <code>cat = "meow"</code> is an assignment, and <code>cat</code> then contains "meow".
+    </p>
+    <h3>Constants</h3>
+    <p>
+        - A <b>constant</b> is a value that cannot be altered by the program during normal execution, i.e., the value is constant.<br>
+        - It works the same as a variable, but it cannot be changed.<br>
+        - While both OCR Exam Reference Language and Python assign variables with <code>variable = value</code>, Python uses <code>CONSTANT = value</code>
+        for constants but OCR Exam Reference Language uses <code>const constant = value</code>.
+    </p>
+    <h3>Operators</h3>
+    <p>
+        - <b>Operators</b> are symbols that tell the compiler or interpreter to perform specific mathematical, 
+        relational, or logical operations and produce a final result.<br>
+        - There are many operators:
+    </p>
+    <h4>Arithmetic Operators</h4>
+    <table>
+        <tr>
+            <!--
+            {""} because astro is jsx now?
+            -->
+            <th>{"Operation"}</th>
+            <th>{"Python Operator"}</th>
+            <th>{"OCR Reference Language Operator"}</th>
+            <th>{"Example (Python)"}</th>
+            <th>{"Example (OCR Reference Language)"}</th>
+        </tr>
+        <tr>
+            <td>{"Addition"}</td>
+            <td>{"+"}</td>
+            <td>{"+"}</td>
+            <td>{"5 + 3"}</td>
+            <td>{"5 + 3"}</td>
+        </tr>
+        <tr>
+            <td>{"Subtraction"}</td>
+            <td>{"-"}</td>
+            <td>{"-"}</td>
+            <td>{"5 - 3"}</td>
+            <td>{"5 - 3"}</td>
+        </tr>
+        <tr>
+            <td>{"Multiplication"}</td>
+            <td>{"*"}</td>
+            <td>{"*"}</td>
+            <td>{"5 * 3"}</td>
+            <td>{"5 * 3"}</td>
+        </tr>
+        <tr>
+            <td>{"Division"}</td>
+            <td>{"/"}</td>
+            <td>{"/"}</td>
+            <td>{"5 / 2"}</td>
+            <td>{"5 / 2"}</td>
+        </tr>
+        <tr>
+            <td>{"Quotient (division w/o remainder)"}</td>
+            <td>{"//"}</td>
+            <td>{"DIV"}</td>
+            <td>{"5 // 2"}</td>
+            <td>{"5 DIV 2"}</td>
+        </tr>
+        <tr>
+            <td>{"Modulus (division remainder only)"}</td>
+            <td>{"%"}</td>
+            <td>{"MOD"}</td>
+            <td>{"5 % 2"}</td>
+            <td>{"5 MOD 2"}</td>
+        </tr>
+        <tr>
+            <td>{"Exponentiation (power)"}</td>
+            <td>{"**"}</td>
+            <td>{"^"}</td>
+            <td>{"5 ** 3"}</td>
+            <td>{"5 ^ 3"}</td>
+        </tr>
+    </table>
+
+    <h3>{"Comparison Operators"}</h3>
+    <table>
+        <tr>
+            <th>{"Operation"}</th>
+            <th>{"Operator (same across both)"}</th>
+            <th>{"Example (same across both)"}</th>
+        </tr>
+        <tr>
+            <td>{"Equal to"}</td>
+            <td>{"=="}</td>
+            <td>{"5 == 3"}</td>
+        </tr>
+        <tr>
+            <td>{"Not equal to"}</td>
+            <td>{"!="}</td>
+            <td>{"5 != 3"}</td>
+        </tr>
+        <tr>
+            <td>{"Greater than"}</td>
+            <td>{">"}</td>
+            <td>{"5 > 3"}</td>
+        </tr>
+        <tr>
+            <td>{"Less than"}</td>
+            <td>{"<"}</td>
+            <td>{"5 < 3"}</td>
+        </tr>
+        <tr>
+            <td>{"Greater than or equal to"}</td>
+            <td>{">="}</td>
+            <td>{"5 >= 3"}</td>
+        </tr>
+        <tr>
+            <td>{"Less than or equal to"}</td>
+            <td>{"<="}</td>
+            <td>{"5 <= 3"}</td>
+        </tr>
+    </table>
+    <h3>Inputs</h3>
+    <p>
+        - <b>Inputs</b> are the data or signals received by the system from the external environment, typically from a user or another system.<br>
+        - Programs are useless without inputs because they can't interact with the outside world.
+    </p>
+    <h3>Outputs</h3>
+    <p>
+        - <b>Outputs</b> are the data or signals sent from the system to the external environment, typically to a user or another system.<br>
+        - Programs are useless without outputs for the same reason.
+    </p>
+</Layout>
