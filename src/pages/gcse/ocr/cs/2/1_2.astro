@@ -74,6 +74,7 @@ import Layout from '../../../../../layouts/Layout.astro';
     <img src="/images/cs/flowchart.png" alt="Dice Game Flowchart" class="centreimage">
     <br>
     <h2>Identifying Common Errors</h2>
+    <h3><i>note: due to the amount of large tables this content is better viewed on a PC from here until the end of the page</i></h3>
     <p>
         - You need to be able to identify common errors in your code.<br>
         - This helps with both debugging and understanding the logic of the code.<br>
@@ -121,7 +122,7 @@ import Layout from '../../../../../layouts/Layout.astro';
         </ul>
     </p>
     <h3>Examples of Code Errors and Corrections</h3>
-    <!--oh god this code is shit looking thanks <pre>-->
+    <!--oh god this markup is shit looking thanks <pre>-->
     <div class="table-container">
         <table>
             <thead>
@@ -246,6 +247,241 @@ print(total)
             </tbody>
         </table>
     </div>
-    <h3>(WIP)</h3>
-    <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/7-algorithms/designing-creating-and-refining-algorithms/trace-tables/">asdasd</a>
+    <br>
+    <h2>Trace Tables</h2>
+    <p>
+        - A trace table is a table that shows the steps taken to solve a problem.<br>
+        - It is used to test algorithms and programs to make sure that there are no logical errors.<br>
+        - Each step of the program is listed in the table, and they have columns for when each variable changes.<br>
+        - Trace tables are another way to visualise the step-by-step execution of a program.
+    </p>
+    <h3>Example</h3>
+    Here is a program written in python that calculates the product of two numbers:<br>
+    (// is integer division, it disregards the remainder, and % is mondulus, it calculates just the remainder)
+    <code>
+        <pre>
+01 | print("Numbers:")
+02 | a = int(input())
+03 | b = int(input())
+04 | sum = 0
+05 | while b > 0:
+06 |   if b % 2 == 1:
+07 |     sum = sum + a 
+08 |   a = 2*a
+09 |   b = b // 2
+10 | print(sum)
+        </pre>
+    </code>
+    <p><b>And here is the trace table (assuming the input is 11 and 7):</b><br>
+    Hover over the table to see the explanations of each column.</p>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Line</th>
+                    <th>a (variable)</th>
+                    <th>b (variable)</th>
+                    <th>sum (variable)</th>
+                    <th>While loop condition</th>
+                    <th>Output</th>
+                    <th>Comments (not usually a column,
+                        just here to make it easier to understand)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>"Numbers:"</td>
+                    <td>Prints the prompt 'Numbers:' on the console.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>11</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>User inputs '11', stored in variable 'a'.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>User inputs '7', stored in variable 'b'.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td>Variable 'sum' is initialized to 0.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>True</td>
+                    <td></td>
+                    <td>The while loop starts. The condition 'b > 0' is checked. Since b is 7, the condition is True.
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>True</td>
+                    <td></td>
+                    <td>The condition 'b % 2 == 1' is checked. Since 7 % 2 == 1, the condition is True.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td>11</td>
+                    <td></td>
+                    <td></td>
+                    <td>Since the condition is True, 'sum' is updated to 'sum + a' (0 + 11 = 11).</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>22</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>'a' is doubled: a = 2 * 11 = 22.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>'b' is halved using integer division: b = 7 // 2 = 3.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>True</td>
+                    <td></td>
+                    <td>The while loop condition is checked again. Since b is 3, the condition is True.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>True</td>
+                    <td></td>
+                    <td>The condition 'b % 2 == 1' is checked. Since 3 % 2 == 1, the condition is True.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td>33</td>
+                    <td></td>
+                    <td></td>
+                    <td>Since the condition is True, 'sum' is updated to 'sum + a' (11 + 22 = 33).</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>44</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>'a' is doubled: a = 2 * 22 = 44.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>'b' is halved using integer division: b = 3 // 2 = 1.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>True</td>
+                    <td></td>
+                    <td>The while loop condition is checked again. Since b is 1, the condition is True.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>True</td>
+                    <td></td>
+                    <td>The condition 'b % 2 == 1' is checked. Since 1 % 2 == 1, the condition is True.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td>77</td>
+                    <td></td>
+                    <td></td>
+                    <td>Since the condition is True, 'sum' is updated to 'sum + a' (33 + 44 = 77).</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>88</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>'a' is doubled: a = 2 * 44 = 88.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>'b' is halved using integer division: b = 1 // 2 = 0.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>False</td>
+                    <td></td>
+                    <td>The while loop condition is checked again. Since b is 0, the condition is False, and the loop
+                        ends.</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>77</td>
+                    <td>Final output: The value of 'sum', which is 77, is printed.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--Done. I never want to touch this page again.-->
 </Layout>
