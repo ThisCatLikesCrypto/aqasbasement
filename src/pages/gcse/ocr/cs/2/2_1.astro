@@ -139,4 +139,80 @@ import Layout from '../../../../../layouts/Layout.astro';
         - <b>Outputs</b> are the data or signals sent from the system to the external environment, typically to a user or another system.<br>
         - Programs are useless without outputs for the same reason.
     </p>
+    <br>
+    <h2>The Three Basic Programming Constructs</h2>
+    <p>
+        - The three basic programming constructs used to control the flow of a program are:
+        <ul>
+            <li>Sequence (program order)</li>
+            <li>Selection (if/else)</li>
+            <li>Iteration (while/for)</li>
+        </ul>
+    </p>
+    <h3>Sequence</h3>
+    <p>
+        - <b>Sequence</b> is the order in which the instructions are executed.<br>
+        - It's generally top-to-bottom line-by-line.<br>
+        <code>
+            name = input("What is your name? ") // this gets executed first<br>
+            print(f"Hello + name + "!") // this gets executed second
+        </code>
+    </p>
+    <h3>Selection</h3>
+    <p>
+        - <b>Selection</b> is when the flow of the program is changed based on a condition.<br>
+        - Selection is best visualised with if/else statements.<br>
+        <code>
+            <pre>
+name = input("What is your name? ")
+if name == "John"
+    print("Hello John!")
+else
+    print("Hello Not John!")
+endif
+            </pre>
+        </code>
+            - There are also switch/case (or match/case) statements used when you want to compare a value against multiple options.<br>
+            - They're generally easier and more efficient when you have a lot of options to compare against, but if statements are more 
+            flexible (you can't write <code>if word.length > 5</code> in a switch/case statement).
+        <code>
+            <pre>
+name = input("What is your name? ")
+switch name:
+    case "John":
+        print("Hello John!")
+    case "Jane":
+        print("Hello Jayne!")
+    default:
+        print("Hello Not John or Jayne!")
+endswitch
+            </pre>
+        </code>
+    </p>
+    <h3>Iteration</h3>
+    <p>
+        - <b>Iteration</b> is when the flow of the program is repeated multiple times.<br>
+        - It looks for a condition to be true, and if it is, it executes the code inside the loop.<br>
+        - Iteration can be done with for or while loops.<br>
+        <code>
+            <pre>
+for i = 1 to 10
+    print(i)
+next i
+            </pre>
+        </code>
+        - This will print the numbers 1 to 10.<br>
+        <code>
+            <pre>
+{`while i < 10
+    print(i)
+    i = i + 1
+endwhile`}
+            </pre>
+        </code>
+        - This will also print the numbers 1 to 10, but it works differently.<br>
+        - The for loop is saying 'do this 10 times', and the second is saying 'do this while i is less than 10' 
+        (and then i is incremented by 1 inside the while loop).<br>
+        - 'while true' will always create an infinite loop, because true is always, well, true.
+    </p>
 </Layout>
