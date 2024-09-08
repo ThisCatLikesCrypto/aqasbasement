@@ -1,0 +1,126 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+---
+
+<Layout title="2.2 - Programming Fundamentals (Part 2)">
+    <h1>2.2 - Programming Fundamentals (Part 2)</h1>
+    <h2>String Manipulation</h2>
+    <p>
+        - Programs may have to modify, extract or analyse information from strings.<br>
+        - Examples of string manipulation include:
+        <ul>
+            <li>Changing the case of a string</li>
+            <li>Extracting a substring</li>
+            <li>ASCII conversion</li>
+            <li>Concatenation (con-cat-en-ation)</li>
+            <li>Getting the length of a string</li>
+        </ul>
+    </p>
+    <h3>Changing the case of a string</h3>
+    <p>
+        - <b>To change the case of a string</b>, use the <code>lower()</code> or <code>upper()</code> functions on a string.<br>
+        - For example, with <code>exampleString = "Hello"</code>, <code>exampleString.lower()</code> will return "hello".
+    </p>
+    <h3>Concatenation (con-cat-en-ation)</h3>
+    <p>
+        - <b>To concatenate two strings</b>, use the <code>+</code> operator.<br>
+        - For example, <code>"Hello " + "World"</code> will return "Hello World". (Note the space within the "Hello " string.)
+    </p>
+    <h3>Extracting a substring</h3>
+    <p>
+        - <b>Extracting a substring</b> is different in OCR Exam Reference Language and Python.
+    </p>
+    <div class="table-container">
+        <table>
+            <thead>
+                <td>OCR Exam Reference Language</td>
+                <td>Python</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>
+                            <pre>
+exampleString = "Hello World"
+exampleString.substring(0, 5) // "Hello"
+exampleString.left(5) // "Hello"
+exampleString.right(5) // "World"</pre>
+                        </code>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>
+exampleString = "Hello World"
+exampleString[0:5] # "Hello"
+exampleString[:5] # "Hello"
+exampleString[5:] # "World"</pre>
+                        </code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <h3>ASCII conversion</h3>
+    <p>
+        - <b>To convert a string to ASCII</b>:
+    </p>
+    <div class="table-container">
+        <table>
+            <thead>
+                <td>OCR Exam Reference Language</td>
+                <td>Python</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>
+                            <pre>
+ASC("A") // 65
+CHR(65) // A</pre>
+                        </code>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>
+ord("A") # 65
+chr(65) # A</pre>
+                        </code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <h3>Getting the length of a string</h3>
+    <p>
+        - <b>To get the length of a string</b>:
+    </p>
+    <div class="table-container">
+        <table>
+            <thead>
+                <td>OCR Exam Reference Language</td>
+                <td>Python</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>
+                            <pre>
+exampleString = "Hello World"
+exampleString.length // 11</pre>
+                        </code>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>
+exampleString = "Hello World"
+len(exampleString) # 11</pre>
+                        </code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--file handling next, i actually kinda feel good about this-->
+</Layout>
