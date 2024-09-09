@@ -1,12 +1,13 @@
 ---
-import Layout from '../../../../../layouts/Layout.astro';
+import Layout from "../../../../../layouts/Layout.astro";
 ---
 
 <Layout title="2.2 - Programming Fundamentals (Part 2)">
     <h1>2.2 - Programming Fundamentals (Part 2)</h1>
     <h2>String Manipulation</h2>
     <p>
-        - Programs may have to modify, extract or analyse information from strings.<br>
+        - Programs may have to modify, extract or analyse information from
+        strings.<br />
         - Examples of string manipulation include:
         <ul>
             <li>Changing the case of a string</li>
@@ -18,17 +19,23 @@ import Layout from '../../../../../layouts/Layout.astro';
     </p>
     <h3>Changing the case of a string</h3>
     <p>
-        - <b>To change the case of a string</b>, use the <code>lower()</code> or <code>upper()</code> functions on a string.<br>
-        - For example, with <code>exampleString = "Hello"</code>, <code>exampleString.lower()</code> will return "hello".
+        - <b>To change the case of a string</b>, use the <code>lower()</code> or
+        <code>upper()</code> functions on a string.<br />
+        - For example, with <code>exampleString = "Hello"</code>, <code
+            >exampleString.lower()</code
+        > will return "hello".
     </p>
     <h3>Concatenation (con-cat-en-ation)</h3>
     <p>
-        - <b>To concatenate two strings</b>, use the <code>+</code> operator.<br>
-        - For example, <code>"Hello " + "World"</code> will return "Hello World". (Note the space within the "Hello " string.)
+        - <b>To concatenate two strings</b>, use the <code>+</code> operator.<br
+        />
+        - For example, <code>"Hello " + "World"</code> will return "Hello World".
+        (Note the space within the "Hello " string.)
     </p>
     <h3>Extracting a substring</h3>
     <p>
-        - <b>Extracting a substring</b> is different in OCR Exam Reference Language and Python.
+        - <b>Extracting a substring</b> is different in OCR Exam Reference Language
+        and Python.
     </p>
     <div class="table-container">
         <table>
@@ -60,7 +67,7 @@ exampleString[5:] # "World"</pre>
             </tbody>
         </table>
     </div>
-    <br>
+    <br />
     <h3>ASCII conversion</h3>
     <p>
         - <b>To convert a string to ASCII</b>:
@@ -91,7 +98,7 @@ chr(65) # A</pre>
             </tbody>
         </table>
     </div>
-    <br>
+    <br />
     <h3>Getting the length of a string</h3>
     <p>
         - <b>To get the length of a string</b>:
@@ -122,5 +129,62 @@ len(exampleString) # 11</pre>
             </tbody>
         </table>
     </div>
-    <!--file handling next, i actually kinda feel good about this-->
+    <br />
+    <h2>File Handling</h2>
+    <p>
+        - To handle (read, write and append) files you must first open the file,
+        then read/write, then close the file.<br>
+        - (you'll need to scroll sideways to see second half the table if it doesn't fit on the screen, 
+        you can do that with all tables but this is the first one that doesn't fit on a 1080p screen)
+    </p>
+    <div class="table-container">
+        <table>
+            <thead>
+                <td>OCR Exam Reference Language</td>
+                <td>Python</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>
+                            <pre>
+newFile("example.txt") // creates example.txt
+file = open("example.txt") // opens example.txt
+
+file.write("Hello World") // writes "Hello World" to example.txt
+print(file.read()) // prints "Hello World" by first reading example.txt and then printing it
+
+file.writeline("Line 1") // writes "Line 1" to example.txt at line 1
+file.writeline("Line 2") // writes "Line 2" to example.txt at line 2
+file.writeline("Line 4") // will still write "Line 4", but to line 3 (since no line 3 exists yet)
+
+print(file.readline()) // prints "Line 1" by first reading example.txt and then printing it
+print(file.readline()) // prints "Line 2"
+
+file.close() // closes example.txt and frees up memory
+</pre>
+                        </code>
+                    </td>
+                    <td>
+                        <code>
+                            <pre>
+file = open("example.txt", "w") # opens example.txt for writing, creates it if it doesn't exist
+file.write("Hello World") # writes "Hello World" to example.txt
+file.close() # closes example.txt and frees up memory
+
+with open("example.txt", "r") as file: # opens example.txt for reading
+    print(file.read()) # prints "Hello World"
+
+file = open("example.txt", "a") # opens example.txt for appending, creates it if it doesn't exist
+file.write("\nHello World") # appends "\nHello World" to example.txt (\n means newline)
+file.close()
+
+# readline and writeline are done the same way as OCR Reference Language
+                            </pre>
+                        </code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </Layout>
