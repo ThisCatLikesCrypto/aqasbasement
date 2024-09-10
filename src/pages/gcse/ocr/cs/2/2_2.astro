@@ -1,5 +1,6 @@
 ---
 import Layout from "../../../../../layouts/Layout.astro";
+import Table from "../../../../../components/Table.astro";
 ---
 
 <Layout title="2.2 - Programming Fundamentals (Part 2)">
@@ -201,7 +202,7 @@ file.close()
         - Databases are faster and more secure than simply using text files.
     </p>
     <h3>Text Files</h3>
-    <p>>
+    <p>
         - Text files can be used to store data but this is not recommended for 
         large datasets due to having to parse them and issues with splitting text.
     <h3>Arrays</h3>
@@ -211,4 +212,77 @@ file.close()
         - Arrays are faster than having to parse text files, but slower than databases.<br>
         - They are used with <code>array exampleArray = ["Hello", "World"]</code>
     </p>
+    <br>
+    <h2>SQL</h2>
+    <p>
+        - SQL (Structured Query Language) is a language used to interact with a 
+        <abbr title="Database Management System">DBMS</abbr>.<br>
+        - Pronounced "sequel", or "ess queue ell".<br>
+        - SQL is used to manage and manipulate data stored in databases.<br>
+        - It allows users to create, read, update, and delete data, commonly known as CRUD operations.<br>
+        - SQL is a standard language supported by many database systems such as MySQL, PostgreSQL, 
+        SQLite, and Microsoft SQL Server (the intricacies of which are not important for GCSE).
+    </p>
+    <h3>Basic SQL Commands</h3>
+    <p>
+        There are several key SQL commands you should know (if you're doing last-minute 
+        revision don't worry about most, the top 3 are the most important):
+    </p>
+    <ul>
+        <li><b>SELECT</b> - Used to retrieve data from a database.</li>
+        <li><b>FROM</b> - Specifies the table from which to retrieve or manipulate data.</li>
+        <li><b>WHERE</b> - Adds a condition to filter the data.</li>
+        <li><b>INSERT INTO</b> - Adds new records to a database.</li>
+        <li><b>UPDATE</b> - Modifies existing records in a database.</li>
+        <li><b>DELETE</b> - Removes records from a database.</li>
+        <li><b>CREATE TABLE</b> - Creates a new table in the database.</li>
+    </ul>
+    <h3>Example SQL Queries</h3>
+    <p>
+        Here are some example queries to show how SQL works
+        (using an example database):
+    </p>
+    <Table>
+        <thead>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Grade</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bob</td>
+                <td>18</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>17</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>Alex</td>
+                <td>16</td>
+                <td>75</td>
+            </tr>
+        </tbody>
+    </Table>
+    <div class="table-container"><!--Bruh this actually works as well-->
+        <pre>
+<b>1. Selecting data:</b>
+{"SELECT * FROM students WHERE grade > 80;"}
+-- This will retrieve all students who have a grade higher than 80.
+    
+<b>2. Inserting data:</b>
+INSERT INTO students (name, age, grade) VALUES ('Alice', 16, 85);
+-- This will add a new record for a student named Alice.
+    
+<b>3. Updating data:</b>
+UPDATE students SET grade = 90 WHERE name = 'Alice';
+-- This will update Alice's grade to 90.
+    
+<b>4. Deleting data:</b>
+DELETE FROM students WHERE name = 'Alice';
+-- This will remove Alice from the database.
+        </pre>
+    </div>
 </Layout>
