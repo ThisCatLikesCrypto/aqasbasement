@@ -7,7 +7,7 @@ import Layout from "../../../../../layouts/Layout.astro";
     <h2>String Manipulation</h2>
     <p>
         - Programs may have to modify, extract or analyse information from
-        strings.<br />
+        strings.<br>
         - Examples of string manipulation include:
         <ul>
             <li>Changing the case of a string</li>
@@ -20,15 +20,13 @@ import Layout from "../../../../../layouts/Layout.astro";
     <h3>Changing the case of a string</h3>
     <p>
         - <b>To change the case of a string</b>, use the <code>lower()</code> or
-        <code>upper()</code> functions on a string.<br />
-        - For example, with <code>exampleString = "Hello"</code>, <code
-            >exampleString.lower()</code
-        > will return "hello".
+        <code>upper()</code> functions on a string.<br>
+        - For example, with <code>exampleString = "Hello"</code>, 
+        <code>exampleString.lower()</code> will return "hello".
     </p>
     <h3>Concatenation (con-cat-en-ation)</h3>
     <p>
-        - <b>To concatenate two strings</b>, use the <code>+</code> operator.<br
-        />
+        - <b>To concatenate two strings</b>, use the <code>+</code> operator.<br>
         - For example, <code>"Hello " + "World"</code> will return "Hello World".
         (Note the space within the "Hello " string.)
     </p>
@@ -67,7 +65,7 @@ exampleString[5:] # "World"</pre>
             </tbody>
         </table>
     </div>
-    <br />
+    <br>
     <h3>ASCII conversion</h3>
     <p>
         - <b>To convert a string to ASCII</b>:
@@ -98,7 +96,7 @@ chr(65) # A</pre>
             </tbody>
         </table>
     </div>
-    <br />
+    <br>
     <h3>Getting the length of a string</h3>
     <p>
         - <b>To get the length of a string</b>:
@@ -129,7 +127,7 @@ len(exampleString) # 11</pre>
             </tbody>
         </table>
     </div>
-    <br />
+    <br>
     <h2>File Handling</h2>
     <p>
         - To handle (read, write and append) files you must first open the file,
@@ -187,4 +185,30 @@ file.close()
             </tbody>
         </table>
     </div>
+    <br>
+    <h2>Records to Store Data</h2>
+    <p>
+        - Sometimes you will need to store data in a record, for example, if you
+        need to store the name and age of a person.
+    </p>
+    <h3>Databases</h3>
+    <p>
+        - A database is a collection of fields (one slot of data) and records 
+        (a collection of fields all for one thing), 
+        each record is a set of data
+        stored in a particular format.<br>
+        - Most of the time databases use 'tables' to store records.<br>
+        - Databases are faster and more secure than simply using text files.
+    </p>
+    <h3>Text Files</h3>
+    <p>>
+        - Text files can be used to store data but this is not recommended for 
+        large datasets due to having to parse them and issues with splitting text.
+    <h3>Arrays</h3>
+    <p>
+        - Arrays are useful when working with small amounts of data, 
+        for example, a list of names, or a list of numbers.<br>
+        - Arrays are faster than having to parse text files, but slower than databases.<br>
+        - They are used with <code>array exampleArray = ["Hello", "World"]</code>
+    </p>
 </Layout>
