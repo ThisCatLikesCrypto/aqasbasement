@@ -205,12 +205,13 @@ file.close()
     <p>
         - Text files can be used to store data but this is not recommended for 
         large datasets due to having to parse them and issues with splitting text.
+    </p>
     <h3>Arrays</h3>
     <p>
         - Arrays are useful when working with small amounts of data, 
         for example, a list of names, or a list of numbers.<br>
         - Arrays are faster than having to parse text files, but slower than databases.<br>
-        - They are used with <code>array exampleArray = ["Hello", "World"]</code>
+        (covered in the next section)
     </p>
     <br>
     <h2>SQL</h2>
@@ -284,5 +285,88 @@ UPDATE students SET grade = 90 WHERE name = 'Alice';
 DELETE FROM students WHERE name = 'Alice';
 -- This will remove Alice from the database.
         </pre>
+    </div>
+    <br>
+    <h2>Arrays</h2>
+    <p>
+        - Arrays let you store a collection of data in a single variable.<br>
+        - They come in multiple 'dimensions', the most common being 1D and 2D.
+    </p>
+    <h3>1D Arrays</h3>
+    <p>
+        - A 1D array is a single dimension array, for example:
+        <code>array exampleArray = ["Hello", "World"]</code>.<br>
+        - They are far more common than 2D arrays, and are used for storing 
+        data that does not require tables.
+    </p>
+    <h4>OCR Exam Reference Language Example</h4>
+    <div class="table-container">
+        <code>
+            <pre>
+array emptyArray = [10] // You specify the size of the array
+array exampleArray = ["Hello", "World", ""]
+exampleArray[0] // "Hello"
+exampleArray[1] // "World"
+
+exampleArray[2] = "!" // Assigns "!" to the 3rd index
+
+/* Loop through the array. This syntax isn't explicity defined 
+in the OCR Exam Reference Language spec, but it should be fine. */
+for item in exampleArray
+    print(item) // prints "Hello", "World" and "!"
+next item
+            </pre>
+        </code>
+    </div>
+    <h4>Python Example</h4>
+    <div class="table-container">
+        <code>
+            <pre>
+emptyArray = [] # You don't have to specify the size of the array
+exampleArray = ["Hello", "World"]
+exampleArray[0] # "Hello"
+exampleArray[1] # "World"
+
+exampleArray[2] = "!" # Assigns "!" to the 3rd index
+
+# Loop through the array
+for item in exampleArray:
+    print(item) # prints "Hello", "World" and "!"
+            </pre>
+        </code>
+    </div>
+    <h3>2D Arrays</h3>
+    <p>
+        - A 2D array is a two-dimensional array, for example:
+        <code>array exampleArray = [["Hello", "World"], ["!", "?"]]</code>.<br>
+        - They are used for storing data that requires tables to visualise.<br>
+        - The right index can be thought of as the column, and the left index 
+        can be thought of as the row.
+    </p>
+    <h4>OCR Exam Reference Language Example</h4>
+    <div class="table-container">
+        <code>
+            <pre>
+array emptyArray = [10, 10] 
+array exampleArray = ["Hello", "World"], ["!", "?"]
+exampleArray[0, 0] // "Hello"
+exampleArray[0, 1] // "World"
+exampleArray[1, 0] // "!"
+exampleArray[1, 1] // "?"
+            </pre>
+        </code>
+    </div>
+    <h4>Python Example</h4>
+    <div class="table-container">
+        <code>
+            <pre>
+exampleArray = [["Hello", "World"], # multi-line not required,
+                ["!", "?"]]         # but it's easier to read
+exampleArray[0][0] # "Hello"
+exampleArray[0][1] # "World"
+exampleArray[1][0] # "!"
+exampleArray[1][1] # "?"
+            </pre>
+        </code>
     </div>
 </Layout>
