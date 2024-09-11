@@ -101,14 +101,27 @@ import Layout from '../../../../../layouts/Layout.astro';
             of O(n), where n is the number of elements in the list).
         </li>
     </ul>
+    <h4>Implementation (Python):</h4>
+    <p>
+        <pre>
+def linear_search(arr, target):
+    # Traverse through the list
+    for i in range(len(arr)):
+        # If the target is found, return the index
+        if arr[i] == target:
+            return i
+        # If the target is not found, return -1
+        else:
+            return -1
+        </pre>
+    </p>
     <h3>Binary Search</h3>
     <h4>Definition:</h4>
     <p>
-        Binary search is a more efficient search algorithm that works only on sorted lists. It repeatedly divides
+        Binary search is a more efficient search algorithm that works only on sorted (in order) lists. It repeatedly divides
         the
         search interval in half to find the target value.
     </p>
-
     <h4>How It Works:</h4>
     <ol>
         <li>Start with two pointers – one at the beginning of the list (low) and one at the end (high).</li>
@@ -166,6 +179,33 @@ import Layout from '../../../../../layouts/Layout.astro';
         <li>Requires the list to be sorted before searching.</li>
         <li>Slightly more complex to implement compared to linear search.</li>
     </ul>
+    <h4>Implementation (Python):</h4>
+    <p>
+        <pre>
+def binary_search(arr, target):
+    # Initialise the low and high pointers
+    low = 0
+    high = len(arr) - 1 
+    {"# Continue searching as long as low <= high"}
+    {"while low <= high:"}
+        # Calculate the middle index
+        mid = (low + high) // 2
+                
+        # If the target is at the middle, return its index
+        if arr[mid] == target:
+            return mid
+        # If the target is smaller than the middle element, search the left half
+        {"elif arr[mid] > target:"}
+            high = mid - 1
+        # If the target is larger than the middle element, search the right half
+        else:
+            low = mid + 1
+        # Repeat
+            
+    # If the target is not found, return -1
+    return -1
+        </pre>
+    </p>
     <h3>Comparison of Linear Search and Binary Search:</h3>
     <table>
         <tr>
