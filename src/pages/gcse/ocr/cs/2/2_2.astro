@@ -368,4 +368,106 @@ exampleArray[1][1] # "?"
             </pre>
         </code>
     </div>
+    <br>
+    <h2>Functions and Prodecures</h2>
+    <p>
+        - Functions and Prodecures are a way to group together a set of instructions that can be 
+        called multiple times.<br>
+        - They help decompose a problem to make it easier to undestand and are used to help 
+        duplicating code, improve maintainability and readability, and to perform calculations, 
+        retireve data, or make decisions.<br>
+        - They can take paramaters, which are values that are passed into the 
+        function when it is called.<br>
+        - Functions, but not prodecures, return values (variables), this is 
+        done by assigning the return value to a variable.<br>
+        - Functions can be called recursively, which means that a function can 
+        call itself.
+    </p>
+    <Table>
+        <thead>
+            <td>OCR Exam Reference Language</td>
+            <td>Python</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code>
+                        <pre>
+function add(a, b)
+    return a + b
+endfunction
+
+print(add(2, 3)) // 5
+
+procedure add(a, b)
+    print(a + b)
+endprocedure
+
+add(2, 3) // 5
+                        </pre>
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        <pre>
+function add(a, b):
+    return a + b
+
+print(add(2, 3)) # 5
+
+def add(a, b):
+    print(a + b)
+
+add(2, 3) # 5
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+        </tbody>
+    </Table>
+    <br>
+    <h3>Local vs Global Variables</h3>
+    <p>
+        - Local variables are only available within the function or prodecure 
+        they are declared in.<br>
+        - Global variables are available to all functions and prodecures.<br>
+        - Variables outside functions and procedures are <i>automatically</i> global, 
+        but variables inside functions and prodecures have to be made global with the <code>global</code>
+        keyword.
+    </p>
+    <code>
+        <pre>
+function add(a, b):
+    sum = a + b # local
+    global globalsum
+    globalsum = sum
+    return sum
+
+add(2, 3)
+print(globalsum) # 5
+print(sum) # not defined error
+        </pre>
+    </code>
+    <br>
+    <h2>Random Numbers</h2>
+    <p>
+        - Random numbers are used to simulate the randomness of the real world, for example, 
+        to simulate the outcome of a dice roll, or the number of people in a room.<br>
+    </p>
+    <h3>OCR Exam Reference Language Example</h3>
+    <code>
+        <pre>
+random_number = random(1, 6)
+print(random_number)
+        </pre>
+    </code>
+    <h3>Python Example</h3>
+    <code>
+        <pre>
+import random
+
+random_number = random.randint(1, 6)
+print(random_number)
+        </pre>
+    </code>
 </Layout>
