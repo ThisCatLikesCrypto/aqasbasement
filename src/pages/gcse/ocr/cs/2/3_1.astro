@@ -1,0 +1,54 @@
+---
+import Layout from "../../../../../layouts/Layout.astro";
+import Table from "../../../../../components/Table.astro";
+---
+
+<Layout title="2.3 - Producing Robust Programs (Part 1)">
+    <h1>2.3 - Producing Robust Programs (Part 1)</h1>
+    <h2>Defensive Design Considerations</h2>
+    <p>
+        - Defensive design is a set of techniques that can be used to reduce the 
+        likelihood of a program failing in a way that is difficult to detect.<br>
+        - It considers every possible input from a user and tries to find ways 
+        that the user could break the program.
+    </p>
+    <p>
+        <b>Key Aspects of Defensive Design:</b>
+        <ul>
+            <li><b>Input Validation:</b> Ensures that the input received by a program 
+                is correct and reasonable before it is processed. This helps avoid errors 
+                such as entering unexpected data types, values outside expected ranges, 
+                or malicious inputs like SQL injection or script injection.</li>
+            <li><b>Sanitisation:</b> Input sanitisation ensures that any user input is 
+                cleaned and prepared correctly to prevent it from causing harm or breaking 
+                the system. This is often used to remove or neutralise any malicious content 
+                from inputs like form fields or query parameters.</li>
+            <li><b>Authentication and Authorisation:</b> Ensures that users are who they say 
+                they are (authentication) and that they have permission to perform certain 
+                actions (authorisation). This is crucial for protecting sensitive data and 
+                functionality from unauthorised access.</li>
+            <li><b>Preventing Code Injection:</b> Defensive design also involves protecting 
+                a program against code injection attacks by ensuring that user inputs are 
+                treated safely and are not executed as code.</li>
+            <li><b>Error Handling:</b> Effective error handling ensures that when things 
+                do go wrong, the program fails gracefully rather than crashing or exposing 
+                sensitive information. This might involve displaying user-friendly error 
+                messages or logging the error details for developers to troubleshoot.</li>
+            <li><b>Boundary Testing:</b> Testing the program's behavior at the limits of 
+                acceptable input values (e.g., largest and smallest numbers, longest strings) 
+                ensures that it can handle edge cases and won't fail unexpectedly in these situations.</li>
+        </ul>
+    </p>
+    <p>
+        <b>Benefits of Defensive Design:</b>
+        <ul>
+            <li>Improves program reliability by ensuring that potential user mistakes 
+                or malicious attempts are managed.</li>
+            <li>Reduces the likelihood of program crashes or unpredictable behavior, 
+                providing a better user experience.</li>
+            <li>Makes code easier to maintain and debug, as errors are caught and 
+                handled before they cause bigger problems.</li>
+        </ul>
+    </p>
+    
+</Layout>
