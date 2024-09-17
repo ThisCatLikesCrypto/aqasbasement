@@ -15,6 +15,9 @@ import Table from "../../../../../components/Table.astro";
     <p>
         <b>Key Aspects of Defensive Design:</b>
         <ul>
+            <li><b>Anticipating Misuse: </b> This is probably the most important 
+            consideration to make, always assume that someone will try to 
+            break the program with malicious intent.</li>
             <li><b>Input Validation:</b> Ensures that the input received by a program 
                 is correct and reasonable before it is processed. This helps avoid errors 
                 such as entering unexpected data types, values outside expected ranges, 
@@ -50,5 +53,54 @@ import Table from "../../../../../components/Table.astro";
                 handled before they cause bigger problems.</li>
         </ul>
     </p>
-    
+    <br>
+    <h2>Input Validation</h2>
+    <p>
+        - Input validation is essential for defensive design. It helps 
+        ensure that user input is correct and safe to process, preventing potential 
+        security vulnerabilities and crashes.<br>
+        - It can prevent attacks such as 
+        SQL injection or cross-site scripting (XSS) attacks, where an attacker can 
+        inject malicious code into the input and potentially execute it on the server.<br>
+        - It involves checking that the input received by a program is 
+        valid and within the expected range. You can use things such as if statements 
+        to check for banned words, the length of a string, the presence of certain 
+        characters, or the type of data being entered.
+    </p>
+    <h3>SQL Injection Prevention</h3>
+    <p>
+        - SQL injection is a type of attack where an attacker can inject malicious SQL 
+        code into a query, allowing them to manipulate or extract data from the database.<br>
+        - To prevent SQL injection, you can check your input for statments such as 'DROP table', 
+        and if this is found, either return an error message or simply ensure that the input is 
+        not processed further.
+    </p>
+    <h3>Auth example</h3>
+    <img class="centreimagebutdontstretch" src="/images/cs/auth.png" alt="Auth example">
+    <br>
+    <h2>Maintainability</h2>
+    <p>
+        - Maintainability is the ability of a program to be easily modified, 
+        extended, and maintained over time.<br>
+        - It is important for defensive design because it helps prevent errors 
+        and crashes that can occur when making changes to the code.<br>
+        - Some ways to make code more maintainable include using naming conventions, 
+        the use of sub programs like functions, using comments 
+        to explain the purpose and functionality of different parts of the code, 
+        and using intentation to make the code easier to read.
+    </p>
+    <h3>Example:</h3>
+    <p>
+        <b>Before:</b>
+        <br>
+        <img class="centreimagebutdontstretch" src="/images/cs/utterlyshit.png" alt="Not very maintainable code at all">
+        <br>
+        <b>After:</b>
+        <br>
+        <img class="centreimagebutdontstretch" src="/images/cs/maintainable.png" alt="Better code">
+    </p>
+    <p>
+        Note that indentation is <i>required</i> in Python, so the first example won't run, 
+        but in almost every other language it is optional.
+    </p>
 </Layout>

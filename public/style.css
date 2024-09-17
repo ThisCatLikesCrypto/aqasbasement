@@ -1,5 +1,4 @@
-@import url("https://cdn.jsdelivr.net/gh/EyeScary-Development/CDN/fonts/reddit/css/reddit-sans.css");
-/* This isn't an EyeScary project but imma use the CDN anyway */
+@import url("https://fonts.bunny.net/css?family=reddit-sans:400,400i,700,700i");
 
 :root {
     --rosewater: #f5e0dc;
