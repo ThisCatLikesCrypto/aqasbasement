@@ -1,45 +1,44 @@
-# A simple authentication program
+def sum_of_numbers(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
 
-# Create an empty dictionary to store user credentials
-users = {}
+# Sample test cases (one of these might be invalid, erroneous, normal, or boundary data)
+print(sum_of_numbers([1, 2, 3]))  # Normal data
+print(sum_of_numbers([-1, 0, 1]))  # Boundary data (negatives and zero), doesn't cause an error
+                                    # but might cause unexpected results
+print(sum_of_numbers(['a', 2, 3]))  # Erroneous data (non-integer) causes an error
+print(sum_of_numbers([]))  # Empty list (Invalid case), causes return 0
 
-def register():
-    print("\n--- Register ---")
-    username = input("Enter a new username: ")
+def sum_of_numbers(numbers):
+    total = 0
+    for num in numbers:
+        # Check if each element is an integer or float, otherwise raise an error
+        if not isinstance(num, (int, float)):
+            raise ValueError(f"Invalid data type: {num}. All elements must be numbers.")
+        if num < 0:
+            raise ValueError(f"Negative number: {num}. All numbers must be positive.")
+        total += num
+    return total
+
+# Test cases
+def run_tests():
+    test_cases = [
+        ([1, 2, 3], "Normal Data"),          # Normal data
+        ([-1, 0, 1], "Boundary Data"),       # Boundary data (negatives and zero)
+        (['a', 2, 3], "Erroneous Data"),     # Erroneous data (non-integer)
+        ([], "Empty List (Boundary Case)"),  # Boundary case (empty list)
+        ([float('inf'), 2], "Boundary Data (Infinity)")  # Edge case with infinity
+    ]
     
-    # Check if the username is already taken
-    if username in users:
-        print("Username already taken! Try a different one.")
-    else:
-        password = input("Enter a new password: ")
-        users[username] = password
-        print("Registration successful!")
+    for data, description in test_cases:
+        try:
+            result = sum_of_numbers(data)
+            print(f"{description}: Success! Sum = {result}")
+        except ValueError as ve:
+            print(f"{description}: Error - {ve}")
+        except Exception as e:
+            print(f"{description}: Unexpected Error - {e}")
 
-def login():
-    print("\n--- Login ---")
-    username = input("Enter your username: ")
-    password = input("Enter your password: ")
-    
-    # Check if the username and password are correct
-    if username in users and users[username] == password:
-        print(f"Login successful! Welcome, {username}.")
-    else:
-        print("Invalid username or password. Try again.")
-
-while True:
-    print("\n--- Main Menu ---")
-    print("1. Register")
-    print("2. Login")
-    print("3. Quit")
-        
-    choice = input("Choose an option (1/2/3): ")
-        
-    if choice == "1":
-        register()
-    elif choice == "2":
-        login()
-    elif choice == "3":
-        print("Goodbye!")
-        break
-    else:
-        print("Invalid choice! Please select 1, 2, or 3.")
+run_tests() 

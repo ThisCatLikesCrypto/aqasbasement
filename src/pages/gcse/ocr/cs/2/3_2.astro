@@ -1,0 +1,85 @@
+---
+import Layout from "../../../../../layouts/Layout.astro";
+---
+
+<Layout title="2.3 - Producing Robust Programs (Part 2)">
+    <h1>2.3 - Producing Robust Programs (Part 2)</h1>
+    <h2>Testing Programs</h2>
+    <p>
+        - Testing is an essential part of defensive design. It helps find errors and bugs, 
+        ensures that the program behaves as expected, helps prevent security vulnerabilities, 
+        and makes sure that the program solves the problem at hand.<br>
+        - The two different types of testing are iterative and final testing.
+    </p>
+    <h3>Iterative Testing</h3>
+    <p>
+        - Iterative testing is a process of testing the program as it is being developed, 
+        often in small increments or iterations.<br>
+        - It helps identify errors and bugs early in the development process, allowing 
+        for fixes to be made before the program is released.<br>
+        - It is important to note that iterative testing should be done on a small 
+        subset of the program, as it is easier to identify errors and bugs in a smaller 
+        scope.
+    </p>
+    <h3>Final Testing</h3>
+    <p>
+        - Final testing is a process of testing the program after it has mostly been developed 
+        and refined.<br>
+        - It helps ensure that the program behaves as expected and meets the requirements 
+        of the users.<br>
+        - Final testing checks the program against real data, including normal data, but also  
+        boundary and erroneous data.<br>
+        - It is important to note that final testing should be done on a larger subset 
+        of the program, as it is more difficult to identify errors and bugs in a larger 
+        scope.<br>
+        - Final testing is often called 'Alpha' or 'Beta' testing, depending on the stage 
+        of development.
+    </p>
+    <br>
+    <h2>Identifying syntax and logic errors</h2>
+    <p>
+        - Syntax and logic errors are types of errors that occur when the program 
+        is not written correctly.<br>
+        - They can be caused by typos, incorrect indentation, or incorrect use of 
+        operators or keywords.<br>
+        - Syntax and logic errors can be identified by running the program and 
+        checking for error messages or unexpected behavior.<br>
+        - Syntax errors are errors which break the grammatical rules of the programming language 
+        and stop it from being run/translated.<br>
+        - Logic errors are errors which produce unexpected output.
+    </p>
+    <h3>Example:</h3>
+    <p>
+        <b>Before:</b>
+        <br>
+        <img class="centreimagebutdontstretch" src="/images/cs/syntaxerror.png" alt="Errors">
+        <p>Some errors have been picked up by the IDE.</p>
+        <br>
+        <b>After:</b>
+        <br>
+        <img class="centreimagefullwidth" src="/images/cs/syntaxerrorfixed.png" alt="Fixed errors">
+        <p>There are no underlined errors.</p>
+    </p>
+    <br>
+    <h2>Selecting and using suitable test data</h2>
+    <p>
+        - There are three main categories of test data: boundary, erroneous, and normal.<br>
+        - Boundary data is data that is outside the expected range of values, such as 
+        extremely high or low numbers.<br>
+        - Erroneous data is data that is incorrect or unexpected, such as strings that 
+        contain invalid characters or numbers that are not in the correct format.<br>
+        - Normal data is data that is within the expected range of values, such as 
+        numbers that are within a certain range or strings that are in the correct format.<br>
+        - Test data should be selected based on the requirements of the program, 
+        ensuring that it covers all possible scenarios and edge cases.<br>
+        - There is also a fourth extra category, invalid, which is data that is not valid 
+        for the program, such as if a number is too large.
+    </p>
+    <h3>Example</h3>
+    <h4>Before</h4>
+    <img class="centreimagefullwidth" src="/images/cs/baddata.png" alt="Bad data">
+    <br>
+    <h4>After</h4>
+    <img class="centreimagefullwidth" src="/images/cs/baddatahandled.png" alt="Handled bad data">
+    <br>
+</Layout>

@@ -207,6 +207,13 @@ tr:nth-child(even) {
     width: 75%;
 }
 
+.centreimagefullwidth {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 .centreimagebutdontstretch {
     display: block;
     margin-left: auto;
