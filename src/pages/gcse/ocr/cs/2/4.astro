@@ -1,0 +1,240 @@
+---
+import Layout from "../../../../../layouts/Layout.astro";
+import Table from "../../../../../components/Table.astro";
+---
+
+<Layout title="2.4 - Boolean Logic">
+    <h1>2.4 - Boolean Logic</h1>
+    <h2>Logic Diagrams</h2>
+    <p>
+        - Boolean logic diagrams are a graphical representation of the Boolean
+        logic used in programming.<br>
+        - Boolean logic is a branching system that uses only two values: true and
+        false.<br>
+        - They are used to test the logic of a program, and to debug the program.<br
+        />
+        - There are two types of Boolean logic diagrams: truth tables and logic gates.<br
+        />
+        - A truth table is a table that shows all possible combinations of inputs
+        and their corresponding outputs.<br>
+        - A logic gate is a diagram that shows logic being performed: things like
+        AND, OR and NOT.
+    </p>
+    <h3>Logic gates</h3>
+    <p>
+        - There are three main types of logic gates: AND, OR, and NOT.<br>
+        - AND is a gate that performs an AND operation, meaning that both inputs
+        must be true for the output to be true.<br>
+        - OR is a gate that performs an OR operation, meaning that at least one input
+        must be true for the output to be true.<br>
+        - NOT is a gate that performs a NOT operation, meaning that the input is
+        inverted, so if the input is true, the output is false, and vice versa.<br>
+        <img
+            class="centreimagefullwidth"
+            src="/images/cs/logicgates.png"
+            alt="Logic gates">
+    </p>
+    <h3>Truth tables</h3>
+    <p>
+        - A truth table is a table that shows all possible combinations of
+        inputs and their corresponding outputs.<br>
+        - The first row of the table shows the inputs, the second row shows the corresponding
+        outputs, and the third row shows the logic gate.<br>
+        <Table>
+            <thead>
+                <tr>
+                    <th colspan="3">AND</th>
+                    <th colspan="3">OR</th>
+                    <th colspan="2">NOT</th>
+                </tr>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>A AND B</th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>A OR B</th>
+                    <th>A</th>
+                    <th>NOT A</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </Table>
+    </p>
+    <br>
+    <h2>Combined Operators</h2>
+    <p>
+        - Boolean operators can be combined to create more complex expressions.<br>
+        - <b>You do not need to know these operators, but you do need to know how to combine 
+            them and as such it's a lot easier if you know some of them.</b><br>
+        - Types of combined operators are XOR (exclusive or), NAND (not and), and
+        NOR (not or).<br>
+        - XOR is a gate that performs an exclusive or operation, meaning that only
+        one of the inputs must be true for the output to be true.<br>
+        - NAND is a gate that performs a not and operation, meaning that both inputs
+        must be false for the output to be true.<br>
+        - NOR is a gate that performs a not or operation, meaning that at least one
+        input must be false for the output to be true.
+    </p>
+    <h3>Trace tables</h3>
+    <h4>XOR</h4>
+    <Table>
+        <thead>
+            <tr>
+                <th colspan="2">INPUT</th>
+                <th>OUTPUT</th>
+            </tr>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A XOR B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </Table>
+    <br>
+    <h3>NOR</h3>
+    <Table>
+        <thead>
+          <tr>
+            <th colspan="2">INPUT</th>
+            <th>OUTPUT</th>
+          </tr>
+          <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A NOR B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+    </Table>
+    <br>
+    <h3>NAND</h3>
+    <Table>
+        <thead>
+          <tr>
+            <th colspan="2">INPUT</th>
+            <th>OUTPUT</th>
+          </tr>
+          <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A NAND B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+    </Table>
+    <br>
+    <h3>Combined Gates</h3>
+    <p>
+        <img class="centreimagefullwidth" src="/images/cs/combinedgates.png" alt="Combined gates"><br>
+        - In this diagram, A, B and C are inputs, X is the output 
+        of the first OR, Y of the first NOT, Z of the second OR, 
+        and Q of the whole thing.<br>
+        - The whole thing is Q = (A OR B) AND (B OR C)
+    </p>
+</Layout>
