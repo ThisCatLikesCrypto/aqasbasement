@@ -1,0 +1,106 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import Table from '../../../../../components/Table.astro';
+---
+
+<Layout title="2.5 - Languages and IDEs">
+    <h1>2.5 - Languages and IDEs</h1>
+    <h2>Levels of languages</h2>
+    <p>
+        - There are two levels of languages: high level, and low level.<br>
+        - High level languages are easier to read, write and understand, but 
+        are harder for computers to process and must be run through a compiler 
+        (translates the high level language into a low level language).<br>
+        - Low level languages are harder to read, write and understand, but are 
+        easier for computers to process and do not need a compiler. Low level
+        languages were the first programming langauges, and programming took a 
+        long time.
+    </p>
+    <h3>Low-Level Languages</h3>
+    <p>
+        - Low level languages either are, or resemble, machine code.<br>
+        - They use 'instructions', which are commands that the CPU understand.<br>
+        - Originally, programming had to be done <b>directly</b> in machine code. 
+        This means that the programmer had to write the code in binary.<br>
+        - Later on, assembly language was created, which is a low level language 
+        that resembles machine code, but is easier to read and write.<br>
+        - It has to be translated (through an <b>assembler</b>) into machine code 
+        before it can be run on the computer, but it is very easy to predict what 
+        will come out.<br>
+        - It looks like this:
+        <img class="centreimagefullwidth" src="/images/cs/assembly.webp" alt="Hello World in Assembly">
+    </p>
+    <Table>
+        <thead>
+            <tr>
+                <th>Advantages of Assembly</th>
+                <th>Disadvantages of Assembly</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Easier to read</li>
+                        <li>Easier to write</li>
+                        <li>Machine code is easy to predict</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Still requires manual memory management</li>
+                        <li>Still requires an assembler</li>
+                        <li>Still requires platform-specific code</li>
+                        <li>Prone to (cryptic) errors</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </Table>
+    <br>
+    <h3>High-Level Languages</h3>
+    <p>
+        - High level languages are easier to read, write and understand, but are 
+        harder for computers to process and must be run through a compiler.<br>
+        - Languages like C, C++, Java, Python, OCR Reference Language, JavaScript, 
+        and pretty much any 'programming language' you would use are high level.<br>
+        - Despite the fact that the generate machine code may be less efficient, 
+        this is generally not an issue due to advancements in processing power 
+        and memory capacity.<br>
+        - One 'standard library' instruction can be many machine code instructions.
+    </p>
+    <Table>
+        <thead>
+            <tr>
+                <th>Advantages</th>
+                <th>Disadvantages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Easiest to read</li>
+                        <li>Easiest to write</li>
+                        <li>A lot easier to debug</li>
+                        <li>Not architecture dependent</li>
+                        <li>One line can be many machine code instructions</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Harder to predict machine code</li>
+                        <li>Less efficient</li>
+                        <li>Needs to be compiled</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </Table>
+    <h2>Translators</h2>
+    <p>(to come)</p>
+    <h2>Compilers and Interpreters</h2>
+    <p>(to come)</p>
+    <h2>IDEs</h2>
+    <p>(to come)</p>
+</Layout>
