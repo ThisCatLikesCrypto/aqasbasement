@@ -28,7 +28,7 @@ import Table from '../../../../../components/Table.astro';
         before it can be run on the computer, but it is very easy to predict what 
         will come out.<br>
         - It looks like this:
-        <img class="centreimagefullwidth" src="/images/cs/assembly.webp" alt="Hello World in Assembly">
+        <img class="centreimage" src="/images/cs/assembly.webp" alt="Hello World in Assembly">
     </p>
     <Table>
         <thead>
@@ -127,7 +127,8 @@ import Table from '../../../../../components/Table.astro';
                     <ul>
                         <li>Source does not need to be available</li>
                         <li>Can be distributed without runtimes</li>
-                        <li>Fastest to run</li>
+                        <li>Fast to run</li>
+                        <li>Pre-run optimisation carried out</li>
                     </ul>
                 </td>
                 <td>
@@ -135,14 +136,103 @@ import Table from '../../../../../components/Table.astro';
                         <li>Everything needs to be recompiled when changes are made</li>
                         <li>Difficult to debug</li>
                         <li>Executables work on only one platform and architecture</li>
+                        <li>Compilation can be memory-intensive</li>
                     </ul>
                 </td>
             </tr>
         </tbody>
     </Table>
     <h3>Interpreters</h3>
-    <p>(im lazy and didnt want to finish this)</p>
-    <a href="https://www.savemyexams.com/gcse/computer-science/ocr/22/revision-notes/11-programming-languages-and-integrated-development-environments/programming-languages-and-integrated-development-environments-ides/translators-compilers-and-interpreters/">UNFISDHFJOIDSJFOIDS!!!!11!!</a>
+    <p>
+        - Interpreters are programs that translate source code into machine code 
+        <b>during</b> its running.<br>
+        - They go line-by-line, and if any errors are found, they will stop and 
+        display an error message.<br>
+        - Programs run with interpreters are usually slower than compiled code, but they are easier 
+        to debug.<br>
+        - Interpreted code is more difficult to distribute, since it requires a runtime 
+        environment to run, for example the Python interpreter.
+    </p>
+    <Table>
+        <thead>
+            <tr>
+                <th>Advantages</th>
+                <th>Disadvantages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Easiest to debug</li>
+                        <li>Not platform-dependent</li>
+                        <li>Does not require recompilation every time</li>
+                        <li>Less RAM needed for processing code</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Slower than compiled code</li>
+                        <li>Requires a runtime environment</li>
+                        <li>Often takes more system resources</li>
+                        <li>No pre-run optimisation can be carried out</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </Table>
+    <br>
     <h2>IDEs</h2>
-    <p>(to come)</p>
+    <p>
+        - An IDE, or Integrated Development Environment, is a software application 
+        that are designed to make writing code easier and more efficient.<br>
+        - There are multiple different facilites available within IDEs:
+        <ul>
+            <li>Editors</li>
+            <li>Error diagnostics</li>
+            <li>Runtime environments</li>
+            <li>Translators</li>
+        </ul>
+    </p>
+    <h3>Editors</h3>
+    <p>
+        - The 'editor' component of an IDE is the part that allows you to write 
+        code.<br>
+        - They will usually have syntax highlighting, which will make it easier to 
+        read code, by highlighting key words.<br>
+        <div class="table-container">
+            <img src="/images/cs/autocomplete.png" alt="autocomplete"><sub>(lmao)</sub>
+        </div>
+        - IDEs also automatically indent code, and automatically add ending 
+        brackets when you type an opening bracket, add ending quotes when you type 
+        an opening quote, etc.
+    </p>
+    <h3>Error diagnostics</h3>
+    <p>
+        - Error diagnostics are a feature of an IDE that will display error messages 
+        when there are errors in your code.<br>
+        - They will also highlight the line where the error is, and will underline 
+        the error in the code.<br>
+        - This has some overlap with runtime environments, as errors in your code #
+        during runtime (not detected beforehand) will be highlighted.<br>
+        - This is useful for finding errors in your code, and for fixing them.
+    </p>
+    <h3>Runtime environments</h3>
+    <p>
+        - Runtime environments are a feature of an IDE that will allow you to run 
+        your code.<br>
+        - They will have the normal start-stop buttons you expect, but a decent 
+        IDE will also have a 'debug' option, which allow you to run your code 
+        line-by-line, and stop at any errors.
+    </p>
+    <sub>I apologise for the repetition in these but they overlap way too much</sub>
+    <h3>Translators</h3>
+    <p>
+        - IDEs will have built-in translators, so you can run your code without 
+        having to leave the IDE.
+    </p>
+    <br>
+    <p>
+        <b>end of the course.</b> woop woop
+    </p>
 </Layout>
