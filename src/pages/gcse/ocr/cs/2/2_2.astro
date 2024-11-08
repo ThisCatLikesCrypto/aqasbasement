@@ -378,7 +378,7 @@ exampleArray[1][1] # "?"
         retireve data, or make decisions.<br>
         - They can take paramaters, which are values that are passed into the 
         function when it is called.<br>
-        - Functions, but not prodecures, return values (variables), this is 
+        - Functions, but not prodecures, return values, this is 
         done by assigning the return value to a variable.<br>
         - Functions can be called recursively, which means that a function can 
         call itself.
@@ -397,7 +397,8 @@ function add(a, b)
     return a + b
 endfunction
 
-print(add(2, 3)) // 5
+result = add(2, 3)
+print(result) // 5
 
 procedure add(a, b)
     print(a + b)
@@ -413,7 +414,8 @@ add(2, 3) // 5
 def add(a, b):
     return a + b
 
-print(add(2, 3)) # 5
+result = add(2, 3)
+print(result) # 5
 
 def add(a, b):
     print(a + b)
