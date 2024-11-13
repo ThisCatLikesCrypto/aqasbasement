@@ -11,10 +11,8 @@ import Table from "../../../../../components/Table.astro";
         logic used in programming.<br>
         - Boolean logic is a branching system that uses only two values: true and
         false.<br>
-        - They are used to test the logic of a program, and to debug the program.<br
-        />
-        - There are two types of Boolean logic diagrams: truth tables and logic gates.<br
-        />
+        - They are used to test the logic of a program, and to debug the program.<br>
+        - There are two types of Boolean logic diagrams: truth tables and logic gates.<br>
         - A truth table is a table that shows all possible combinations of inputs
         and their corresponding outputs.<br>
         - A logic gate is a diagram that shows logic being performed: things like
@@ -32,7 +30,8 @@ import Table from "../../../../../components/Table.astro";
         <img
             class="centreimagefullwidth"
             src="/images/cs/logicgates.png"
-            alt="Logic gates">
+            alt="Logic gates"><br>
+	- You may also see V as OR, ∧ as AND and ¬ as NOT.
     </p>
     <h3>Truth tables</h3>
     <p>
@@ -117,7 +116,7 @@ import Table from "../../../../../components/Table.astro";
         - NOR is a gate that performs a not or operation, meaning that at least one
         input must be false for the output to be true.
     </p>
-    <h3>Trace tables</h3>
+    <h3>Truth tables</h3>
     <h4>XOR</h4>
     <Table>
         <thead>
@@ -235,6 +234,6 @@ import Table from "../../../../../components/Table.astro";
         - In this diagram, A, B and C are inputs, X is the output 
         of the first OR, Y of the first NOT, Z of the second OR, 
         and Q of the whole thing.<br>
-        - The whole thing is Q = (A OR B) AND (B OR C)
+        - The whole thing is Q = (A OR B) AND ((NOT B) OR C)
     </p>
 </Layout>
