@@ -235,6 +235,10 @@ tr:nth-child(even) {
     max-width: 700px;
 }
 
+.strike {
+    text-decoration: line-through;
+}
+
 @media screen and (max-width: 800px) {
     #main {
         margin-left: 0;
