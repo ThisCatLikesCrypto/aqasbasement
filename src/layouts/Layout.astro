@@ -14,9 +14,15 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 		<meta name="keywords" content="AQA, Basement, GCSE, OCR, Edexcel, revision, notes, discord, server, AQA's Basement, A-Level, A Level">
-		<meta name="author" content="AQA's Basement">
+		<meta name="author" content="Wilbur Williams">
+		<meta name="fediverse:creator" content="@wilbur@wetdry.world">
+		<meta property="og:title" content=`${title} - AQA's Basement`>
+		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://aqasbasement.uk/">
+		<meta property="og:description" content=`A website for notes and resources for GCSEs and A-Levels. This page is: ${title}`>
 		<!--<meta property="og:image" content="[insert image URL for sharing here]">-->
+		<link rel="dns-prefetch" href="https://fonts.bunny.net">
+		<link rel="preconnect" href="https://fonts.bunny.net">
 		<link rel="preload" as="style" href="/style.css">
 		<link rel="preload" as="script" href="/script.js">
 		<link rel="preload" as="image" href="/images/CC-BY-SA-NC.png">
