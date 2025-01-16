@@ -239,6 +239,16 @@ tr:nth-child(even) {
     text-decoration: line-through;
 }
 
+.lotsofnotes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.lotsofnotes > div {
+    flex: 1 1 auto;
+}
+
 @media screen and (max-width: 800px) {
     #main {
         margin-left: 0;
