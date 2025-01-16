@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
+import Table from '../../../../../components/Table.astro';
 ---
 
 <Layout title="GCSE AQA Bio 3.1 - Communicable disases">
@@ -62,4 +63,37 @@ import Layout from '../../../../../layouts/Layout.astro';
         - Protists are a living type of microorganism that are reliant on a host 
         (they are parasites).
     </p>
+    <h3>Modes of transmission</h3>
+    <Table>
+        <tr>
+            <th>Mode of Transmission</th>
+            <th>Pathogens Involved</th>
+            <th>How is the Pathogen Transferred from Human to Human?</th>
+            <th>How is the Pathogen Transferred from Plant to Plant?</th>
+        </tr>
+        <tr>
+            <td>Air/Droplet Infection</td>
+            <td>Bacteria, Virus, Fungal Spores</td>
+            <td>Droplet infection (e.g., sneezing, coughing) or inhalation of airbone pathogens</td>
+            <td>Airborne spores or particles</td>
+        </tr>
+        <tr>
+            <td>Direct Contact</td>
+            <td>All Pathogens</td>
+            <td>Touching infected individuals or surfaces</td>
+            <td>Physical contact, pruning tools, or human handling</td>
+        </tr>
+        <tr>
+            <td>Indirect Contact</td>
+            <td>All Pathogens</td>
+            <td>Through contaminated objects or vectors (e.g., mosquitoes)</td>
+            <td>Via contaminated tools, insects, or windborne particles</td>
+        </tr>
+        <tr>
+            <td>Water</td>
+            <td>All Pathogens</td>
+            <td>Drinking or bathing in contaminated water</td>
+            <td>Contaminated water sources, splash dispersal</td>
+        </tr>
+    </Table>
 </Layout>
