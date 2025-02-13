@@ -31,7 +31,7 @@ function msgs() {
 
 function ocrify(){
     var homelink = document.getElementById('homelink');
-    homelink.innerHTML = "OCR's Basement";
+    homelink.innerHTML = "<s>AQA's</s> (OCR's) Basement";
 }
 
 window.addEventListener('load', function(){
