@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import '../styles/style.css';
 ---
 
 
@@ -23,12 +25,10 @@ const { title } = Astro.props;
 		<!--<meta property="og:image" content="[insert image URL for sharing here]">-->
 		<link rel="dns-prefetch" href="https://fonts.bunny.net">
 		<link rel="preconnect" href="https://fonts.bunny.net">
-		<link rel="preload" as="style" href="/style.css">
 		<link rel="preload" as="script" href="/script.js">
 		<link rel="preload" as="image" href="/images/CC-BY-SA-NC.png">
 		<link rel="preload" as="image" href="/images/discord.png">
 		<link rel="canonical" href="https://aqasbasement.uk/">
-		<link href="/style.css" rel="stylesheet">
 		<script is:inline src="/script.js"></script>
 	</head>
 	
