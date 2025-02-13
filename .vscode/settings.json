@@ -1,18 +1,27 @@
 {
     "cSpell.words": [
         "ciphertext",
+        "defences",
+        "Defences",
+        "Discolouration",
+        "fertiliser",
         "Gbps",
         "GCSE",
         "Mbps",
         "organises",
         "overcomplicate",
+        "pathognes",
         "PSTN",
+        "pudica",
         "QDOS",
         "qwerqwerqewrqew",
+        "recieve",
         "sidenote",
         "standardised",
         "Supermaven",
         "unauthorised",
+        "weakend",
         "wirelessly"
-    ]
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
