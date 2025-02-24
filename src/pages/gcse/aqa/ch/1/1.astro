@@ -1,8 +1,10 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
+import BackButton from '../../../../../components/BackButton.astro';
 ---
 
 <Layout title="Chemistry 1.1 Atoms">
+    <BackButton />
     <h1>1.1 - A simple model of the atom, symbols, relative atomic mass,
         electronic charge and isotopes</h1>
     <h2>1.1.1 Atoms, elements and compounds</h2>
@@ -18,7 +20,11 @@ import Layout from '../../../../../layouts/Layout.astro';
         - Compounds contain two or more elements chemically combined in
         fixed proportions and can be represented by formulae using the
         symbols of the atoms from which they were formed.<br>
-        - Compounds can only be separated into elements by chemical reactions.<br><br>
+        - Compounds can only be separated into elements by chemical reactions.
+    </p>
+    <br>
+    <h2>Equations</h2>
+    <p>
         - Here is an example of a chemical reaction:<br>
         <code>2H<sub>2</sub> + O<sub>2</sub>{" -> 2H"}<sub>2</sub>O</code><br>
         - In that reaction, 4 hydrogen atoms (2x2; as hydrogen does not exist naturally 
@@ -29,8 +35,12 @@ import Layout from '../../../../../layouts/Layout.astro';
         - The unbalanced equation would be:<br>
         <code>H<sub>2</sub> + O<sub>2</sub>{" -> H"}<sub>2</sub>O</code><br>
         - Here, there is one oxygen atom left over, which you can't have.<br><br>
+        - Equations can also be ionic (show electrical charge), for example:<br>
+        <code>H<sup>+</sup> + OH<sup>-</sup>{" ->"} H<sub>2</sub>O</code><br>
+        - Here, the hydrogen ion gains an electron, and the hydroxide ion loses one, in a neutralisation 
+        reaction to form water (more on this later).<br><br>
         - Chemical reactions can be represented by word equations or equations using 
         symbols and formulae. For example, the reaction to form water above would be 
-        written as <code>Hydrogen + Oxygen -> Water</code>.
+        written as <code>{"Hydrogen + Oxygen -> Water"}</code>.
     </p>
 </Layout>
