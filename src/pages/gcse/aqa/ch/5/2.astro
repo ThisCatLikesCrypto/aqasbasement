@@ -1,8 +1,9 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
+import Table from '../../../../../components/Table.astro';
 ---
 
-<Layout title="Chemistry 5.2 Chemical cells and fuel cells">
+<Layout title="Chem 5.2 Chemical cells and fuel cells">
     <h1>5.2 Chemical cells and fuel cells</h1>
     <h2>5.2.1 Cells and batteries</h2>
     <p>
@@ -14,15 +15,15 @@ import Layout from '../../../../../layouts/Layout.astro';
         contact with an electrolyte.<br>
         - Batteries consist of two or more cells connected in series, 
         which produces a greater voltage.<br>
-        - In non-rechargable cells, the chemical reactions stop when one of 
+        - In non-rechargable cells (primary cells), the chemical reactions stop when one of 
         the reactants is depleted. An example of this is a standard household 
         alkaline battery (like your basic Duracell or Energizer non-rechargable).<br>
-        - In rechargable cells, the chemical reactions also stop when one of the 
+        - In rechargable cells (secondary cells), the chemical reactions also stop when one of the 
         reactants is depleted, but the cell can be recharged by passing an electric 
-        current in the opposite direction to the output (batteries produce DC).
+        current in the opposite direction to the output (cells produce DC).
     </p>
     <h3>Cell Diagram</h3>
-    <img class="centreimagebutdontstretch" src="/images/ch/cell-diagram.png" alt="Cell Diagram">
+    <img class="centreimage" src="/images/ch/cell-diagram.png" alt="Cell Diagram">
     <a href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Electrochemistry/Exemplars/Rechargeable_Batteries">source</a>
     <p>
         If, in this diagram, the cathode was Zinc and the anode was Copper, then, <b>in discharging</b>, the Zinc 
@@ -31,4 +32,59 @@ import Layout from '../../../../../layouts/Layout.astro';
         <br>
         Shown in the diagram is <b>charging</b>, therefore this is reversed.
     </p>
+    <h2>5.2.2 Fuel Cells</h2>
+    <p>
+        - Fuel cells are supplied by an external source of fuel (e.g. hydrogen) 
+        and oxygen or air.<br>
+        - The fuel is oxidised electrochemically within the fuel cell to 
+        produce a potential difference (a voltage).<br>
+        - The overall reaction in a hydrogen fuel cell involves the oxidation of 
+        hydrogen to produce water.
+    </p>
+    <h3>Fuel Cell Diagram</h3>
+    <img class="centreimage" src="/images/ch/hydrogen_fuel_cell.jpg" alt="Fuel Cell Diagram">
+    <sub><a href="https://opentextbc.ca/chemistry/chapter/17-5-batteries-and-fuel-cells/">source</a></sub>
+    <h3>Electrode Reaction Half Equations</h3>
+    <p>
+        - Hydrogen enters at the anode where it is oxidised and oxygen enters at the
+        cathode where it is reduced.<br>
+        - There are two half-equations for the fuel cell:<br>
+        <code>4e<sup>-</sup> + O<sub>2</sub> + 2H<sub>2</sub>O -> 4OH<sup>-</sup></code> (reduction [cathode])<br>
+        <code>2OH<sup>-</sup> + H<sub>2</sub> -> 2H<sub>2</sub>O + 2e<sup>-</sup></code> (oxidation [anode])<br>
+        - And this makes the full equation:<br>
+        <code>2H<sub>2</sub> + O<sub>2</sub> -> 2H<sub>2</sub>O</code>
+    </p>
+    <h3>Advantages and Disadvantages of Fuel Cells</h3>
+    <Table>
+        <thead>
+            <tr>
+                <th>Advantages</th>
+                <th>Disadvantages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>They do not produce pollution (only water vapour).</td>
+                <td>Hydrogen is flammable.</td>
+            </tr>
+            <tr>
+                <td>They produce lots of energy per kilogram (more than petrol or diesel).</td>
+                <td>Fuel cells are affected by low temperature (however batteries are too).</td>
+            </tr>
+            <tr>
+                <td>No batteries to dispose of or produce.</td>
+                <td>Materials to produce fuel cells are expensive.</td>
+            </tr>
+            <tr>
+                <td>Energy is produced as long as fuel is available (chain reaction).</td>
+                <td>High pressure tanks are needed to store and transport hydrogen, which also 
+                    requires cooling to very low temperatures in order to compress the hydrogen and this is expensive.</td>
+            </tr>
+            <tr>
+                <td>No moving parts.</td>
+                <td>Using hydrogen very inefficient (often only half as efficient as batteries or worse due to energy 
+                    required for compression, storage, transport and fuel cells just being less efficient).</td>
+            </tr>
+        </tbody>
+    </Table>
 </Layout>
