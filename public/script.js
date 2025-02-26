@@ -29,11 +29,6 @@ function msgs() {
     }, 2000); // Ensure the class is removed after the animation completes
 }
 
-function ocrify(){
-    var homelink = document.getElementById('homelink');
-    homelink.innerHTML = "<s>AQA's</s> (OCR's) Basement";
-}
-
 window.addEventListener('load', function(){
     msgs();
     setInterval(msgs, 10000);
