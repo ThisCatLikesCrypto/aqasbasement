@@ -28,9 +28,10 @@ import Table from "../../../../../components/Table.astro";
         - NOT is a gate that performs a NOT operation, meaning that the input is
         inverted, so if the input is true, the output is false, and vice versa.<br>
         <img
+            id="logicgates"
             class="centreimagefullwidth"
             src="/images/cs/logicgates.png"
-            alt="Logic gates"><br>
+            alt="Logic gates"><p id="logicfunni" style="display: none;">this is a certified dibujar moment</p><br>
 	- You may also see V as OR, ∧ as AND and ¬ as NOT.
     </p>
     <h3>Truth tables</h3>
@@ -237,3 +238,15 @@ import Table from "../../../../../components/Table.astro";
         - The whole thing is Q = (A OR B) AND ((NOT B) OR C)
     </p>
 </Layout>
+<script is:inline>
+  // make it do kieran stuff 1 in 100 chance
+  const random_num = Math.floor(Math.random() * 100) + 1;
+  console.log(random_num);
+  function kieran(){
+    document.getElementById("logicgates").src = "/images/cs/aww-i-got-clickbaited.png";
+    document.getElementById("logicfunni").style.display = "block";
+  }
+  if (random_num == 1) {
+    kieran();
+  }
+</script>
