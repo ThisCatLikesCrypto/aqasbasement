@@ -32,6 +32,7 @@ import Table from "../../../../../components/Table.astro";
             class="centreimagefullwidth"
             src="/images/cs/logicgates.png"
             alt="Logic gates"><p id="logicfunni" style="display: none;">this is a certified dibujar moment</p><br>
+          <span id="logicaudio"></span>
 	- You may also see V as OR, ∧ as AND and ¬ as NOT.
     </p>
     <h3>Truth tables</h3>
@@ -245,6 +246,7 @@ import Table from "../../../../../components/Table.astro";
   function kieran(){
     document.getElementById("logicgates").src = "/images/cs/aww-i-got-clickbaited.png";
     document.getElementById("logicfunni").style.display = "block";
+    document.getElementById("logicaudio").outerHTML = '<audio controls><source src="/cert.mp3" type="audio/mpeg"></audio><br>';
   }
   if (random_num == 1) {
     kieran();
