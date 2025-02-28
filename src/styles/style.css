@@ -241,7 +241,7 @@ tr:nth-child(even) {
 
 .lotsofnotes {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
