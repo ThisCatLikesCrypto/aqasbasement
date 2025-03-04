@@ -1,0 +1,123 @@
+---
+import Layout from "../../../../../layouts/Layout.astro";
+---
+
+<Layout title="Chemistry 5.1 Endothermic and exothermic reactions">
+    <h1>Chemistry 5.1 Endothermic and exothermic reactions</h1>
+    <h2>5.1.1 Energy transfer during exothermic and endothermic reactions</h2>
+    <p>
+        - The energy in the universe at before and after a reaction is the same.
+        This is known as the law of conservation of energy.<br>
+        - This means that, because energy can only be transferred, reactions that
+        expel heat to the surroundings must end up with products that have less energy
+        than the reactants.<br>
+        - This is known as an <b>exothermic</b> reaction.<br>
+        - Exothermic reactions include combustion, neutralisation, and many oxidation
+        reactions.<br>
+        - Everyday uses of them are for self-heating cans and hand warmers.<br>
+        - The opposite of an exothermic reaction is an <b>endothermic</b> reaction.<br>
+        - Endothermic reactions are when the products have more energy than the reactants.<br>
+        - This causes the temperature of the surroundings to decrease, rather than
+        increase as it would in an exothermic reaction.<br>
+        - Endothermic reactions include thermal decompositions and the reaction of
+        citric acid and sodium hydrogencarbonate. Some sports injury packs are based
+        on endothermic reactions.
+    </p>
+    (there's a req prac here i'm ignoring for now)
+    <br>
+    <h2>5.1.2 Reaction profiles</h2>
+    <p>
+        - Chemical reactions can occur only when reacting particles collide with
+        each other and with sufficient energy.<br>
+        - The minimum amount of energy that particles must have to react is called
+        the activation energy.<br>
+        - Reaction profiles can be used to show the relative energies of reactants
+        and products, the activation energy and the overall energy change of a reaction.
+    </p>
+    <h3>Energy Profile Diagrams (left is exothermic, right is endothermic)</h3>
+    <img
+        class="centreimage"
+        src="/images/ch/endovsexo.png"
+        alt="Energy Profile Diagram"
+    />
+    <sub
+        ><a
+            href="https://bioclimate.commons.gc.cuny.edu/quantitative-determination/enzymes/"
+            >source</a
+        ></sub
+    >
+    <p>
+        - For the exothermic reaction, the energy of the products will be lower
+        than the energy of the reactants, so the change in energy is negative.<br>
+        - For the endothermic reaction, the energy of the products will be higher
+        than the energy of the reactants, so the change in energy is positive.
+    </p>
+    <br>
+    <h2>5.1.3 The energy change of reactions</h2>
+    <p>
+        - Bond energy (or bond enthalpy) is the amount of energy required to
+        break one mole of a particular bond in a gaseous state. Different bonds
+        have different bond energies — for example:
+        <ul>
+            <li>H-H bond in H₂: about 436 kJ/mol</li>
+            <li>O=O bond in O₂: about 498 kJ/mol</li>
+        </ul>
+        - The energy needed to break bonds and the energy released when bonds are
+        formed can be calculated from bond energies.<br>
+        - The difference between the sum of the energy needed to break bonds in the
+        reactants and the sum of the energy released when bonds in the products are
+        formed is the overall energy change of the reaction.<br>
+        - In an exothermic reaction, the energy released from forming new bonds is
+        greater than the energy needed to break existing bonds.<br>
+        - In an endothermic reaction, the energy needed to break existing bonds is
+        greater than the energy released from forming new bonds.
+    </p>
+    <h3>Bond Energy Calculations</h3>
+    <p>
+        The energy change for a reaction is given by this formula:<br>
+        <code
+            >ΔH = Total energy to break bonds - Total energy to form bonds</code
+        ><br>
+        <ol>
+            <li>List the bonds in reactants and products.</li>
+            <li>Look up the bond energies (usually given in the exam).</li>
+            <li>Add up the bond energies for all bonds broken (reactants).</li>
+            <li>Add up the bond energies for all bonds formed (products).</li>
+            <li>Use the formula to find the overall energy change.</li>
+        </ol>
+    </p>
+    <h4>Example: Combustion of methane (CH₄ + 2O₂ → CO₂ + 2H₂O)</h4>
+
+    <p><b>Bond energies (in kJ/mol):</b></p>
+    <ul>
+        <li>C-H: <code>412</code></li>
+        <li>O=O: <code>498</code></li>
+        <li>C=O: <code>805</code></li>
+        <li>O-H: <code>463</code></li>
+    </ul>
+
+    <h5>Step 1: Breaking bonds (reactants)</h5>
+    <ul>
+        <li>4 × C-H = <code>4 × 412 = 1648 kJ</code></li>
+        <li>2 × O=O = <code>2 × 498 = 996 kJ</code></li>
+    </ul>
+    <p><b>Total energy needed to break bonds:</b></p>
+    <code>1648 + 996 = 2644 kJ</code>
+
+    <h5>Step 2: Forming bonds (products)</h5>
+    <ul>
+        <li>2 × C=O = <code>2 × 805 = 1610 kJ</code></li>
+        <li>4 × O-H = <code>4 × 463 = 1852 kJ</code></li>
+    </ul>
+    <p><b>Total energy released by forming bonds:</b></p>
+    <code>1610 + 1852 = 3462 kJ</code>
+
+    <h5>Step 3: Calculate energy change</h5>
+    <p><code>ΔH = 2644 - 3462 = -818 kJ</code></p>
+
+    <p><b>Result:</b></p>
+    <p>
+        The negative value shows an <b>exothermic reaction</b> (releases
+        heat).
+    </p>
+</Layout>
