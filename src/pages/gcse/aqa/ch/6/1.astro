@@ -1,8 +1,11 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
+import BackButton from '../../../../../components/BackButton.astro';
+import Table from '../../../../../components/Table.astro';
 ---
 
 <Layout title="Chemistry 6.1 Rate of reaction">
+    <BackButton />
     <h1>Chemistry 6.1 Rate of reaction</h1>
     <h2>6.1.1 Calculating rates of reactions</h2>
     <p>
@@ -14,6 +17,52 @@ import Layout from '../../../../../layouts/Layout.astro';
     <p>
         - The quantity of reactant or product can be measured by the mass in
         grams, moles, or by a volume in cm<sup>3</sup>.<br>
-        - The unites of rate of reaction maybe given as g/s, mol/s, or cm<sup>3</sup>/s.
+        - The units of rate of reaction maybe given as g/s, mol/s, or cm<sup>3</sup>/s.
+    </p>
+    <br>
+    <h2>6.1.2 Factors which affect the rates of chemical reactions</h2>
+    <Table>
+        <thead>
+            <tr>
+                <th>Factor</th>
+                <th>Increases frequency of collision</th>
+                <th>Increases energy of particles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Temperature</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Surface area to volume ratio</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Increase concentration (solutions)</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Increase pressure (gases)</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Add a catalyst</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </Table>
+    <br>
+    <h2>6.1.3 Collision theory and activation energy</h2>
+    <p>
+        - Collision theory states that chemical reactions can occur only when reacting 
+        particles collide with each other and with sufficient energy.<br>
+        - The minimum amount of energy that particles must have to react is called 
+        the activation energy.<br>
     </p>
 </Layout>

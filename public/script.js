@@ -1,4 +1,4 @@
-var messages = [
+const messages = [
     "Website indev as hell",
     "All hail AQA",
     "Edexcel confusing everyone again",
