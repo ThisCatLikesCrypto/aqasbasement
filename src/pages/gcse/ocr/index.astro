@@ -1,0 +1,13 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="OCR">
+    <h1>OCR</h1>
+    <p>"Choose" your weapon!:<br><sub>(there's only one weapon)</sub></p>
+    <a href="cs/">Computer Science</a>
+</Layout>
+<script>
+    const homelink = document.getElementById('homelink');
+    homelink.innerHTML = "<s>AQA's</s> (OCR's) Basement";
+</script>
