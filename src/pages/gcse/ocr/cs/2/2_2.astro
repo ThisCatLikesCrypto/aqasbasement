@@ -48,7 +48,12 @@ import Table from "../../../../../components/Table.astro";
                         <code>
                             <pre>
 exampleString = "Hello World"
+
+// the first number is the index of the first character
+// the second number is the number of characters to return
 exampleString.substring(0, 5) // "Hello"
+exampleString.substring(6, 5) // "World"
+
 exampleString.left(5) // "Hello"
 exampleString.right(5) // "World"</pre>
                         </code>
@@ -57,7 +62,12 @@ exampleString.right(5) // "World"</pre>
                         <code>
                             <pre>
 exampleString = "Hello World"
+
+# the first number is the index of the first character
+# the second number is the index of the last character
 exampleString[0:5] # "Hello"
+exampleString[6:11] # "World"
+
 exampleString[:5] # "Hello"
 exampleString[5:] # "World"</pre>
                         </code>
