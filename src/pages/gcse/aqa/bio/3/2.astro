@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
+import Table from '../../../../../components/Table.astro';
 ---
 
 <Layout title="Bio 3.2 Monoclonal antibodies">
@@ -51,8 +52,57 @@ import Layout from '../../../../../layouts/Layout.astro';
             <li>To treat some diseases: for cancer the monoclonal antibody can be
                 bound to a radioactive substance, a toxic drug or a chemical which
                 stops cells growing and dividing. It delivers the substance to the
-                cancer cells without harming other cells in the body.</li>
-            <li>Covid tests! (not actually in the spec but gives you an idea)</li>
+                cancer cells without harming other cells in the body. Monoclonal antibodies 
+                can also block growth chemicals from binding, which prevents the cancer dividing.</li>
+            <li>Covid tests!</li>
         </ul>
     </p>
+    <h3>Pregnancy Tests</h3>
+    <img class="centreimage" src="/images/bio/pregnancy-test.webp" alt="pregnancy test">
+    <sub>this image took me half an hour to make help</sub>
+    <p>
+        How a pregnancy test works:<br>
+        <ol>
+            <li>Urine is applied to the absorbent strip.</li>
+            <li>(if pregnant) hCG hormone binds to the mobile antibody in the reaction zone.</li>
+            <li>Each mobile antibody has a blue dye attatched.</li>
+            <li>Mobile antibodies with the hCG hormone attached binds to the immobilised
+                antibodies in the test window.</li>
+            <li>Excess mobile antibodies without hCG attactched bind to immobilised antibodies 
+                at the control window.</li>
+            <li>The accumulation of blue dye in either window creates a line to indicate whether 
+                the test is positive or negative.</li>
+        </ol>
+    </p>
+    <h3>Advantages and disadvantages for using monoclonal antibodies</h3>
+    <Table>
+        <thead>
+            <th>Advantages</th>
+            <th>Disadvantages</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Can be used to treat a range of diseases because it is specific.</td>
+                <td>Expensive to develop.</td>
+            </tr>
+            <tr>
+                <td>Healthy cells are not effected, unlike chemo.</td>
+                <td>More side effects than expected.</td>
+            </tr>
+            <tr>
+                <td>They bind to specific antigens.</td>
+                <td>The mouse antibodies used can trigger an immune response.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Side effects need treatment.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Producing the correct monoclonal antibody and attaching the drug can be 
+                    difficult.
+                </td>
+            </tr>
+        </tbody>
+    </Table>
 </Layout>
