@@ -1,0 +1,21 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+---
+
+<Layout title="A-Level OCR CS">
+    <h1>Computer Science Resources</h1>
+    <h2>OCR A-Level</h2>
+    <p>
+        <button><a href="https://www.ocr.org.uk/images/170844-specification-accredited-a-level-gce-computer-science-h446.pdf">Specification</a></button>
+        <button><a href="https://www.savemyexams.com/a-level/computer-science/ocr/17/">SaveMyExams</a></button>
+        <button><a href="https://www.programiz.com/python-programming/online-compiler/">Python Online Interpreter</a></button>
+        <button><a href="https://www.examreferencelanguage.co.uk/">Reference Language Interpreter</a></button>
+    </p>
+    <h2>Revision notes</h2>
+    <div class="lotsofnotes">
+    </div>
+    <script>
+        const homelink = document.getElementById('homelink');
+        homelink.innerHTML = "<s>AQA's</s> (OCR's) Basement";
+    </script>
+</Layout>
