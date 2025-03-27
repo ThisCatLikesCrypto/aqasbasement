@@ -261,7 +261,7 @@ import Layout from '../../../../../layouts/Layout.astro';
         to other networks, and so on until you have the whole Internet.<br>
         - This all results in loads of routers all connected together, which
         allows you to access other LANs, which will then contain other computers,
-        including servers (this site runs on a server, one of Cloudflare's).
+        including servers.
     </p>
     <h3>Domain Name System</h3>
     <p>
@@ -272,16 +272,15 @@ import Layout from '../../../../../layouts/Layout.astro';
         or DNS.<br>
         - The DNS is (simplifying) a directory of domain names and their
         associated IP addresses, so you can have a nice human-readable domain
-        name and don't have to type in '81.0.246.142' into your browser (or,
-        worse (screw IPv6 readability): <code>[2001:4860:4860::8844]</code> )<br>
+        name and don't have to type in '81.0.246.142' or '[2001:4860:4860::8844]' into your browser.<br>
         - An entry into the directory is called a 'record'.<br>
         - If DNS didn't exist, you'd have to remember the IP address of every
         website you want to visit (or at least a search engine's one).<br>
-        - Here is what the DNS records for this website (aqasbasement.uk) look like,
+        - Here is what the DNS records for this website (aqasbasement.uk) looked like at the time of writing,
         for GCSEs you don't need to worry about the different types or what 'proxied'
-        means, but 'A' means direct to IP, and 'CNAME' means a domain
+        means, but 'A' means direct to IP(v4), and 'CNAME' means a domain
         name that is pointing to another one, which can keep happening until eventually
-        an A record is reached and the IP can be resolved.<br>
+        an A (or AAAA for IPv6) record is reached and the IP can be resolved.<br>
         <img class="centreimage" alt="cloudflare dns settings" src="/images/cs/cfdns.png">
     </p>
     <h4>How does DNS work, then?</h4>
@@ -482,7 +481,7 @@ import Layout from '../../../../../layouts/Layout.astro';
 </Layout>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('https://api.ipify.org')
+        fetch('https://icanhazip.com')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('ipaddresslmao').textContent = data;
@@ -492,5 +491,5 @@ import Layout from '../../../../../layouts/Layout.astro';
                 document.getElementById('ipaddresslmao').textContent =
                     "couldn't fetch IP and now i'm sad :(";
             });
-    })
+    });
 </script>
