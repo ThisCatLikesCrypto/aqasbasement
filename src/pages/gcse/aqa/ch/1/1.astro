@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
 import BackButton from '../../../../../components/BackButton.astro';
+import Table from '../../../../../components/Table.astro';
 ---
 
 <Layout title="Chemistry 1.1 Atoms">
@@ -42,5 +43,152 @@ import BackButton from '../../../../../components/BackButton.astro';
         - Chemical reactions can be represented by word equations or equations using 
         symbols and formulae. For example, the reaction to form water above would be 
         written as <code>{"Hydrogen + Oxygen -> Water"}</code>.
+    </p>
+    <br>
+    <h2>1.1.2 Mixtures</h2>
+    <p>
+        - A mixture consists of two or more elements or compounds <b>not</b> chemically combined together.<br>
+        - The chemical properties of each substance in the mixture are unchanged.<br>
+        - Mixtures can be separated by physical processes such as filtration,
+        crystallisation, simple distillation, fractional distillation and
+        chromatography. These physical processes do not involve chemical
+        reactions and no new substances are made.
+    </p>
+    <Table>
+        <thead>
+            <tr>
+                <th>Separation Method</th>
+                <th>Description</th>
+                <th>Explanation</th>
+                <th>When to Use</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Filtration</td>
+                <td>Separates an insoluble solid from a liquid.</td>
+                <td>
+                    Filtration involves pouring a mixture through filter paper placed in a funnel. The paper has tiny
+                    pores that allow only liquids and very fine particles to pass through. The solid particles, which
+                    are too large to pass through the pores, are trapped on the paper (called the residue). The liquid
+                    that passes through is collected in a container below and is called the filtrate. This process does
+                    not change the substances; it only separates them based on particle size.
+                </td>
+                <td>
+                    Use when separating a solid that does not dissolve in a liquid, like sand from water or coffee
+                    grounds from brewed coffee.
+                </td>
+            </tr>
+            <tr>
+                <td>Crystallisation</td>
+                <td>Obtains a dissolved solid (solute) from a solution.</td>
+                <td>
+                    Crystallisation works by forming solid crystals from a solution. The solution is first gently heated
+                    to partially evaporate the solvent (usually water), increasing the concentration of the solute. Once
+                    it becomes saturated—meaning no more solute can dissolve—the mixture is left to cool slowly. As the
+                    temperature drops, the solute particles come out of solution and form an orderly crystal structure.
+                    Impurities remain in the solution and are left behind when the crystals are filtered and dried.
+                </td>
+                <td>
+                    Use when recovering pure crystals from a solution, like forming salt crystals from seawater or
+                    copper sulfate crystals from a laboratory solution.
+                </td>
+            </tr>
+            <tr>
+                <td>Simple Distillation</td>
+                <td>Separates a solvent from a solution.</td>
+                <td>
+                    Simple distillation uses the difference in boiling points between a solvent and solute. The solution
+                    is heated until the solvent (which has a lower boiling point) boils and turns into vapor. This vapor
+                    is then directed into a condenser, where it cools and turns back into liquid. The remaining solute,
+                    which doesn’t evaporate, stays in the original container. This method is best when separating a
+                    single solvent from a non-volatile solute, like salt in saltwater.
+                </td>
+                <td>
+                    Use when extracting pure solvent from a solution, such as getting distilled water from tap water.
+                </td>
+            </tr>
+            <tr>
+                <td>Fractional Distillation</td>
+                <td>Separates a mixture of liquids based on their boiling points.</td>
+                <td>
+                    Fractional distillation is an extension of simple distillation and is used for mixtures of liquids
+                    with similar boiling points. The mixture is heated and vapors rise up a fractionating column, which
+                    is packed with glass beads or plates to provide a surface for repeated condensation and
+                    vaporisation. Substances with lower boiling points rise higher in the column and are collected
+                    first, while those with higher boiling points condense lower down. This allows each component to be
+                    separated more precisely.
+                </td>
+                <td>
+                    Use when separating mixtures like ethanol and water, or in industry for refining crude oil into
+                    petrol, diesel, and other products.
+                </td>
+            </tr>
+            <tr>
+                <td>Chromatography</td>
+                <td>Separates components of a mixture based on how they travel through a medium.</td>
+                <td>
+                    Chromatography relies on differences in solubility and how substances interact with a stationary
+                    phase (like paper) and a mobile phase (like a solvent). A small spot of the mixture is placed near
+                    the bottom of chromatography paper. When the paper is placed in a solvent, the solvent travels up
+                    the paper, carrying the components of the mixture with it. Substances that are more soluble in the
+                    solvent move further up the paper, while those that are less soluble move more slowly. This
+                    separates the components visibly.
+                </td>
+                <td>
+                    Use when separating or identifying substances in dyes, inks, or food colorings, especially when only
+                    small amounts are available.
+                </td>
+            </tr>
+        </tbody>
+    </Table>
+    <br>
+    <h2>1.1.3 The development of the model of the atom</h2>
+    <p>
+        - In science, new experimental evidence may lead to a scientific model being
+        changed or replaced.<br>
+    </p>
+    <h3>Solid Sphere & Plum Pudding</h3>
+    <p>
+        - Before the discovery of the electron, atoms were thought to be tiny
+        spheres that could not be divided. Simply the <b>solid sphere</b> model, proposed by John Dalton in 1803.<br>
+        - The discovery of the electron led to the <b>plum pudding</b> model of the
+        atom. The plum pudding model suggested that the atom is a ball of
+        positive charge with negative electrons embedded in it. This was proposed by J.J. Thomson in 1897.
+        <img class="centreimage" src="/images/ch/plumpudding.png" alt="plum pudding">
+        <sub>CC BY-SA, from <a href="https://www.wikilectures.eu/w/File:Plumpuding.png">WikiLectures</a></sub><br>
+    </p>
+    <h3>The alpha particle scattering experiment & nuclear model</h3>
+    <p>
+        - The experiment, carried out by Ernest Rutherford and his colleagues Hans Geiger and Ernest Marsden in 1909, involved 
+        firing alpha particles (positively charged particles) at a thin gold foil. Behind the foil, a detector screen coated 
+        with zinc sulfide would light up whenever an alpha particle hit it, allowing the scientists to track the scattering patterns of the particles.<br>
+        - Most alpha particles passed straight through the gold foil with very little deflection, indicating that atoms are mostly empty space.<br>
+        - Some alpha particles were deflected at small angles, and a few were scattered back at very large angles, even bouncing straight back toward the source.
+        <img class="centreimage" src="/images/ch/alphaparticlescattering.webp" alt="alpha particle scattering">
+        <sub>CC BY, from <a href="https://pressbooks.online.ucf.edu/phy2053tjb/chapter/discovery-of-the-parts-of-the-atom-electrons-and-nuclei/">UCF Pressbooks</a></sub><br>
+        - These observations led Rutherford to propose that atoms have a tiny, dense, positively charged nucleus at their centre as most of the atom was 
+        shown to be empty space.<br>
+        - The nucleus contains most of the atom's mass and repels the positively charged alpha particles when they come close to it.<br>
+        - This nuclear model replaced the plum pudding model.
+        <img class="centreimage" src="/images/ch/nuclear.webp" alt="nuclear model">
+    </p>
+    <h3>The Planetary (Bohr) model</h3>
+    <p>
+        Niels Bohr adapted the nuclear model by suggesting that electrons
+        orbit the nucleus at specific distances. The theoretical calculations
+        of Bohr agreed with experimental observations.
+        <img class="centreimage" src="/images/ch/planetary.png" alt="bohr model">
+    </p>
+    <h3>Developments in the nucleus</h3>
+    <p>
+        - Later experiments led to the idea that the positive charge of any
+        nucleus could be subdivided into a whole number of smaller
+        particles, each particle having the same amount of positive charge.
+        - The name proton was given to these particles.<br>
+        The experimental work of James Chadwick provided the evidence
+        to show the existence of neutrons within the nucleus. This was
+        about 20 years after the nucleus became an accepted scientific
+        idea.
     </p>
 </Layout>
