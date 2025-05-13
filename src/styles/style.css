@@ -223,6 +223,11 @@ tr:nth-child(even) {
     margin-right: auto;
 }
 
+.restrictimage {
+    max-width: 500px;
+    max-height: 250px;
+}
+
 .centreplease {
     display: flex;
     justify-content: center; /* Horizontally center the inner divs */

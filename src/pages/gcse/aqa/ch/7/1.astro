@@ -1,0 +1,116 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import BackButton from '../../../../../components/BackButton.astro';
+import Table from '../../../../../components/Table.astro';
+---
+
+<Layout title="7.1 Carbon compounds as fuels and feedstock">
+    <BackButton />
+    <h1>7.1 Carbon compounds as fuels and feedstock</h1>
+    <h2>Introduction to organic chemistry (not really 7.1, but should come first imo)</h2>
+    <sub>yknow this seems like the branch of chem i'll actually enjoy</sub>
+    <p>
+        - <b>Organic chemistry</b>: The study of molecules made from chains of carbon atoms covalently bonded together.<br>
+        - <b>Hydrocarbon</b>: A compound made up of hydrogen and carbon <u>only</u>.<br>
+        - <b>Saturated molecule</b>: An organic molecule wtih no carbon-carbon double bonds (e.g. C=C).<br>
+        - <b>Homologous series</b>: Molecules that have the same functional group 
+        but differ by the addition of a CH<sub>2</sub>.<br>
+        - <b>Functional group</b>: The atoms in an organic molecule that react. They determine the chemical 
+        properties of the molecule.
+    </p>
+    <h3>Alkanes</h3>
+    <p>
+        - <b>Name</b>: words (IUPAC [International Union of Pure and Applied Chemistry; you dont need to know that dw])<br>
+        - &nbsp;&nbsp;&nbsp;&nbsp;e.g. methane, ethane, propane, butane, pentane<br>
+        - &nbsp;&nbsp;&nbsp;&nbsp;also known as alkanes<br>
+        - <b>Molecular formula</b>: how many of each atom in the molecule<br>
+        - &nbsp;&nbsp;&nbsp;&nbsp;e.g. CH<sub>4</sub>, C<sub>2</sub>H<sub>6</sub><br>
+        - <b>Empirical formula</b>: Simple whole number ratio<br>
+        - &nbsp;&nbsp;&nbsp;&nbsp;e.g. CH<sub>4</sub>, CH<sub>3</sub>
+        - <b>Displayed/structural formula</b>: Draw out the structure showing the covalent bonds<br>
+        - &nbsp;&nbsp;&nbsp;&nbsp;e.g. stick diagram (for C<sub>2</sub>H<sub>6</sub>):<br>
+        <img src="/images/ch/c2h6stick.png" alt="Stick diagram of C2H6"><br>
+        - <b>General formula</b>: all molecules in the same homologous series share a general formula (algebraic)<br>
+        - &nbsp;&nbsp;&nbsp;&nbsp;The general formula for the homologous series of alkanes is C<sub>n</sub>H<sub>2n+2</sub>
+    </p>
+    <h3>Functional groups</h3>
+    <p>
+        - <b>C=C</b> being present means alkene.<br>
+        - <b>OH</b> being present means alcohol.<br>
+        - <b>O=C-OH</b> being present means carbonic acid.<br>
+        - <b>O=C-O</b> being present means ester.<br>
+        - Alkanes _do not_ have functional groups.<br>
+        - Alkanes are saturated hydrocarbons, meaning they consist only of carbon (C)
+        and hydrogen (H) atoms with single bonds between the carbon atoms.<br>
+        - Despite this, we say the functional group in an alkane is just C-C, but they don't really have one.<br>
+        - Numbering of aklanes is: <b>Meth-, Eth-, Prop-, But-, Pent-, Hex-, Hept-, Oct-, Non-, Dec-</b><br>
+    </p>
+    <h3>Alkanes - Functional group C-C</h3>
+    <Table>
+        <thead>
+            <tr>
+                <th>No. of carbons</th>
+                <th>Name</th>
+                <th>Molecular formula</th>
+                <th>Displayed (structural) formula</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Methane</td>
+                <td>CH<sub>4</sub></td>
+                <td><img class="restrictimage" src="/images/ch/methane.png" alt="Methane stick diagram"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ethane</td>
+                <td>C<sub>2</sub>H<sub>6</sub></td>
+                <td><img class="restrictimage" src="/images/ch/ethane.png" alt="Ethane stick diagram"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Propane</td>
+                <td>C<sub>3</sub>H<sub>8</sub></td>
+                <td><img class="restrictimage" src="/images/ch/propane.png" alt="Propane stick diagram"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Butane</td>
+                <td>C<sub>4</sub>H<sub>10</sub></td>
+                <td><img class="restrictimage" src="/images/ch/butane.jpg" alt="Butane stick diagram"></td>
+            </tr>
+        </tbody>
+    </Table>
+    <h3>Alkenes - Functional group C=C</h3>
+    <Table>
+        <thead>
+            <tr>
+                <th>No. of carbons</th>
+                <th>Name</th>
+                <th>Molecular formula</th>
+                <th>Displayed (structural) formula</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>Ethylene</td>
+                <td>C<sub>2</sub>H<sub>4</sub></td>
+                <td><img class="restrictimage" src="/images/ch/ethylene.png" alt="Ethylene stick diagram"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Propene</td>
+                <td>C<sub>3</sub>H<sub>6</sub></td>
+                <td><img class="restrictimage" src="/images/ch/propene.png" alt="Propene stick diagram"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Butene</td>
+                <td>C<sub>4</sub>H<sub>8</sub></td>
+                <td><img class="restrictimage" src="/images/ch/butene.png" alt="Butene stick diagram"></td>
+            </tr>
+        </tbody>
+    </Table>
+</Layout>

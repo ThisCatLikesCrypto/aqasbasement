@@ -3,7 +3,7 @@ const messages = [
     "All hail AQA",
     "Edexcel confusing everyone again",
     "OCR computer science > every other OCR subject",
-    "<a href='https://www.youtube.com/@texanspell'>GCSE Slander is more important than revising</a>",
+    "<a href='https://www.youtube.com/thiscatlikescrypto'>GCSE Slander is more important than revising</a>",
     "That one CCEA person",
     "CIE = international nerds",
     "'I'm Cooked' - Everyone Ever",
