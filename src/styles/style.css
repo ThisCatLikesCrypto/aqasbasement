@@ -210,6 +210,13 @@ tr:nth-child(even) {
     width: 75%;
 }
 
+.centreimagesmall {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 .centreimagefullwidth {
     display: block;
     margin-left: auto;
