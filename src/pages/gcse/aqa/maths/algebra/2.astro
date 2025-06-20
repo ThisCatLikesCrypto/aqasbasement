@@ -1,0 +1,22 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import Table from '../../../../../components/Table.astro';
+import BackButton from '../../../../components/BackButton.astro';
+---
+
+<Layout title="Expanding Brackets">
+    <BackButton />
+    <h1>Expanding Brackets</h1>
+    <h2>Single brackets</h2>
+    Say you have something like
+    \(x(4x + 8)\)
+    to expand the bracket you would first multiply the x by the 4x to get \(4x^2\)
+    and then multiply the x by the 8 to get \(8x\)
+
+    <h3> Example 1 </h3>
+    \(4x(18x^2 + 2x + 3)\)
+    \((4x \times 18x^2) + (4x \times 2x) + (4x \times 3)\)
+    \(72x^3 + 8x^2 + 12x\)
+    
+    <i>No more examples<\i>
+</Layout>
