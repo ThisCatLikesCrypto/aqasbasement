@@ -277,6 +277,10 @@ tr:nth-child(even) {
     .centreimage {
         width: 100%;
     }
+
+    .centreimagesmall {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 600px) {
