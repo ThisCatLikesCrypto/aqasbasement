@@ -1,5 +1,6 @@
 ---
 import Layout from "../../../../../layouts/Layout.astro";
+import Table from "../../../../../components/Table.astro";
 ---
 
 <Layout title="5.2 The human nervous system">
@@ -49,4 +50,56 @@ import Layout from "../../../../../layouts/Layout.astro";
         - The muscles contract to pick up the fruit.<br>
         - The effector is the skeletal muscle.
     </p>
+    <h2>5.2.1 (Part 2) Reflexes</h2>
+    <p>
+        - Reflex actions are automatic and rapid &ndash; they do not involve the conscious part of the brain
+        (are involuntary).<br><br>
+        - <b>Synapses</b> are a gap in between neurons. Chemicals diffuse across the synapses. This allows 
+        neurons to communicate between each other.<br>
+        <img class="centreimage" src="/images/bio/synapse.jpg" alt="Synapse diagram">
+        <sub><a href="https://courses.lumenlearning.com/suny-ap1/chapter/communication-between-neurons/">source</a></sub>
+        <br>
+        <ol>
+            <li>Electrical impulse travels to the synapse.</li>
+            <li>Triggers chemicals to be released into the synapse.</li>
+            <li>Chemicals diffuse across the synapse to the next neurone.</li>
+            <li>Causes the electrical impulse to travel through the next neurone.</li>
+        </ol>
+    </p>
+    <br>
+    <h3>Voluntary vs Reflex response</h3>
+    <Table>
+        <thead>
+            <tr>
+                <th>Voluntary</th>
+                <th>Reflex</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ol>
+                        <li>Receptors detects stimulus</li>
+                        <li>Sensory neurone sends impulse, to relay neurone through synapse</li>
+                        <li>The relay neurone sends impulse to the CNS (brain)</li>
+                        <li>The CNS processes the input</li>
+                        <li>The CNS sends impulse to the motor neurone</li>
+                        <li>The motor neurone sends impulse to the effector</li>
+                        <li>The effector carries out the action</li>
+                    </ol>
+                </td>
+                <td>
+                    <ol>
+                        <li>The stimulus is detected by receptors</li>
+                        <li>Sensory neurone sends impulse, to relay neurone through synapse</li>
+                        <li>The relay neurone sends impulse to the CNS (spinal cord)</li>
+                        <li>The CNS processes the input, but subconsciously</li>
+                        <li>The CNS sends impulse to the motor neurone</li>
+                        <li>The motor neurone sends impulse to the effector</li>
+                        <li>The effector carries out the action</li>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </Table>
 </Layout>
