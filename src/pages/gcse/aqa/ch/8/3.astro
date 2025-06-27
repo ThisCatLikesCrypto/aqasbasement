@@ -1,0 +1,84 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import BackButton from '../../../../../components/BackButton.astro';
+import Table from '../../../../../components/Table.astro';
+---
+
+<Layout title="8.3 Identification of ions by chemical and spectroscopic means">
+    <BackButton />
+    <h1>8.3 Identification of ions by chemical and spectroscopic means</h1>
+    <h2>8.3.1 Flame Tests</h2>
+    <p>
+        - Flame tests can be used to identify some metal ions (cations).<br>
+        - If a sample containing a mixture of ions is used, some flame colours 
+        can be masked.
+    </p>
+    <Table>
+        <thead>
+            <tr>
+                <th>Metal ion</th>
+                <th>Flame colour</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Calcium</td>
+                <td style="color: orangered;">Orange-red</td>
+            </tr>
+            <tr>
+                <td>Potassium</td>
+                <td style="color: #bf80bf;">Lilac</td>
+            </tr>
+            <tr>
+                <td>Sodium</td>
+                <td style="color: yellow;">Yellow</td>
+            </tr>
+            <tr>
+                <td>Copper</td>
+                <td style="color: green;">Green</td>
+            </tr>
+            <tr>
+                <td>Lithium</td>
+                <td style="color: crimson;">Crimson</td>
+            </tr>
+        </tbody>
+    </Table>
+    <br>
+    <h2>8.3.2 Metal Hydroxides</h2>
+    <p>
+        - Sodium hydroxide solution can be used to identify some cations.
+    </p>
+    <Table>
+        <tr>
+            <th>Metal Cation</th>
+            <th>Effect of adding NaOH</th>
+            <th>Ionic equation</th>
+        </tr>
+        <tr>
+            <td>Al<sup>3+</sup></td>
+            <td><span style="color: white">White</span> precipitate formed, but when adding more<br> 
+                NaOH it dissolves (we found this out the hard way lmao)</td>
+            <td>Al<sup>3+</sup><sub>(aq)</sub> + 3OH<sup>-</sup><sub>(aq)</sub> {"->"} Al(OH)<sub>3(s)</sub></td>
+        </tr>
+        <tr>
+            <td>Ca<sup>2+</sup></td>
+            <td><span style="color: white">White</span> precipitate formed</td>
+            <td>Ca<sup>2+</sup><sub>(aq)</sub> + 2OH<sup>-</sup><sub>(aq)</sub> {"->"} Ca(OH)<sub>2(s)</sub></td>
+        </tr>
+        <tr>
+            <td>Cu<sup>2+</sup></td>
+            <td><span style="color: lightblue">Light blue</span> precipitate formed</td>
+            <td>Cu<sup>2+</sup><sub>(aq)</sub> + 2OH<sup>-</sup><sub>(aq)</sub> {"->"} Cu(OH)<sub>2(s)</sub></td>
+        </tr>
+        <tr>
+            <td>Fe<sup>2+</sup></td>
+            <td><span style="color: green;">Green</span> precipitate formed</td>
+            <td>Fe<sup>2+</sup><sub>(aq)</sub> + 2OH<sup>-</sup><sub>(aq)</sub> {"->"} Fe(OH)<sub>2(s)</sub></td>
+        </tr>
+        <tr>
+            <td>Fe<sup>3+</sup></td>
+            <td><span style="color: #741212;">Red-brown</span> precipitate formed</td>
+            <td>Fe<sup>3+</sup><sub>(aq)</sub> + 3OH<sup>-</sup><sub>(aq)</sub> {"->"} Fe(OH)<sub>3(s)</sub></td>
+        </tr>
+    </Table>
+</Layout>
