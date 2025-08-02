@@ -112,14 +112,14 @@ button a {
 
 table {
     width: 100%;
-    border-collapse: collapse; /* Ensures borders don't double up */
+    border-collapse: collapse;
     overflow-x: scroll;
 }
 
 th, td {
-    border: 1px solid white; /* Sets the border color to white */
-    padding: 8px; /* Adds padding for better readability */
-    text-align: left; /* Aligns text to the left */
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
 }
 
 h2 {
@@ -147,7 +147,7 @@ tr:nth-child(even) {
 
 .table-container {
     width: 100%;
-    overflow-x: auto; /* Allows horizontal scrolling */
+    overflow-x: auto;
 }
 
 #header {
@@ -182,8 +182,8 @@ tr:nth-child(even) {
 
 .inlineplease {
     display: flex;
-    align-items: center; /* Aligns items vertically */
-    justify-content: center; /* Aligns items horizontally */
+    align-items: center;
+    justify-content: center;
 }
 
 #main {
@@ -195,12 +195,12 @@ tr:nth-child(even) {
 
 #footer {
     text-align: center;
-    padding: 10px; /* Optional: for spacing */
+    padding: 10px;
 }
 
 #footer p {
     text-align: center;
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
 
 .centreimage {
@@ -237,12 +237,12 @@ tr:nth-child(even) {
 
 .centreplease {
     display: flex;
-    justify-content: center; /* Horizontally center the inner divs */
+    justify-content: center;
 }
 
-.classiccentreplease { /* Also known as maindivdiv */
+.classiccentreplease {
     display: flex;
-    justify-content: space-between; /* Horizontally center the inner divs */
+    justify-content: space-between;
     max-width: 350px;
 }
 
