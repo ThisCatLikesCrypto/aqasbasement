@@ -1,0 +1,123 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import BackButton from '../../../../../components/BackButton.astro';
+import Table from '../../../../../components/Table.astro';
+---
+
+<Layout title="2.4 Bulk and surface properties of matter including nanoparticles">
+    <BackButton />
+    <h1>2.4 Bulk and surface properties of matter including nanoparticles</h1>
+    <h1>2.4 Bulk and surface properties of matter including nanoparticles</h1>
+    <h2>2.4.1 Sizes of particles and their properties</h2>
+    <p>
+        - Nanoparticles are structures that are 1&ndash;100 nm in size, of the order
+        of a few hundred atoms.<br>
+        - They are smaller than fine particles (PM<sub>2.5</sub>). Fine particles are particles with diameters
+        between 100 and 2500 nm, and are commonly referred to as "particulates" in a pollution context.<br>
+        - Coarse particles (PM<sub>10</sub>) have diameters between 1 &times; 10<sup>-5</sup> m and 2.5 &times;
+        10<sup>-6</sup> m.
+        Coarse particles are often referred to as dust.
+    </p>
+    <h3>Comparison of particle sizes</h3>
+    <Table>
+        <tr>
+            <th>Type of Particle</th>
+            <th>Typical Size Range</th>
+            <th>Example / Context</th>
+        </tr>
+        <tr>
+            <td>Nanoparticles</td>
+            <td>1 &ndash; 100 nm</td>
+            <td>Medicines, catalysts, sunscreen</td>
+        </tr>
+        <tr>
+            <td>Fine Particles (PM<sub>2.5</sub>)</td>
+            <td>100 &ndash; 2500 nm (0.1 &ndash; 2.5 &mu;m)</td>
+            <td>Air pollution particulates</td>
+        </tr>
+        <tr>
+            <td>Coarse Particles (PM<sub>10</sub>)</td>
+            <td>2.5 &ndash; 10 &mu;m (2.5 &times; 10<sup>-6</sup> m to 1 &times; 10<sup>-5</sup> m)</td>
+            <td>Dust, pollen</td>
+        </tr>
+    </Table>
+    <h3>Surface area to volume ratio</h3>
+    <p>
+        - The surface area to volume ratio (SA:V) becomes larger as the size of the particle decreases.<br>
+        - For a cube of side length <em>L</em>:
+    </p>
+    <ul>
+        <li>Surface area = 6L<sup>2</sup></li>
+        <li>Volume = L<sup>3</sup></li>
+        <li>SA:V ratio = 6 / L</li>
+    </ul>
+    <p>
+        This means that nanoparticles, being extremely small, have a much greater SA:V ratio compared to bulk material.
+        A large surface area relative to volume makes them highly reactive and useful for applications such as:
+    </p>
+    <ul>
+        <li>Catalysts (faster reactions due to more exposed surface)</li>
+        <li>Drug delivery (large surface area for interaction with cells)</li>
+        <li>Cosmetics and sunscreens (better coverage and absorption of UV light)</li>
+    </ul>
+    <h4>Worked example: SA:V for cubes at different scales</h4>
+    <Table>
+        <tr>
+            <th>Object</th>
+            <th>Side length, L (m)</th>
+            <th>Surface area, 6L<sup>2</sup> (m<sup>2</sup>)</th>
+            <th>Volume, L<sup>3</sup> (m<sup>3</sup>)</th>
+            <th>SA:V, 6/L (m<sup>-1</sup>)</th>
+        </tr>
+        <tr>
+            <td>1&nbsp;cm cube</td>
+            <td>1.0 &times; 10<sup>-2</sup></td>
+            <td>6.0 &times; 10<sup>-4</sup></td>
+            <td>1.0 &times; 10<sup>-6</sup></td>
+            <td>6.0 &times; 10<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>10&nbsp;nm cube</td>
+            <td>1.0 &times; 10<sup>-8</sup></td>
+            <td>6.0 &times; 10<sup>-16</sup></td>
+            <td>1.0 &times; 10<sup>-24</sup></td>
+            <td>6.0 &times; 10<sup>8</sup></td>
+        </tr>
+    </Table>
+    <p>
+        Moving from a 1&nbsp;cm cube to a 10&nbsp;nm cube increases SA:V by a factor of
+        10<sup>6</sup> (one million), because SA:V scales as 1/&thinsp;L.
+    </p>
+    <br>
+    <h2>2.4.2 Uses of nanoparticles</h2>
+    <p>
+        - Nanoparticles have many applications in medicine, in electronics, in cosmetics 
+        and sun creams, as deodorants, and as catalysts.<br>
+        - New applications of nanoparticles is an important area of research.
+    </p>
+    <h3>Advantages and disadvantages of nanoparticles</h3>
+    <Table>
+        <tr>
+            <th>Advantages</th>
+            <th>Disadvantages</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Useful in medicine (e.g. targeted drug delivery, tumour treatment).</li>
+                    <li>High surface area to volume ratio → very effective as catalysts.</li>
+                    <li>Transparent coatings (e.g. in suncreams, self-cleaning glass).</li>
+                    <li>Can improve strength, durability and functionality of materials (e.g. clothing, sports equipment).</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Potentially toxic to humans and the environment (can enter cells easily).</li>
+                    <li>Uncertain long-term health effects due to their small size and reactivity.</li>
+                    <li>Expensive and difficult to manufacture in bulk.</li>
+                    <li>Some may bopaccumulate in the environment if not disposed of properly.</li>
+                </ul>
+            </td>
+        </tr>
+    </Table>
+</Layout>
