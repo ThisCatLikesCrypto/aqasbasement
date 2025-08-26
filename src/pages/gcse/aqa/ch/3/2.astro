@@ -18,4 +18,102 @@ import BackButton from '../../../../../components/BackButton.astro';
         relative atomic mass of 16, one mole of oxygen weighs 16g.<br>
         - <b>mass = moles * molar mass</b>
     </p>
+    <br>
+    <h2>3.2.2 Amounts of substances in equations</h2>
+    <p>
+        - The masses of reactants and products can be calculated from balanced symbol equations.<br>
+        - Chemical equations can be interpreted in terms of moles. For example:<br>
+        <img class="centreimage" src="/images/ch/onemoleof.png" alt="One mole of... diagram">
+        - "one mole of magnesium reacts with two moles of hydrochloric acid to produce one mole of 
+        magnesium chloride and one mole of hydrogen gas."
+    </p>
+
+    <h3>Mole calculations (aka pain)</h3>
+    <p>
+        <ol>
+            <li><b>Write the balanced symbol equation.</b></li>
+            <li><b>Work out Mr</b> (molar mass) for the substances you need (use periodic table values).</li>
+            <li><b>Convert the known mass to moles</b> using <code>moles = mass ÷ Mr</code>.</li>
+            <li><b>Use the mole ratio</b> from the balanced equation to find the moles of the required substance.</li>
+            <li><b>Convert moles back to mass</b> (if the question asks for mass) using <code>mass = moles × Mr</code> and round to the correct number of significant figures.</li>
+        </ol>
+    </p>
+
+    <h4>Worked example 1 — forward calculation (mass of product from a mass of reactant)</h4>
+    <p>
+        <b>Reaction:</b> <code>Mg + 2HCl → MgCl2 + H2</code><br>
+        <b>Question:</b> If 3.00 g of magnesium reacts completely with excess hydrochloric acid, what mass of hydrogen gas is produced? 
+        (Use Mr: Mg = 24.305, H = 1.008, Cl = 35.453) [in reality in the exam you'd need to use your periodic table for this]
+        <br>
+        <b>Solution:</b>
+        <ol>
+            <li>
+                Balanced equation already given: <code>1 mol Mg</code> produces <code>1 mol H2</code> (mole ratio Mg :
+                H2 = 1 : 1).
+            </li>
+            <li>
+                Calculate Mr for hydrogen gas (H<sub>2</sub>): <code>Mr(H2) = 2 × 1.008 = 2.016</code>.
+            </li>
+            <li>
+                Convert mass of Mg to moles:<br>
+                <code>moles(Mg) = mass ÷ Mr = 3.00 ÷ 24.305 = 0.123431392718...</code>
+            </li>
+            <li>
+                Use mole ratio to get moles of H<sub>2</sub>: because ratio is 1:1, <code>moles(H2) = moles(Mg) = 0.123431392718...</code>
+            </li>
+            <li>
+                Convert moles of H<sub>2</sub> to mass:<br>
+                <code>mass(H2) = moles × Mr = 0.123431392718 × 2.016 = 0.248837687719 ≈ 0.249 g</code> (rounded to three significant figures).
+            </li>
+        </ol>
+        <br>
+        <b>Answer:</b> <b>0.249 g</b> of hydrogen gas (H<sub>2</sub>).
+    </p>
+    <hr>
+
+    <h4>Worked example 2 — using a reactant amount to find mass of a product using limiting stoichiometry</h4>
+    <p>
+        <b>Reaction:</b> <code>Mg + 2HCl → MgCl2 + H2</code><br>
+        <b>Question:</b> 10.0 g of hydrochloric acid is available and reacts completely (excess magnesium). What mass of magnesium chloride is produced? (Use Mr HCl = 36.461, Mr MgCl2 = 95.211)
+        <br>
+        <b>Solution:</b>
+        <ol>
+            <li>Balanced equation: <code>2 mol HCl → 1 mol MgCl2</code> (mole ratio HCl : MgCl2 = 2 : 1).</li>
+            <li>Convert mass of HCl to moles: <br>
+                <code>moles(HCl) = 10.0 ÷ 36.461 = 0.274265653712...</code>
+            </li>
+            <li>Convert moles of HCl to moles of MgCl2 using the mole ratio: <br>
+                <code>moles(MgCl2) = moles(HCl) × (1 mol MgCl2 / 2 mol HCl) = 0.274265653712 ÷ 2 = 0.137132826856...</code>
+            </li>
+            <li>Convert moles of MgCl2 to mass: <br>
+                <code>mass(MgCl2) = moles × Mr = 0.137132826856 × 95.211 = 13.0565535778 ≈ 13.1 g</code> (rounded to three significant figures to match <code>10.0 g</code>).
+            </li>
+        </ol>
+        <br>
+        <b>Answer:</b> <b>13.1 g</b> of magnesium chloride (MgCl<sub>2</sub>).
+    </p>
+    <hr>
+
+    <h4>Worked example 3 — reverse calculation (find required mass of reactant)</h4>
+    <p>
+        <b>Reaction:</b> <code>2H2 + O2 → 2H2O</code><br>
+        <b>Question:</b> How much oxygen (O<sub>2</sub>) is needed to completely react with 5.00 g of hydrogen gas? (Use Mr H2 = 2.016, Mr O2 = 32.00)
+        <br>
+        <b>Solution:</b>
+        <ol>
+            <li>Balanced equation gives mole ratio H<sub>2</sub> : O<sub>2</sub> = 2 : 1 (2 mol H<sub>2</sub> react with 1 mol O<sub>2</sub>).</li>
+            <li>Convert mass of H<sub>2</sub> to moles: <br>
+                <code>moles(H2) = 5.00 ÷ 2.016 = 2.480158730158...</code>
+            </li>
+            <li>Use mole ratio to find moles of O<sub>2</sub> required: <br>
+                <code>moles(O2) = moles(H2) × (1 mol O2 / 2 mol H2) = 2.480158730158 ÷ 2 = 1.240079365079...</code>
+            </li>
+            <li>Convert moles of O<sub>2</sub> to mass: <br>
+                <code>mass(O2) = moles × Mr = 1.240079365079 × 32.00 = 39.682539681 ≈ 39.7 g</code> (three significant figures).
+            </li>
+        </ol>
+        <br>
+        <b>Answer:</b> <b>39.7 g</b> of oxygen (O<sub>2</sub>).
+    </p>
+    <br>
 </Layout>
