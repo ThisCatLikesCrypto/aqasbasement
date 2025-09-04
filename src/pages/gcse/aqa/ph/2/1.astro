@@ -1,19 +1,110 @@
 ---
-import Layout from '../../../../../layouts/Layout.astro';
-import Table from '../../../../../components/Table.astro';
+import Layout from "../../../../../layouts/Layout.astro";
+import Table from "../../../../../components/Table.astro";
 ---
 
 <Layout title="GCSE AQA Physics 2.1">
     <h1>Physics 2.1 - Current, potential difference and resistance</h1>
     <h2>2.1.1 Circuit Diagrams</h2>
-    <p>
-        - There are many circuit symbols you need to know for GCSE:
-    </p>
-    <img class="centreimage" src="/images/ph/circuit_symbols.jpg" alt="Circuit Symbols">
-    <h3>Functions: </h3>
+    <p>- There are many circuit symbols you need to know for GCSE:</p>
+    <img
+        class="centreimage"
+        src="/images/ph/circuit_symbols.jpg"
+        alt="Circuit Symbols"
+    />
+    <h3>Functions:</h3>
     <Table>
         <thead>
-
+            <tr>
+                <th>Component</th>
+                <th>Function</th>
+            </tr>
         </thead>
+        <tbody>
+            <tr>
+                <td>Switch</td>
+                <td>Completes or breaks a circuit to stop electrical flow</td>
+            </tr>
+            <tr>
+                <td>Cell</td>
+                <td>Power source (Chemical energy -> electrical energy)</td>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td
+                    >Collection of cells to increase the size of the power
+                    source/increase potential difference</td
+                >
+            </tr>
+            <tr>
+                <td>Diode</td>
+                <td
+                    >A type of resistor that has high resistance in one
+                    direction, but very low resistance in the other</td
+                >
+            </tr>
+            <tr>
+                <td>Resistor</td>
+                <td
+                    >A component that introduces resistence into the circuit (it
+                    resists :O)</td
+                >
+            </tr>
+            <tr>
+                <td>Variable resistor</td>
+                <td
+                    >A resistor that can vary in resistance (chat this is crazy)</td
+                >
+            </tr>
+            <tr>
+                <td>LED (Light Emitting Diode)</td>
+                <td
+                    >A diode that emits light when current passes through in the
+                    forward direction</td
+                >
+            </tr>
+            <tr>
+                <td>Lamp</td>
+                <td>A light source that activates when current flows through</td
+                >
+            </tr>
+            <tr>
+                <td>Fuse</td>
+                <td
+                    >A component that breaks the circuit when an excessive
+                    current flows through. Often used to protect a circuit</td
+                >
+            </tr>
+            <tr>
+                <td>Voltmeter</td>
+                <td
+                    >A tool that is placed in parallel to measure the potential
+                    difference of a circuit or component</td
+                >
+            </tr>
+            <tr>
+                <td>Ammeter</td>
+                <td
+                    >A tool placed in series to measure the current flow in a
+                    circuit</td
+                >
+            </tr>
+            <tr>
+                <td>Thermistor</td>
+                <td
+                    >A resistor that changes in resistance based on the
+                    surrounding temperature. Lower temperature = greater
+                    resistance</td
+                >
+            </tr>
+            <tr>
+                <td>LDR (Light Dependent Resistor)</td>
+                <td
+                    >A resistor that changes in resistance based on the
+                    surrounding light level. Lower light level = greater
+                    resistance</td
+                >
+            </tr>
+        </tbody>
     </Table>
 </Layout>
