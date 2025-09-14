@@ -296,10 +296,12 @@ import Layout from '../../../../../layouts/Layout.astro';
         (Top-Level Domain, like .uk or .net) server.<br>
         4. The TLD server (managed by a company or organisation like
         <a href="https://nominet.uk">Nominet UK</a> (for .uk, .co.uk, .org.uk and the like)).
-        provides the resolver with the correct IP address for its request.<br>
-        5. The DNS resolver passes its answer onto you, and caches the answer in case it
+        provides the resolver with the correct authoritative name server for its request.<br>
+        5. The authoritative name server, managed by the domain name owner, answers the original 
+        query with the correct IP address.<br>
+        6. The DNS resolver passes its answer onto you, and caches the answer in case it
         comes up again soon.<br>
-        6. Your computer will now do whatever it needs to with the IP address, such as
+        7. Your computer will now do whatever it needs to with the IP address, such as
         request a website resource (explained below).
     </p>
     <h3>Web Servers + Clients</h3>
