@@ -1,0 +1,236 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import BackButton from '../../../../../components/BackButton.astro';
+---
+
+<Layout title="3.2 Use of amount of substance in relation to masses of pure substances">
+    <BackButton />
+    <h1>3.2 Use of amount of substance in relation to masses of pure substances</h1>
+    <h2>3.2.1 Moles</h2>
+    <p>
+        - Chemical amounts are measured in moles. The symbol for the unit mole is mol.<br>
+        - Moles are 6.022 × 10^23 particles (this is known as Avogadro's number).<br>
+        - The mass of one mole of a substance in grams is numerically equal
+        to its relative formula mass, and one mole of a substance contains the same 
+        number of the stated particles, atoms, molecules or ions as one mole of any other
+        substance.<br>
+        - For example, one mole of Oxygen contains 6.022 × 10^23 atoms, and oxygen has a 
+        relative atomic mass of 16, one mole of oxygen weighs 16g.<br>
+        - <b>mass = moles * molar mass</b>
+    </p>
+    <br>
+    <h2>3.2.2 Amounts of substances in equations</h2>
+    <p>
+        - The masses of reactants and products can be calculated from balanced symbol equations.<br>
+        - Chemical equations can be interpreted in terms of moles. For example:<br>
+        <img class="centreimage" src="/images/ch/onemoleof.png" alt="One mole of... diagram">
+        - "one mole of magnesium reacts with two moles of hydrochloric acid to produce one mole of 
+        magnesium chloride and one mole of hydrogen gas."
+    </p>
+
+    <h3>Mole calculations (aka pain)</h3>
+    <p>
+        <ol>
+            <li><b>Write the balanced symbol equation.</b></li>
+            <li><b>Work out Mr</b> (molar mass) for the substances you need (use periodic table values).</li>
+            <li><b>Convert the known mass to moles</b> using <code>moles = mass ÷ Mr</code>.</li>
+            <li><b>Use the mole ratio</b> from the balanced equation to find the moles of the required substance.</li>
+            <li><b>Convert moles back to mass</b> (if the question asks for mass) using <code>mass = moles × Mr</code> and round to the correct number of significant figures.</li>
+        </ol>
+    </p>
+
+    <h4>Worked example 1 — forward calculation (mass of product from a mass of reactant)</h4>
+    <p>
+        <b>Reaction:</b> <code>Mg + 2HCl → MgCl2 + H2</code><br>
+        <b>Question:</b> If 3.00 g of magnesium reacts completely with excess hydrochloric acid, what mass of hydrogen gas is produced? 
+        (Use Mr: Mg = 24.305, H = 1.008, Cl = 35.453) [in reality in the exam you'd need to use your periodic table for this]
+        <br>
+        <b>Solution:</b>
+        <ol>
+            <li>
+                Balanced equation already given: <code>1 mol Mg</code> produces <code>1 mol H2</code> (mole ratio Mg :
+                H2 = 1 : 1).
+            </li>
+            <li>
+                Calculate Mr for hydrogen gas (H<sub>2</sub>): <code>Mr(H2) = 2 × 1.008 = 2.016</code>.
+            </li>
+            <li>
+                Convert mass of Mg to moles:<br>
+                <code>moles(Mg) = mass ÷ Mr = 3.00 ÷ 24.305 = 0.123431392718...</code>
+            </li>
+            <li>
+                Use mole ratio to get moles of H<sub>2</sub>: because ratio is 1:1, <code>moles(H2) = moles(Mg) = 0.123431392718...</code>
+            </li>
+            <li>
+                Convert moles of H<sub>2</sub> to mass:<br>
+                <code>mass(H2) = moles × Mr = 0.123431392718 × 2.016 = 0.248837687719 ≈ 0.249 g</code> (rounded to three significant figures).
+            </li>
+        </ol>
+        <br>
+        <b>Answer:</b> <b>0.249 g</b> of hydrogen gas (H<sub>2</sub>).
+    </p>
+    <hr>
+
+    <h4>Worked example 2 — using a reactant amount to find mass of a product using limiting stoichiometry</h4>
+    <p>
+        <b>Reaction:</b> <code>Mg + 2HCl → MgCl2 + H2</code><br>
+        <b>Question:</b> 10.0 g of hydrochloric acid is available and reacts completely (excess magnesium). What mass of magnesium chloride is produced? (Use Mr HCl = 36.461, Mr MgCl2 = 95.211)
+        <br>
+        <b>Solution:</b>
+        <ol>
+            <li>Balanced equation: <code>2 mol HCl → 1 mol MgCl2</code> (mole ratio HCl : MgCl2 = 2 : 1).</li>
+            <li>Convert mass of HCl to moles: <br>
+                <code>moles(HCl) = 10.0 ÷ 36.461 = 0.274265653712...</code>
+            </li>
+            <li>Convert moles of HCl to moles of MgCl2 using the mole ratio: <br>
+                <code>moles(MgCl2) = moles(HCl) × (1 mol MgCl2 / 2 mol HCl) = 0.274265653712 ÷ 2 = 0.137132826856...</code>
+            </li>
+            <li>Convert moles of MgCl2 to mass: <br>
+                <code>mass(MgCl2) = moles × Mr = 0.137132826856 × 95.211 = 13.0565535778 ≈ 13.1 g</code> (rounded to three significant figures to match <code>10.0 g</code>).
+            </li>
+        </ol>
+        <br>
+        <b>Answer:</b> <b>13.1 g</b> of magnesium chloride (MgCl<sub>2</sub>).
+    </p>
+    <hr>
+
+    <h4>Worked example 3 — reverse calculation (find required mass of reactant)</h4>
+    <p>
+        <b>Reaction:</b> <code>2H2 + O2 → 2H2O</code><br>
+        <b>Question:</b> How much oxygen (O<sub>2</sub>) is needed to completely react with 5.00 g of hydrogen gas? (Use Mr H2 = 2.016, Mr O2 = 32.00)
+        <br>
+        <b>Solution:</b>
+        <ol>
+            <li>Balanced equation gives mole ratio H<sub>2</sub> : O<sub>2</sub> = 2 : 1 (2 mol H<sub>2</sub> react with 1 mol O<sub>2</sub>).</li>
+            <li>Convert mass of H<sub>2</sub> to moles: <br>
+                <code>moles(H2) = 5.00 ÷ 2.016 = 2.480158730158...</code>
+            </li>
+            <li>Use mole ratio to find moles of O<sub>2</sub> required: <br>
+                <code>moles(O2) = moles(H2) × (1 mol O2 / 2 mol H2) = 2.480158730158 ÷ 2 = 1.240079365079...</code>
+            </li>
+            <li>Convert moles of O<sub>2</sub> to mass: <br>
+                <code>mass(O2) = moles × Mr = 1.240079365079 × 32.00 = 39.682539681 ≈ 39.7 g</code> (three significant figures).
+            </li>
+        </ol>
+        <br>
+        <b>Answer:</b> <b>39.7 g</b> of oxygen (O<sub>2</sub>).
+    </p>
+    <br>
+    <h2>3.2.3 Using moles to balance equations</h2>
+    <p>
+        - The balancing numbers in a symbol equation can be calculated from the masses of reactants and 
+        products by converting the masses in grams to amounts in moles and converting the numbers
+        of moles to simple whole number ratios.<br>
+    </p>
+    <h3>Example</h3>
+    <p>
+        <b>Question:</b> When 8.0 g of methane (CH<sub>4</sub>) burns in excess oxygen, 22.0 g of carbon dioxide (CO<sub>2</sub>) and 9.0 g of water (H<sub>2</sub>O) are produced. Use moles to balance the equation for this reaction.<br>
+        <b>Unbalanced equation:</b> <code>CH<sub>4</sub> + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O</code>
+        <br>
+        <b>Solution:</b>
+        <ol>
+            <li>
+                Calculate moles of each substance using their masses and relative formula masses:<br>
+                Mr(CH<sub>4</sub>) = 12.01 + (4 × 1.008) = 16.042<br>
+                Mr(CO<sub>2</sub>) = 12.01 + (2 × 16.00) = 44.01<br>
+                Mr(H<sub>2</sub>O) = (2 × 1.008) + 16.00 = 18.016
+            </li>
+            <li>
+                Moles of CH<sub>4</sub>: <code>8.0 ÷ 16.042 = 0.499</code><br>
+                Moles of CO<sub>2</sub>: <code>22.0 ÷ 44.01 = 0.500</code><br>
+                Moles of H<sub>2</sub>O: <code>9.0 ÷ 18.016 = 0.499</code>
+            </li>
+            <li>
+                Write the ratio of moles (approximate to whole numbers):<br>
+                CH<sub>4</sub> : O<sub>2</sub> : CO<sub>2</sub> : H<sub>2</sub>O = 0.5 : ? : 0.5 : 0.5<br>
+                (O<sub>2</sub> is in excess, so not calculated here)
+            </li>
+            <li>
+                Simplify the ratio to whole numbers:<br>
+                CH<sub>4</sub> : CO<sub>2</sub> : H<sub>2</sub>O ≈ 1 : 1 : 1
+            </li>
+            <li>
+                Balance the equation using these ratios and add O<sub>2</sub> to balance oxygen atoms:<br>
+                <code>CH<sub>4</sub> + ?O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O</code><br>
+                <code>CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O</code>
+            </li>
+        </ol>
+        <br>
+        <b>Answer:</b> The balanced equation is <code>CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O</code>.
+    </p>
+    <br>
+    <h2>3.2.4 Limiting reactants</h2>
+    <p>
+        - In a chemical reaction involving two reactants, it is common to use an excess of one of the reactants to 
+        ensure that all of the other reactant is used.<br>
+        - This means that more of one reactant is present than is needed to completely react with the other reactant 
+        &ndash; this is the one in <b>excess</b>.<br>
+        - The reactant that is completely used up is called the <b>limiting reactant</b> because it limits the amount of products.
+    </p>
+    <h3>How to find the limiting reactant</h3>
+    <p>
+        - Sometimes the limiting reactant is obvious, but in a GCSE exam you're likely to be asked to calculate it using moles.<br>
+        - To find the limiting reactant, follow these steps:
+        <ol>
+            <li>Write the balanced equation for the reaction.</li>
+            <li>Calculate the number of moles of each reactant.</li>
+            <li>Use the mole ratios from the balanced equation to determine which reactant is limiting.</li>
+        </ol>
+    </p>
+    <h4>Worked Example</h4>
+    <p>
+        - Consider the reaction between nitrogen (N<sub>2</sub>) and hydrogen (H<sub>2</sub>) to form ammonia (NH<sub>3</sub>):
+        - Say there is 12.0g of nitrogen and 7.0g of hydrogen.<br>
+        - First, we need to write the balanced equation:<br>
+        - <code>N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub></code><br>
+        - Next, we calculate the moles of each reactant:<br>
+        - 12.0 (mass) ÷ 14 * 2 (A<sub>r</sub> and amount of atoms) = 12/28 = 0.426 moles of nitrogen<br>
+        - 7.0 (mass) ÷ 1 * 2 (A<sub>r</sub> and amount of atoms) = 7/2 = 3.5 moles of hydrogen<br>
+        - Finally, we need to find the molar ratios:<br>
+        - From the balanced equation, we see that 1 mole of N<sub>2</sub> reacts with 3 moles of H<sub>2</sub> to produce 2 moles of NH<sub>3</sub>.<br>
+        - Therefore, the molar ratio is:<br>
+        - N<sub>2</sub> : H<sub>2</sub> : NH<sub>3</sub> = 1 : 3 : 2<br>
+        - Therefore, nitrogen is the limiting reactant (0.426 is smaller than 1.17 (3.5 ÷ 3), therefore nitrogen is limiting)
+    </p>
+    <br>
+    <h2>3.2.5 Concentration of solutions</h2>
+    <p>
+        - Many chemical reactions take place in solutions.<br>
+        - The concentration of a solution can be measured in mass per given volume of solution, e.g. grams per dm<sup>3</sup> (g/dm<sup>3</sup>).<br>
+        - <b>Concentration (g/dm<sup>3</sup>) = mass of solute (g) / volume of solution (dm<sup>3</sup>)</b>
+    </p>
+    <h3>How to calculate mass of solute in a given volume</h3>
+    <p>
+        <ol>
+            <li>Write down the concentration and volume of the solution.</li>
+            <li>Rearrange the formula to find mass: <code>mass = concentration × volume</code></li>
+            <li>Make sure the volume is in dm<sup>3</sup> (1 dm<sup>3</sup> = 1000 cm<sup>3</sup>).</li>
+            <li>Multiply the concentration by the volume to get the mass of solute.</li>
+        </ol>
+    </p>
+    <h4>Worked example</h4>
+    <p>
+        <b>Question:</b> What is the mass of sodium chloride (NaCl) dissolved in 250 cm<sup>3</sup> of solution with a concentration of 2.0 g/dm<sup>3</sup>?<br>
+        <b>Solution:</b>
+        <ol>
+            <li>Convert volume to dm<sup>3</sup>: <code>250 cm<sup>3</sup> ÷ 1000 = 0.250 dm<sup>3</sup></code></li>
+            <li>Use the formula: <code>mass = concentration × volume</code></li>
+            <li>Calculate: <code>mass = 2.0 g/dm<sup>3</sup> × 0.250 dm<sup>3</sup> = 0.50 g</code></li>
+        </ol>
+        <br>
+        <b>Answer:</b> <b>0.50 g</b> of sodium chloride is dissolved.
+    </p>
+    <hr>
+    <h3>Relationship between mass, volume, and concentration</h3>
+    <p>
+        - The concentration of a solution tells you how much solute is dissolved per unit volume.<br>
+        - If you increase the mass of solute while keeping the volume the same, the concentration increases.<br>
+        - If you increase the volume while keeping the mass of solute the same, the concentration decreases.<br>
+        - The formula <code>concentration = mass / volume</code> can be rearranged to find any variable:<br>
+        <ul>
+            <li><b>mass = concentration × volume</b></li>
+            <li><b>volume = mass / concentration</b></li>
+        </ul>
+        - Always ensure volume is in dm<sup>3</sup> for these calculations.
+    </p>
+</Layout>

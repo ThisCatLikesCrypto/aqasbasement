@@ -1,0 +1,51 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import BackButton from '../../../../../components/BackButton.astro';
+import Table from '../../../../../components/Table.astro';
+---
+
+<Layout title="8.2 Identification of common gases">
+    <BackButton />
+    <h1>8.2 Identification of common gases</h1>
+    <Table>
+        <thead>
+            <tr>
+                <th>Gas</th>
+                <th>Test</th>
+                <th>Why</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hydrogen</td>
+                <td>Test for hydrogen by using a burning splint held at the open end of a test 
+                    tube of gas. Hydrogen burns rapidly with a pop sound, so this test is sometimes 
+                    called the "squeaky pop test".</td>
+                <td>The hydrogen causes an explosion.<br>
+                    <code>2H<sub>2(g)</sub> + O<sub>2(g)</sub> -> 2H<sub>2</sub>O<sub>(l)</sub></code></td>
+            </tr>
+            <tr>
+                <td>Oxygen</td>
+                <td>Oxygen can be tested for using a glowing splint inserted into a test type of the gas.
+                    The splint will re-light in oxygen.</td>
+                    <td>The splint uses the oxygen for the combustion reaction, so it is re-ignited.</td>
+            </tr>
+            <tr>
+                <td>Carbon dioxide</td>
+                <td>The test for carbon dioxide uses an aqueous solution of calcium hydroxide (also known 
+                    as limewater). When carbon dxoide is bubbled through limewater, the limewater turns 
+                    milky/cloudy (technically, this is a "white precipitate").</td>
+                <td>Carbon dioxide reacts with calcium dioxide to form calcium carbonate.<br>
+                    <code>CO<sub>2(g)</sub> + Ca(OH)<sub>2(aq)</sub>{" -> "}CaCO<sub>3(s)</sub> + H<sub>2</sub>O<sub>(l)</sub></code></td>
+            </tr>
+            <tr>
+                <td>Chlorine</td>
+                <td>The test for chlorine gas uses litmus paper. When damp litmus paper is put into 
+                    chlorine gas, the litmus paper is bleached and turns white.</td>
+                <td>When chlorine gas comes into contact with moist (damp) litmus paper, 
+                    it first dissolves slightly in the water present on the paper, 
+                    forming a mixture that includes hypochlorous acid (HOCl) and hydrochloric acid (HCl).</td>
+            </tr>
+        </tbody>
+    </Table>
+</Layout>
