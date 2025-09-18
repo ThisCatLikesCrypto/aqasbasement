@@ -1,0 +1,43 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import Table from '../../../../../components/Table.astro';
+---
+
+<Layout title="Simulanious Equations">
+    A Simulanious equation is a set of equations (2 or more) with 2 or more variables
+    <h2>Example</h2>
+    \(3x + 2y = 30\) <br>
+    \(3x + 5y = 42\) <br>
+    <br>
+    to solve it you do
+    <br>
+    \(  3x + 2y = 30\) <br>
+    \(- 3x + 5y = 42\) <br>
+    It's a minus because both signs are equal (the + and the +) <br>
+    which gives you <br>
+    \(  -3y = -12\) <br>
+    which is simplified down to <br>
+    \(y = 4\) <br>
+    now substitute y into one of the above equations <br>
+    \(3x + 2y = 30\) <br>
+    \(3x + 8 = 30\) <br>
+    \(3x = 22\) <br>
+    \(x = 7.\overline{333}\) <br>
+    now check it works in the other equation <br>
+    \(3x + 5y = 42\) <br>
+    \(22 + 20 = 42\) <br>
+    <br>
+    
+    
+
+</Layout>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
