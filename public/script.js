@@ -32,5 +32,5 @@ function msgs() {
 window.addEventListener('load', function(){
     msgs();
     setInterval(msgs, 10000);
-    console.log("%chello everyone and welcome to aqasbasement :), how are you all doing today?", 'font-weight: bold; font-size: 20px; color: #3c3367ff; text-shadow: 2px 2px 0 rgba(1, 234, 255, 1)');
+    console.log("%chello everyone and welcome to aqa's basement :), how are you all doing today?", 'font-weight: bold; font-size: 40px; color: #3c3367ff;');
 });
