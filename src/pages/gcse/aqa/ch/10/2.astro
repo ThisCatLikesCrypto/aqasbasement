@@ -1,0 +1,61 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import Table from '../../../../../components/Table.astro';
+---
+
+<Layout title="10.2 Life cycle assessment and recycling">
+    <h1>10.2 Life cycle assessment and recycling</h1>
+    <h2>10.2.1 Life cycle assessment</h2>
+    <p>
+        - Life cycle assessments are carried out to assess the environmental impact of a product over its entire life cycle.<br>
+        - The stages of a product's life cycle include:<br>
+        <ul>
+            <li>Raw material extraction</li>
+            <li>Manufacturing</li>
+            <li>Use/reuse/maintenance</li>
+            <li>Recycle/waste management</li>
+        </ul>
+    </p>
+    <h3>Paper or plastic?</h3>
+    <Table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Paper bag</th>
+                <th>Plastic bag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Raw materials and extraction</td>
+                <td>Paper from trees - could cause deforestation if trees not replanted, but most paper (in the UK) comes from managed woodlands
+                    (which have less biodiversity). Trees are a renewable resource.<br>
+                    Water - from (most likely) rain, non-renewable (or slowly refilling but not fast enough) aquifers, or potentially desalination plants.<br>
+                    Sodium Hydroxide - extracted from seawater.</td>
+                <td>Plastic from crude oil - finite. These can cause habitat destruction in order to reach the oil.<br>
+                    Lots of energy for distillation, cracking, and polymerisation.</td>
+            </tr>
+            <tr>
+                <td>Manufacture</td>
+                <td>Pulp made from wood and water, if making white paper we add bleach (NaOH). Lots of energy required (4x as much as plastic).</td>
+                <td>Lots of energy required.</td>
+            </tr>
+            <tr>
+                <td>Use</td>
+                <td>Once or twice.</td>
+                <td>Used once or many times before it breaks.</td>
+            </tr>
+            <tr>
+                <td>Disposal</td>
+                <td>Easily recyclable, but a limited number of times. Can be composted (biodegradable) or incinerated (reclaims heat energy but releases toxic compounds).</td>
+                <td>Not very recyclable - often ends up in landfill (producing methane emissions) or in incineration plants. Recycling is 
+                    technically possible through cracking and breaking down into monomers, and this is infinitely possible, but this does not happen very often.
+                    Non-biodegradable.</td>
+            </tr>
+        </tbody>
+    </Table>
+    <p>
+        I think that paper bags are better for the environment due to being made from renewable resources and being biodegradable, despite the higher energy costs 
+        (which, if from renewable sources, are less harmful).<br>
+    </p>
+</Layout>
