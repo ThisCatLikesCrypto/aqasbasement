@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../../../layouts/Layout.astro';
+import Table from '../../../../../components/Table.astro';
 ---
 
 <Layout title="10.1 Using the Earth's resources and obtaining potable water">
@@ -16,4 +17,70 @@ import Layout from '../../../../../layouts/Layout.astro';
         - Sustainable resource management is using resources while leaving enough for future generations to meet their needs.<br>
         - Carbon-neutral resources come from plants. The carbon dioxide absorbed by the plants as they grow is equal to the carbon dioxide released when they are burned.<br>
     </p>
+    <br>
+    <h2>10.1.2 Potable water</h2>
+    <p>
+        - Potable water is water that is safe to drink.<br>
+        - Fresh water is water that has a low concentration of dissolved salts and microbes.<br>
+        - Most fresh water is found in lakes, rivers, and groundwater.<br>
+        - In the UK, fresh water from rivers and lakes is treated to make it potable by:<br>
+        <ul>
+            <li>choosing an appropriate source of fresh water</li>
+            <li>passing the water through filter beds (sand, gravel, and charcoal)</li>
+            <li>sterilisation (using chlorine, ozone, or ultraviolet light) to kill microbes</li>
+        </ul>
+        - In areas where there is a limited supply of fresh water, salty water from the sea or from underground sources 
+        can be treated to produce potable water. This process is called desalination.<br>
+        - Desalination methods include distillation (heating the water until it evaporates, then condensing the vapour) and 
+        reverse osmosis (forcing the water through a membrane that only allows water molecules to pass through).<br>
+        - Both methods of desalination require large amounts of energy, making them expensive.
+    </p>
+    <Table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Name</th>
+                <th>Contains microbes</th>
+                <th>Contains dissolved substances</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Water in the seas and oceans</td>
+                <td>Salt water</td>
+                <td>Yes</td>
+                <td>Yes - high concentration</td>
+            </tr>
+            <tr>
+                <td>Water in underground streams and rocks</td>
+                <td>Ground water</td>
+                <td>Yes</td>
+                <td>Low concentration</td>
+            </tr>
+            <tr>
+                <td>Water in underground streams and rocks, rivers, lakes, ice caps, and glaciers</td>
+                <td>Fresh water</td>
+                <td>Yes</td>
+                <td>Low concentration</td>
+            </tr>
+            <tr>
+                <td>Used water from homes, industry, and agriculture</td>
+                <td>Waste water</td>
+                <td>Yes</td>
+                <td>High concentration (not as high as sea water)</td>
+            </tr>
+            <tr>
+                <td>Water that is safe to drink</td>
+                <td>Potable water</td>
+                <td>A small number</td>
+                <td>Very low concentration</td>
+            </tr>
+            <tr>
+                <td>Water that is 100% water molecules</td>
+                <td>Pure water</td>
+                <td>No</td>
+                <td>No dissolved substances</td>
+            </tr>
+        </tbody>
+    </Table>
 </Layout>
