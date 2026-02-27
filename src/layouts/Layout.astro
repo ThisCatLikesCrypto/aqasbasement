@@ -1,9 +1,10 @@
 ---
 interface Props {
 	title: string;
+	path: string;
 }
 
-const { title } = Astro.props;
+const { title, path } = Astro.props;
 
 import '../styles/style.css';
 ---
@@ -11,55 +12,94 @@ import '../styles/style.css';
 
 <!DOCTYPE html>
 <html lang="en-GB">
-	<head>
-		<title>{title} - AQA's Basement</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta charset="UTF-8">
-		<meta name="keywords" content="AQA, Basement, GCSE, OCR, Edexcel, revision, notes, discord, server, AQA's Basement, A-Level, A Level">
-		<meta name="author" content="Wilbur Williams">
-		<meta name="fediverse:creator" content="@wilbur@wetdry.world">
-		<meta property="og:title" content=`${title} - AQA's Basement`>
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://aqasbasement.uk/">
-		<meta property="og:description" content=`A website for notes and resources for GCSEs and A-Levels. This page is: ${title}`>
-		<!--<meta property="og:image" content="[insert image URL for sharing here]">-->
-		<link rel="dns-prefetch" href="https://assets.c48.uk">
-		<link rel="preconnect" href="https://assets.c48.uk" crossorigin>
-		<link rel="preload" as="script" href="/script.js">
-		<link rel="preload" as="image" href="/images/cc0.png">
-		<link rel="preload" as="image" href="/images/discord.png">
-		<link rel="canonical" href="https://aqasbasement.uk/">
-		<link rel="icon" href="/favicon.ico">
-		<script is:inline src="/script.js"></script>
-	</head>
+
+<head>
+  	<title>{title} - AQA's Basement</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="keywords" content="AQA, Basement, GCSE, OCR, Edexcel, revision, notes, discord, server, AQA's Basement, A-Level, A Level">
+	<meta name="author" content="Wilbur Williams">
+	<meta name="fediverse:creator" content="@wilbur@wetdry.world">
+	<meta property="og:title" content=`${title} - AQA's Basement`>
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://aqasbasement.uk/">
+	<meta property="og:description" content=`A website for notes and resources for GCSEs and A-Levels. This page is: ${title}`>
+	<meta property="title" content={title}>
+	<meta property="path" content={path}>
+	<!--<meta property="og:image" content="[insert image URL for sharing here]">-->
+	<link rel="dns-prefetch" href="https://assets.c48.uk">
+	<link rel="preconnect" href="https://assets.c48.uk" crossorigin>
+	<link rel="preload" as="script" href="/script.js">
+	<link rel="preload" as="image" href="/images/cc0.png">
+	<link rel="preload" as="image" href="/images/discord.png">
+	<link rel="canonical" href="https://aqasbasement.uk/">
+	<link rel="icon" href="/favicon.ico">
+	<script is:inline src="/script.js"></script>
+</head>
 	
-    <body>
-        <header id="header">
-			<div id="headercontent">
-				<div>
-					<h1 class="rainbow"><a href="/" id="homelink">AQA's Basement</a></h1>
-					<p id="headmsg">Messages Loading... <noscript>(Well, they won't. Unless you enable JavaScript.)</noscript></p>
-				</div>
-				<div>
-					<a href="https://discord.gg/XTvhaHYRBa"><img alt="Discord" src="/images/discord.png"></a>
-				</div>
+<body>
+	<script is:inline>
+		// Script gets the contributors for the page and updates the footer with username + link to github URL
+		// This is done by unique authors of commits to the file using a GitHub API request
+		// This may be a terrible implementation, but it works and I don't care enough to make it better
+
+		// Getting the title and path from the meta tags in the head, as well as the element to display contributors in
+		// I couldn't find any other way of getting astro to pass this information to JS, so here we are...
+		const title = document.querySelector('meta[property="title"]').content
+		const path = document.querySelector('meta[property="path"]').content
+
+		document.addEventListener("DOMContentLoaded", async function() {
+			let contributorsHeader = document.getElementById("contributorsHeader");
+			let contributorsElement = document.getElementById("contributors");
+			let contributors;
+			
+			if (title === "Home") {
+				contributorsHeader.innerHTML = "This site was generously contributed to by:";
+				contributors = await getAllContributors();
+			} else {
+				contributors = await getUniqueContributors(path);
+			}
+
+			if (contributors === false || contributors.length === 0) {
+				contributorsElement.innerHTML = "Unable to fetch contributors";
+			} else {
+		    	contributorsElement.innerHTML = contributors.map(c => `<a href="${c.url}">${c.name}</a>`).join(", ");
+			}
+		});
+
+		// Once the content is loaded, a request is made to the script.js function with the path in order to fetch contributors
+		// These are then displayed in the footer with links to their GitHub profiles
+		// If we are on the homepage, the label text is changed due to it being the contributors of the whole site
+	</script>
+ 
+	<header id="header">
+		<div id="headercontent">
+			<div>
+				<h1 class="rainbow"><a href="/" id="homelink">AQA's Basement</a></h1>
+				<p id="headmsg">Messages Loading... <noscript>(Well, they won't. Unless you enable JavaScript.)</noscript></p>
 			</div>
-		</header>
-        <hr>
-        <main id="main">
-			<noscript><h3 style="text-align: center;">While this website doesn't <i>require</i> JavaScript, it is better to have it enabled.</h3></noscript>
-			<slot />
-		</main>
-        <footer id="footer">
-			<p>
-				Site by <a href="https://wilburwilliams.uk">Wilbur Williams</a>. 
-				This is not endorsed by AQA or any exam boards. 
-				<a href="https://github.com/ThisCatLikesCrypto/aqasbasement">Source code</a><br>
-				<a href="https://creativecommons.org/publicdomain/zero/1.0/">
-					<img src="/images/cc0.png" title="Site content is dedicated to the public domain" alt="CC0 1.0 Universal">
-				</a><br>
-				<img src="https://wakatime.com/badge/user/018edb3f-18b0-4c2c-8d13-f603c53260cb/project/30b7a0f5-e154-47ad-9cca-8ac73e5cd8fd.svg" alt="wakatime badge">
-			</p>
-		</footer>
-    </body>
+			<div>
+				<a href="https://discord.gg/XTvhaHYRBa"><img alt="Discord" src="/images/discord.png"></a>
+			</div>
+		</div>
+	</header>
+    <hr>
+    <main id="main">
+		<noscript><h3 style="text-align: center;">While this website doesn't <i>require</i> JavaScript, it is better to have it enabled.</h3></noscript>
+		<slot />
+	</main>
+    <footer id="footer">
+		<p>
+		<div id="contributorsHeader">This page was generously contributed to by: </div>
+		<b id="contributors">Fetching contributors...</b><noscript><i>&nbsp;Well, I guess you won't know who contributed to this page if you don't have JavaScript enabled...</i></noscript><br><br>
+		Site by <a href="https://wilburwilliams.uk">Wilbur Williams</a>. 
+		This is not endorsed by AQA or any exam boards. 
+		<a href="https://github.com/ThisCatLikesCrypto/aqasbasement">Source code</a><br>
+		<a href="https://creativecommons.org/publicdomain/zero/1.0/">
+			<img src="/images/cc0.png" title="Site content is dedicated to the public domain" alt="CC0 1.0 Universal">
+		</a><br>
+		<img src="https://wakatime.com/badge/user/018edb3f-18b0-4c2c-8d13-f603c53260cb/project/30b7a0f5-e154-47ad-9cca-8ac73e5cd8fd.svg" alt="wakatime badge">
+		</p>
+	</footer>
+</body>
 </html>
