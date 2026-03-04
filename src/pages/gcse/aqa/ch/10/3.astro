@@ -93,11 +93,34 @@ import Table from "../../../../../components/Table.astro";
     </p>
     <br>
     <h2>10.3.3 Ceramics, polymers and composites</h2>
-    <p>
-        - Most of the glass we use is soda-lime glass, made by heating a mixture of sand, sodium carbonate and limestone.<br>
-        - There is also Borosilicate glass, made from sand and boron trioxide, which has a higher melting point and is used for laboratory glassware and cookware.<br>
-        - Clay ceramics, including pottery and bricks, are made by shaping wet clay and then heating in a furnace.
-    </p>
+    <Table>
+        <thead>
+            <tr>
+                <th>Soda-lime Glass</th>
+                <th>Borosilicate Glass</th>
+                <th>Clay Ceramics</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Made by heating a mixture of sand, sodium carbonate and limestone</td>
+                <td>Made from sand and boron trioxide</td>
+                <td>Made by shaping wet clay and then heating in a furnace</td>
+            </tr>
+            <tr>
+                <td>Used for most cases (windows, bottles)</td>
+                <td>Used for laboratory glassware and cookware as well as fibre-optic cables</td>
+                <td>Used for pottery and bricks, insulators, electronics, etc</td>
+            </tr>
+            <tr>
+                <td>Because it is transparent, very cheap, and recyclable</td>
+                <td>Because it has a higher melting point and is more heat and chemical-resistant; has a higher optical clarity</td>
+                <td>Because it is fired at high temperatures and can be shaped easily while hot / wet, as well as 
+                    being a good insulator</td>
+            </tr>
+        </tbody>
+    </Table>
+    <br>
     <h3>Polymers</h3>
     <p>
         - A polymer is a long chain molecule made up of repeating units called monomers. They can be natural (e.g., DNA, proteins) or synthetic (e.g., plastics).<br>
@@ -117,7 +140,68 @@ import Table from "../../../../../components/Table.astro";
     <h3>Composites</h3> 
     <p>
         - Composites are materials made from two or more different materials, where the properties of the composite are better than those of the individual components.<br> 
-        - The two materials are a matrix or binder surrounding and binding together fibres or fragments of the other material, which is called the reinforcement.<br>
-        - Examples include fibreglass (glass fibres in a polymer matrix) and carbon fibre (carbon fibres in a polymer matrix).
+        - The two materials are a matrix or binder surrounding and binding together fibres or fragments of the other material, which is called the reinforcement.
     </p>
+    <Table>
+        <thead>
+            <tr>
+                <th>Composite</th>
+                <th>Matrix or Binder</th>
+                <th>Reinforcement</th>
+                <th>Use and Why?</th>
+                <th>Traditional material it has replaced</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Concrete</td>
+                <td>Cement paste</td>
+                <td>Sand and gravel (aggregate)</td>
+                <td>Buildings and foundations; very strong in compression, durable, and low cost</td>
+                <td>Stone blocks / large amounts of brickwork</td>
+            </tr>
+            <tr>
+                <td>Reinforced Concrete</td>
+                <td>Concrete</td>
+                <td>Steel bars or steel mesh</td>
+                <td>Bridges and high-rise buildings; resists both compression (concrete) and tension (steel)</td>
+                <td>Plain concrete</td>
+            </tr>
+            <tr>
+                <td>Fibreglass</td>
+                <td>Polymer resin (usually polyester)</td>
+                <td>Glass fibres</td>
+                <td>Boat hulls, car body panels, storage tanks; lightweight, corrosion resistant, and strong</td>
+                <td>Steel and aluminium panels</td>
+            </tr>
+            <tr>
+                <td>Carbon fibre reinforced polymer</td>
+                <td>Polymer resin (often epoxy)</td>
+                <td>Carbon fibres</td>
+                <td>Aircraft, bikes, sports equipment; very high strength-to-weight ratio and stiffness</td>
+                <td>Steel and aluminium alloys</td>
+            </tr>
+            <tr>
+                <td>Chipboard</td>
+                <td>Resin/glue binder</td>
+                <td>Wood chips and sawdust</td>
+                <td>Flat-pack furniture and flooring; cheap, uses waste wood, easy to shape</td>
+                <td>Solid timber boards</td>
+            </tr>
+            <tr>
+                <td>Kevlar-Reinforced composites</td>
+                <td>Polymer resin</td>
+                <td>Kevlar fibres</td>
+                <td>Body armour, helmets, and protective parts; high impact resistance with low mass</td>
+                <td>Steel armour plates</td>
+            </tr>
+            <tr>
+                <td>CMCs</td>
+                <td>Ceramic matrix (e.g. silicon carbide)</td>
+                <td>Ceramic fibres (e.g. silicon carbide fibres)</td>
+                <td>Furnace parts, brakes, and turbine components; keeps strength at very high temperatures</td>
+                <td>Metal alloys in high-temperature parts</td>
+            </tr>
+        </tbody>
+    </Table>
 </Layout>
