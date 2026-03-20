@@ -33,4 +33,13 @@ window.addEventListener('load', function(){
     msgs();
     setInterval(msgs, 10000);
     console.log("%chello everyone and welcome to aqa's basement :), how are you all doing today?", 'font-weight: bold; font-size: 40px; color: #3c3367ff;');
+    fetch('https://a.c48.uk/in', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            path: window.location.href
+        })
+    })
 });
